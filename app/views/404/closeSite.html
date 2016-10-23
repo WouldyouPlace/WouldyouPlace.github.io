@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>闭站保护中……</title>
+    <link rel="icon" href="../../image/main/icon-title.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="../../stylesheets/neat.css">
+    <link rel="stylesheet" href="../../stylesheets/404/closeSite.css" type="text/css">
+</head>
+<body>
+<div class="fill">
+    <h1 style="color: #ffffff;">网站维护中...</h1>
+    <div class="reference"></div>
+    <div class="clock" id="utility-clock">
+        <div class="centre">
+            <div class="dynamic"></div>
+            <div class="expand round circle-1"></div>
+            <div class="anchor hour">
+                <div class="element thin-hand"></div>
+                <div class="element fat-hand"></div>
+            </div>
+            <div class="anchor minute">
+                <div class="element thin-hand"></div>
+                <div class="element fat-hand minute-hand"></div>
+            </div>
+            <div class="anchor second">
+                <div class="element second-hand"></div>
+            </div>
+            <div class="expand round circle-2"></div>
+            <div class="expand round circle-3"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function(){
+        var clock = document.querySelector('#utility-clock');
+        utilityClock(clock);
+
+        if (clock.parentNode.classList.contains('fill')) autoResize(clock, 295 + 32);
+
+
+        function utilityClock(container) {
+            //创建DOM对象
+            var dynamic = container.querySelector('.dynamic');
+            var hourElement = container.querySelector('.hour');
+            var minuteElement = container.querySelector('.minute');
+            var secondElement = container.querySelector('.second');
+
+            //每到一刻钟显示一个数字
+            var minute = function (n) {
+                return n % 5 == 0 ? minuteText(n) : minuteLine(n);
+            };
+            //刻度盘上的数字显示
+            var minuteText = function (n) {
+                var element = document.createElement('div');
+                element.className = 'minute-text';
+                element.innerHTML = (n < 10 ? '0' : '') + n;
+                position(element, n / 60, 135);
+                dynamic.appendChild(element);
+            }
+            //刻度线
+            var minuteLine = function (n) {
+                var anchor = document.createElement('div');
+                anchor.className = 'anchor';
+                var element = document.createElement('div');
+                element.className = 'element minute-line';
+                rotate(anchor, n);
+                anchor.appendChild(element);
+                dynamic.appendChild(anchor);
+            };
+
+            var hour = function (n) {
+                var element = document.createElement('div');
+                element.className = 'hour-text hour-' + n;
+                element.innerHTML = n;
+                position(element, n / 12, 105);
+                dynamic.appendChild(element);
+            }
+            var position = function (element, phase, r) {
+                var theta = phase * 2 * Math.PI;
+                element.style.top = (-r * Math.cos(theta)).toFixed(1) + 'px';
+                element.style.left = (r * Math.sin(theta)).toFixed(1) + 'px';
+            }
+            var rotate = function (element, second) {
+                element.style.transform = element.style.webkitTransform = 'rotate(' + (second * 6) + 'deg)';
+            }
+            var animate = function () {
+                var now = new Date();
+                var time = now.getHours() * 3600 +
+                        now.getMinutes() * 60 +
+                        now.getSeconds() * 1 +
+                        now.getMilliseconds() / 1000;
+                rotate(secondElement, time);
+                rotate(minuteElement, time / 60);
+                rotate(hourElement, time / 60 / 12);
+                requestAnimationFrame(animate);
+            };
+            for (var i = 1; i <= 60; i++)
+                minute(i);
+            for (var i = 1; i <= 12; i++)
+                hour(i);
+            animate();
+        }
+
+        function autoResize(element, nativeSize) {
+            var update = function () {
+                var scale = Math.min(window.innerWidth, window.innerHeight) / nativeSize;
+                element.style.transform = element.style.webkitTransform = 'scale(' + scale.toFixed(3) + ')';
+            };
+            update();
+            window.addEventListener('resize', update);
+        }
+    })();
+</script>
+
+</body>
+
+</html>

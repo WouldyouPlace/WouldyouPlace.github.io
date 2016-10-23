@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <title>前端之路</title>
+    <link rel="icon" href="../../image/main/icon-title.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="../../stylesheets/neat.css">
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/main/main.min.css">
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/animate.min.css">
+    <script type="text/javascript" src="../../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=prlgCEAlu7CaWGRZI2hxqn5aQmLwRGGM& s=1"></script>
+</head>
+<body>
+<div id="wicket" class="wrapper">
+    <nav class="sideNav">
+        <ul>
+            <li class="active">首页</li>
+            <li>关于网站</li>
+            <li>网站规划</li>
+            <li>编程之路</li>
+            <li>联系我</li>
+        </ul>
+        <img src="../../image/main/slider_btn.png">
+    </nav>
+    <section class="start">
+        <header>
+            <a href="#" class="logo">前端之路</a>
+            <ul class="header-nav">
+                <li><a href="#" class='active'>首页</a></li>
+                <li><a href="../manga/manga.html">动漫</a></li>
+                <li><a href="../404/closeSite.html">游戏</a></li>
+                <li><a href="../404/404.html">案例</a></li>
+<!--                <li><a href="../projects/projects.html">项目</a></li>-->
+                <li>
+                    <a href="#" id="logOff" class="seek">
+                        <span>退出登录</span>
+                    </a>
+                </li>
+            </ul>
+            <!--          <div class="headerRight">
+                          <a href="#" id="userNmae"><img src="" alt="">sa</a>
+                      </div>-->
+        </header>
+        <div class="banner">
+            <ul id="inner">
+                <li>
+                    <img src="../../image/start/banner0.jpg">
+                </li>
+                <li>
+                    <img src="../../image/start/banner3.jpg">
+                </li>
+                <li><img src="../../image/start/banner6.jpg"></li>
+            </ul>
+            <ol id="indicators">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+
+        <!-- <a href="project/unisPC/main.html">unis</a>-->
+    </section>
+    <section class="manga">
+        <hgroup id="mt" class="title">
+            <h1>What I want to do</h1>
+            <h2 class="mangaH2">欠缺的不是能力，而是天马行空般的想象力。</h2>
+        </hgroup>
+        <!--品字显示-->
+        <!-- <div id="exhibit" class="sp">
+             <div class='pack'>
+                 <div><img src="../../image/manga/hok5.jpg" alt="hok"></div>
+                 <div><img src="../../image/manga/april1.jpg" alt="april"></div>
+                 <div><img src="../../image/manga/fairy.jpg" alt="april"></div>
+                 <div><img src="../../image/manga/mangaBG2.jpg"></div>
+                 <div><img src="../../image/manga/mangaBG3.jpeg" alt="bg"></div>
+             </div>
+         </div>-->
+        <!-- <div id="exhibit" class="sp">
+             <ul class='pack'>
+                 <li><img src="../../image/manga/hok5.jpg" alt="hok"></li>
+                 <li class="active"><img src="../../image/manga/april1.jpg" alt="april"></li>
+                 <li><img src="../../image/manga/fairy.jpg" alt="april"></li>
+                 <li><img src="../../image/manga/mangaBG2.jpg"></li>
+                 <li><img src="../../image/manga/mangaBG3.jpeg" alt="bg"></li>
+             </ul>
+         </div>-->
+        <ul class="img-group">
+            <li class="stage">
+                <div class='pack'>
+                    <div class="front"><img src="../../image/manga/april4.jpg"></div>
+                    <div class="upright1"><img src="../../image/manga/april8.jpeg"></div>
+                    <div class="upright2"><img src="../../image/manga/april5.jpg"></div>
+                    <div class="upright3"><img src="../../image/manga/april3.jpg"></div>
+                </div>
+            </li>
+            <li class="stage">
+                <div class='pack'>
+                    <div class="front"><img src="../../image/manga/hok4.jpg"></div>
+                    <div class="upright1"><img src="../../image/manga/hok1.jpg"></div>
+                    <div class="upright2"><img src="../../image/manga/hok3.jpg"></div>
+                    <div class="upright3"><img src="../../image/manga/hok2.jpg"></div>
+                </div>
+            </li>
+            <li class="stage">
+                <div class='pack'>
+                    <div class="front"><img src="../../image/manga/piece3.jpg"></div>
+                    <div class="upright1"><img src="../../image/manga/piece.jpg"></div>
+                    <div class="upright2"><img src="../../image/manga/piece2.jpeg"></div>
+                    <div class="upright3"><img src="../../image/manga/piece4.jpg"></div>
+                </div>
+            </li>
+            <li class="stage">
+                <div class='pack'>
+                    <div class="front"><img src="../../image/manga/fairy2.jpeg"></div>
+                    <div class="upright1"><img src="../../image/manga/fairy.jpg"></div>
+                    <div class="upright2"><img src="../../image/manga/fairy1.jpg"></div>
+                    <div class="upright3"><img src="../../image/manga/fairy4.jpg"></div>
+                </div>
+            </li>
+        </ul>
+        <p class="view animated">其实要做成什么风格的网站，我也没想好。不过先做着，动手做总比干想要好。以后想出风格然后再细化。</p>
+        <a href="#" class="more" style="margin-top: 4%;margin-bottom:4% ">
+            <span class="line"></span>
+            MORE
+        </a>
+    </section>
+    <section class="game">
+        <!--<canvas id="game_bg" class="gameBg"></canvas>-->
+        <hgroup id="gt" class="title gameTitle animated">
+            <h1>前端生活</h1>
+            <h2>历史悠久的前端开发，始终像是被放养的野孩子，原是如斯，不免令人慨叹。</h2>
+        </hgroup>
+        <div id="site_type" class="list">
+            <dl id="wItem" class="animated">
+                <dt><img src="../../image/main/p_04.png"></dt>
+                <dd><h1>网站建设</h1><em>WEBSITE BUILDING</em></dd>
+                <dd>
+                    PC端作为网站的开始，先对网站的大体方向，style定位，然后开发。
+                </dd>
+            </dl>
+            <dl id="mItem" class="animated" style="border-left: 1px solid #f1a417">
+                <dt><img src="../../image/main/p_03.png"></dt>
+                <dd><h1>移动应用</h1><em>MOBILE INTERNET</em></dd>
+                <dd>
+                    现在移动端这么火，怎么可能少得了对于移动端的开发，webAPP来一发。
+                </dd>
+            </dl>
+            <dl id="fItem" class="animated" style="border-left: 1px solid #f1a417">
+                <dt><img src="../../image/main/p_01.png"></dt>
+                <dd><h1>全栈开发</h1><em>FULL STACK DEVELOPMENT</em></dd>
+                <dd>
+                    只做页面，那太没意思了。除非明年出个H6,自带VR。
+                    对于后台语言，就用node.js配合mongoDB数据库了，正好考验一下自己的javascript编程能力。
+                </dd>
+            </dl>
+            <dl id="sItem" class="animated" style="border-left: 1px solid #f1a417">
+                <dt><img src="../../image/main/p_03.png"></dt>
+                <dd><h1>学习列表</h1><em>STUDY LIST</em></dd>
+                <dd>
+                    我只想说:不管是前端还是后台：打好基础，剩下的万变不离其中。
+                </dd>
+            </dl>
+        </div>
+    </section>
+    <section class="pw">
+        <hgroup class="title">
+            <h1>前端之路</h1>
+        </hgroup>
+        <div class="controls">
+            <button onclick="toggleShape()" class="btn-toggle">切换状态</button>
+            <input type="checkbox" id="backfaces" onclick="toggleBackfaces()" checked>
+            <label for="backfaces">取消透视</label>
+        </div>
+        <div class="pack">
+            <div id="stage">
+                <div id="shape" class="ring backfaces">
+                    <div class="plane one"><a href="#"><img src="../../image/main/logo-bootstrap.png"></a></div>
+                    <div class="plane two"><a href="#"><img src="../../image/main/logo_HTML5.png"></a></div>
+                    <div class="plane three"><a href="#"><img src="../../image/main/logo_css3.png"></a></div>
+                    <div class="plane four"><a href="#"><img src="../../image/main/logo-jquery.png"></a></div>
+                    <div class="plane five"><a href="#"><img src="../../image/main/logo-grunt.png"></a></div>
+                    <div class="plane six"><a href="#"><img src="../../image/main/logo-angularjs.png"></a></div>
+                    <div class="plane seven"><a href="#"><img src="../../image/main/logo-less.png"></a></div>
+                    <div class="plane eight"><a href="#"><img src="../../image/main/logo-bower.png"></a></div>
+                    <div class="plane nine"><a href="#"><img src="../../image/main/logo-yeoman.png"></a></div>
+                    <div class="plane ten"><a href="#"><img src="../../image/main/logo_vue.png"></a></div>
+                    <div class="plane eleven"><a href="#"><img src="../../image/main/logo-sass.png"></a></div>
+                    <div class="plane twelve"><a href="#"><img src="../../image/main/logo_nodejs.png"></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="title">
+            <h1>联系我</h1>
+        </div>
+        <div id="allmap"></div>
+        <footer>
+            <p class="copyright">版权归LIAOWANG所有.<br/><em>2016.9.10</em></p>
+        </footer>
+    </section>
+</div>
+<div class="loading">
+    <div class="pacman">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <a href="#" id="skipLoad">跳过动画</a>
+</div>
+<div class="control">
+    <a href="javascript:void(0)" class="menu" id="menuBtn"></a>
+</div>
+</body>
+<!-- tongji begin -->
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Faeff88f19045b513af7681b011cea3bd' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- tongji end -->
+<script type="text/javascript" src="../../javascript/main/main.min.js"></script>
+</html>

@@ -1,0 +1,370 @@
+@charset "utf-8";
+html, body {
+    font-family: '华文细黑', 'fantasy', '楷体';
+    overflow-y: hidden;
+}
+header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    line-height: 70px;
+    background-color: #ffffff;
+    z-index: 1000;
+    box-shadow: 2px 2px 5px #ccc;
+    -moz-box-shadow: 12px 2px 5px #ccc;
+    -webkit-box-shadow: 2px 2px 5px #ccc;
+}
+
+header .logo {
+    float: left;
+    margin-top: 8px;
+    padding-left: 5%;
+    color: #000;
+    font-size: 30px;
+    font-family: '华文新魏';
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+ul.header-nav {
+    float: right;
+    margin-left: 10px;
+}
+
+ul.header-nav li {
+    float: left;
+    padding: 10px;
+    margin-left: 20px;
+    display: block;
+}
+
+ul.header-nav li a {
+    color: #535151;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 1s linear;
+    -webkit-transition: color 1s linear;
+    -o-transition: color 1s linear;
+    -moz-transition: color 1s linear;
+}
+
+ul.header-nav li a:hover,
+ul.header-nav li a:active,
+ul.header-nav li a:focus {
+    text-decoration: none;
+    color: #ff9600;
+}
+
+ul.header-nav li a.seek {
+    width: 29px;
+    height: 0;
+    margin-top: 20px;
+    padding: 31px 2px 1px 1px;
+    border-radius: 45px;
+    color: #ffffff;
+    overflow: hidden;
+    display: block;
+    background-color: #ff9600;
+    background-image: url('../../image/start/seek.png ');
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    transition: padding-right 1s linear;
+    -webkit-transition: padding-right 1s linear;
+}
+
+ul.header-nav li a.seek:hover {
+    width: auto;
+    height: 29px;
+    line-height: 26px;
+    padding: 3px 20px 0 40px;
+    transition: padding-right 1s linear;
+    -webkit-transition: padding-right 1s linear;
+}
+
+ul.header-nav li a.active {
+    color: #ff9600;
+}
+
+ul.header-nav li a.seek span {
+    display: block;
+    float: left;
+
+}
+
+.top {
+    width: 100%;
+    height: 535px;
+    /*background:#fff;*/
+    box-shadow: 0 2px 0 0 #e7e7e7;
+    padding-top: 5px;
+    margin-bottom: 0;
+}
+
+.top_content {
+    width: 100%;
+    overflow: hidden;
+    height: 534px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.top_content .box_mar {
+    float: none;
+    position: absolute;
+    margin: 0;
+    overflow: hidden;
+    background-color: #54B3D2;
+}
+
+.top_content .tag a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+.top_content .box_mar img {
+    transition: all .2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.top_content .box_mar:hover img {
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    -moz-trnsition: scale(1.15);
+}
+
+.top_content .box_mar img {
+    width: 100%;
+}
+
+.top_content .pic-list-scroll-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.top_content .tag {
+    width: 130px;
+    height: 130px;
+}
+
+.picwall_tag_box {
+    padding: 14px 17px;
+}
+
+.picwall_tag_name {
+    font-size: 22px;
+    font-weight: bolder;
+    color: #fff;
+    font-family: "微软雅黑";
+    line-height: 27px;
+    width: 78px;
+    word-wrap: break-word;
+}
+
+.picwall_tag_nub {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+    font-family: "微软雅黑";
+}
+
+.picwall_tag_icon {
+    background: url("../../image/manga/Icons2.png") no-repeat 0 -960px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 90px;
+}
+
+.picwall_tag_icon2 {
+    background: url("../../image/manga/Icons2.png") no-repeat 0 -1200px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 45px;
+    right: 3px;
+}
+
+.box_mar:hover a .picwall_tag_icon2 {
+    -webkit-animation: tagAnimation 0.4s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes tagAnimation {
+    from {
+        right: 3px
+    }
+    to {
+        right: 11px
+    }
+}
+
+.top_content .pic-list {
+    display: none;
+    height: 100%;
+}
+
+.top_content .prev, .top_content .next {
+    position: absolute;
+    background: #000;
+    height: 80px;
+    width: 80px;
+    top: 42%;
+    cursor: pointer;
+    font-size: 28px;
+    color: #000;
+    line-height: 410px;
+    z-index: 99;
+    opacity: 0.5;
+}
+
+.top_content .prev:hover, .top_content .next:hover {
+    opacity: 0.8
+}
+
+.top_content .prev {
+    left: 32px;
+    border-radius: 40px;
+}
+
+.top_content .next {
+    right: 32px;
+    border-radius: 40px;
+    text-align: right;
+}
+
+.top_content .banner-page .banner-page-arrow-r, .top_content .banner-page .banner-page-arrow-l {
+    background: url("../../image/manga/Icons2.png") no-repeat;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 37%;
+    left: 15px;
+    margin-top: -10px;
+}
+
+.top_content .banner-page .banner-page-arrow-r {
+    left: 23px;
+}
+
+.top_content .banner-page .banner-page-arrow-l {
+    background-position: 0 -1160px;
+}
+
+.top_content .banner-page .banner-page-arrow-r {
+    background-position: 0 -1200px;
+}
+
+.big_box {
+    width: 262px;
+    height: 262px;
+}
+
+.little_box {
+    width: 130px;
+    height: 130px;
+}
+
+.fl_l {
+    float: left;
+}
+
+.fl_r {
+    float: right;
+}
+
+.overimg {
+    position: relative;
+    display: block;
+    /* overflow: hidden; */
+    box-shadow: 0 0 10px #FFF;
+    transition: 0.2s all;
+}
+
+.overimg img {
+    transition: 0.2s all;
+}
+
+.overimg:hover img {
+    -webkit-transform: scale(1.2);
+}
+
+/*.light{
+    cursor:pointer;
+    position: absolute;
+    left: -290px;
+    top: 0;
+    width: 270px;
+    height:270px;
+    background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    transform: skewx(-25deg);
+    -o-transform: skewx(-25deg);
+    -moz-transform: skewx(-25deg);
+    -webkit-transform: skewx(-25deg);
+
+}*/
+.overimg:hover .light {
+    left: 290px;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+}
+
+/*.light_s{
+    cursor:pointer;
+    position: absolute;
+    left: -200px;
+    top: 0;
+    width: 130px;
+    height:130px;
+    background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    transform: skewx(-25deg);
+    -o-transform: skewx(-25deg);
+    -moz-transform: skewx(-25deg);
+    -webkit-transform: skewx(-25deg);
+
+}*/
+.overimg:hover .light_s {
+    left: 200px;
+    -moz-transition: 1.0s;
+    -o-transition: 1.0s;
+    -webkit-transition: 1.0s;
+    transition: 1.0s;
+}
+
+.flash {
+    background-color: #007AB3;
+}
+
+.affiche {
+    display: block;
+    height: 58px;
+}
+
+.flash.notice {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px;
+    color: white;
+    font-weight: bold;
+    min-width: 1032px;
+}
+
+@-webkit-keyframes hidden {
+    0% {
+        height: 58px;
+    }
+    80% {
+        height: 58px;
+    }
+    100% {
+        height: 0px;
+    }
+}
