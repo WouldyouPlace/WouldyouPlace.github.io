@@ -1,0 +1,30 @@
+<form>
+
+    <!-- 公交车编号 -->
+    <div class="form-group">
+        <label for="search_cBusCode">公交车编号</label>
+        <input type="text" class="form-control" name="search_cBusCode" id="search_cBusCode" placeholder="公交车编号" ng-model="queryObject.cBusCode">
+    </div>
+
+    <!-- 等级 -->
+    <div class="form-group">
+        <label for="search_iLineCode">等级</label>
+        <input type="text" class="form-control" name="search_iLineCode" id="search_iLineCode" placeholder="等级" ng-model="queryObject.iLineCode">
+    </div>
+    
+    <!-- 公交车类型 -->
+    <div class="form-group">
+        <label for="search_iBusType">公交车类型</label>
+        <select name="search_iBusType" id="search_iBusType" class="form-control" ng-options="item.id as item.name for item in busTypeList" ng-model="queryObject.iBusType"></select>
+    </div>
+
+
+    <div class="btn-group btn-group-xs btn-group-justified" role="group">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-success" ng-click="searchList()">确定</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" ng-click="resetQuery()">重置</button>
+        </div>
+    </div>
+</form>

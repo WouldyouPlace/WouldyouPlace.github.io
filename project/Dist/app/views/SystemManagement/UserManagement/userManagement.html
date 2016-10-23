@@ -1,0 +1,73 @@
+<div>
+    <div class="row">
+        <div class="col-xs-3">
+
+            <div class="btn-group btn-group-xs" role="group" aria-label="...">
+                <button type="button" class="btn btn-primary" ng-click="addUser()"><b class="ace-icon fa fa-plus"></b>添加</button>
+                <button type="button" class="btn btn-info2" ng-click="searchUser()"><i class="ace-icon fa fa-search"></i>查询条件</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>用户名</th>
+                    <th>登录名</th>
+                    <th>性别</th>
+                    <th>手机号码</th>
+                    <th>所属部门</th>
+                    <th>所属路队</th>
+                    <th>工号</th>
+                    <th>用户角色</th>
+                    <th>账户状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="userItem in userList">
+                    <th>{{(paginationConf.currentPage - 1) * paginationConf.itemsPerPage + $index + 1}}</th>
+                    <td>{{userItem.nameCN}}</td>
+                    <td>{{userItem.loginName}}</td>
+                    <td>{{getSex(userItem)}}</td>
+                    <td>{{userItem.phone}}</td>
+                    <td>{{userItem.dept.name}}</td>
+                    <td>{{userItem.team.name}}</td>
+                    <td>{{userItem.jobNumber}}</td>
+                    <td>{{userItem.role.nameCN}}</td>
+                    <td>{{getUserState(userItem)}}</td>
+                    <td>
+                        <div class="btn-group btn-group-xs" role="group">
+                            <button type="button" class="btn btn-success" ng-click="userDetail(userItem)"><i class="ace-icon fa fa-bars"></i>详情</button>
+                            <button type="button" class="btn btn-info" ng-click="editUser(userItem)"><i class="ace-icon fa fa-edit"></i>修改</button>
+                            <button type="button" class="btn btn-danger" ng-click="delUser(userItem)"><i class="ace-icon fa fa-trash"></i>删除</button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div ace-pagination pagination-conf="paginationConf"></div>
+        </div>
+    </div>
+    <div ace-modal-view modal-title="modalViewConf.title" modal-size="modalViewConf.size" modal-show="modalViewConf.show" modal-footer-block="modalViewConf.modalFooterBlock" modal-view-close="closeModalView()">
+        <div user-management-form form-object="formObject" modal-view-conf="modalViewConf" update-list="updateList()"></div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_del.title" modal-show="modalViewConf_del.show" modal-footer-block="modalViewConf_del.modalFooterBlock" modal-view-close="closeModalView()">
+        <div user-management-form-del form-object="formObject" modal-view-conf="modalViewConf_del" update-list="updateList()"></div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_query.title" modal-show="modalViewConf_query.show" modal-footer-block="modalViewConf_query.modalFooterBlock">
+        <div user-management-search query-object="queryObject" modal-view-conf="modalViewConf_query" update-list="updateList()" reset-query="resetQuery()"></div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_detail.title" modal-size="modalViewConf_detail.size" modal-show="modalViewConf_detail.show" modal-footer-block="modalViewConf_detail.modalFooterBlock"  modal-view-close="closeModalView()">
+        <div user-management-detail form-object="formObject" modal-view-conf="modalViewConf_detail"></div>
+    </div>
+</div>

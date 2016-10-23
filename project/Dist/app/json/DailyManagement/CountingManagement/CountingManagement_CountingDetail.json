@@ -1,0 +1,81 @@
+{
+  "errMsg": "",
+  "obj": {
+    "bus": {
+      "cBusCode": "这是辆车",
+      "cOrgCode": "",
+      "iBusId": "",
+      "iBusType": "",
+      "iDelFlag": "",
+      "iLineCode": "",
+      "iRegionCode": ""
+    },
+    "busId": 1,
+    "coinMoney": 50,
+    "dept": {
+      "address": "",
+      "cid": "",
+      "code": "",
+      "id": "",
+      "name": "机构1",
+      "note": "",
+      "phone": 0,
+      "pid": ""
+    },
+    "deptOID": "1",
+    "distributedList": [
+      {
+        "distributeId": "55a9b4b7c94c43e2a0b00aac7032ffae",
+        "driver": "12212",
+        "driverName": "钱莹莹",
+        "money": 100,
+        "recordId": "f01d70d21f144ef0ad33a820d14808a8"
+      },
+      {
+        "distributeId": "95766092d2164daaa0547ce72561bc5a",
+        "driver": "2",
+        "driverName": "吴怀禹",
+        "money": 140,
+        "recordId": "f01d70d21f144ef0ad33a820d14808a8"
+      }
+    ],
+    "fakeMoney": 10,
+    "line": {
+      "cOrgCode": "",
+      "cid": "",
+      "iBasePrice": "",
+      "iDownlinkTerminus": "",
+      "iLineCode": "",
+      "iLineId": 0,
+      "iMaxPrice": "",
+      "iRegionCode": "",
+      "iStationId": 0,
+      "iStationName": 0,
+      "iUplinkTerminus": "",
+      "iValType": "",
+      "iValue": "",
+      "isTranship": "",
+      "name": "95路",
+      "pid": "",
+      "station": []
+    },
+    "lineId": 101,
+    "moneyBagNum": "$888",
+    "paperMoney": 200,
+    "recordId": "f01d70d21f144ef0ad33a820d14808a8",
+    "recordTime": "2016-08-18 14:34:09.0",
+    "remark": "没啥备注",
+    "team": {
+      "cid": "",
+      "code": "",
+      "id": "",
+      "name": "路队2",
+      "note": "",
+      "pid": ""
+    },
+    "teamOID": "11",
+    "tradeDate": "2016-08-18",
+    "validMoney": 240
+  },
+  "status": true
+}

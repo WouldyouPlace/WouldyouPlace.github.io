@@ -1,0 +1,180 @@
+
+
+body {
+    background: #e0e0e0;
+}
+
+#wrapper {
+    padding-left: 0;
+}
+.main-header{
+    position: relative;
+    z-index:1000;
+}
+.main-header>.logo{
+    -webkit-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    width: 200px;
+    min-height: 50px;
+    display: block;
+    float: left;
+    font-size: 18px;
+    line-height: 50px;
+    background: #222;
+    color: #c8e5bc;
+    text-align: center;
+    overflow:hidden;
+}
+.main-header>a:hover,.main-header>a:focus,.main-header>a:active{
+    color: #fff;
+    text-decoration: none;
+}
+.main-header >.navbar{
+    -webkit-transition: margin-left 0.3s ease-in-out;
+    -o-transition: margin-left 0.3s ease-in-out;
+    transition: margin-left 0.3s ease-in-out;
+    margin-bottom: 0px;
+    min-height: 50px;
+    margin-left: 200px;
+    border: 0px;
+}
+.main-sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #222;
+    padding-top:20px ;
+    overflow-y:auto ;
+}
+.sidebar>ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.sidebar>ul>li{
+    padding: 0;
+}
+.sidebar ul li a{
+    padding: 15px 50px;
+    color: #e0e0e0;
+    border-left:1px solid #222;
+    display: block;
+    text-decoration: none;
+}
+.sidebar ul li a:hover{
+    border-left:1px solid #2aabd2;
+    background:#000000;
+}
+.sidebar ul .active{
+    border-left:1px solid #2aabd2;
+    background-color: #000000;
+}
+.sidebar .header{
+    padding: 5px 30px;
+    color: #3e8f3e;
+    font-size: 15px;
+}
+.content-wrapper{
+    background: #e0e0e0;
+    margin: 40px 0 0 200px;
+    padding: 20px 10px 10px 10px;
+}
+.content-header .breadcrumb{
+    position: relative;
+    padding: 7px 5px;
+    top:-40px;
+    right: 15px;
+    background: #e0e0e0;
+}
+.content-header .breadcrumb a:hover,
+.content-header .breadcrumb a:active,
+.content-header .breadcrumb a:focus{
+    text-decoration: none;
+}
+.btn-operate{
+    margin-bottom: 10px;
+}
+.content-wrapper > h1{
+    float: left;
+}
+.content-wrapper .content-header{
+    padding-bottom:10px ;
+}
+.table-content{
+    width: 100%;
+    min-height: 500px;
+    border-top: 4px solid #ccc;
+    margin: 15px 0;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background: #fff;
+}
+.table-content>.row{
+    margin:0 -5px;
+}
+.table-content>h3{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.table-side{
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.side-nav{
+    width: 200px;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 50px;
+    height: 100%;
+    background-color: #222222;
+    overflow-y: auto;
+}
+.main-footer {
+    position: absolute;
+    width: 100%;
+    z-index: -100;
+    padding-left:230px;
+    display: block;
+}
+.messages-dropdown .message-menu{
+    max-height: 500px;
+    overflow: auto;
+}
+.messages-dropdown .message-menu .message-preview .avater,
+.messages-dropdown .message-menu .message-preview .name,
+.messages-dropdown .message-menu .message-preview .message,
+.messages-dropdown .message-menu .message-preview .time {
+    display: block;
+}
+
+.messages-dropdown .message-menu .message-preview .avater {
+    float: left;
+    margin-right: 15px;
+}
+
+.messages-dropdown .message-menu .message-preview .name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.messages-dropdown .message-menu .message-preview .message {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.messages-dropdown .message-menu .message-preview .time {
+    font-size: 12px;
+}
+.messages-dropdown .message-menu {
+    min-width: 300px;
+}
+
+.messages-dropdown .dropdown-menu .message-preview a {
+    white-space: normal;
+}
+/*[class*="col-"]{
+    border: 1px solid #080808;
+}*/

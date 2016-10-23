@@ -1,0 +1,17 @@
+<div class="modal fade" data-keyboard="false">
+    <div class="modal-dialog" ng-class="{true: 'modal-lg', false: 'modal-sm'}[modalViewSize()]">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="modalViewClose()"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">{{modalTitle}}</h4>
+            </div>
+            <div class="modal-body">
+                <span ng-transclude></span>
+            </div>
+            <div class="modal-footer" ng-if="modalFooterBlock">
+                <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="modalViewClose()">Close</button>
+                <button type="button" class="btn {{modalBtnClass()}}" ng-click="modalViewSubmit()" ng-if="modalBtnText">{{modalBtnText}}</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

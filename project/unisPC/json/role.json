@@ -1,0 +1,166 @@
+[
+  {
+    "roleId":"01",
+    "roleName":"系统管理员",
+    "roleDescribe":"负责系统所有功能",
+    "roleCreatePerson":"赵大",
+    "roleCreateTime":"2015-05-3",
+    "roleUpdatePerson":"赵大",
+    "roleUpdateTime":"2015-10-6"
+
+  },{
+  "roleId":"02",
+  "roleName":"厂家管理员",
+  "roleDescribe":"厂家端系统管理员",
+  "roleCreatePerson":"钱二",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"03",
+  "roleName":"终端管理员",
+  "roleDescribe":"终端系统管理员",
+  "roleCreatePerson":"孙三",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"04",
+  "roleName":"终端员工",
+  "roleDescribe":"终端普通员工角色",
+  "roleCreatePerson":"赵大",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"05",
+  "roleName":"系统管理员",
+  "roleDescribe":"负责系统所有功能",
+  "roleCreatePerson":"赵大",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"06",
+  "roleName":"系统管理员",
+  "roleDescribe":"负责系统所有功能",
+  "roleCreatePerson":"赵大",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"07",
+  "roleName":"系统管理员",
+  "roleDescribe":"负责系统所有功能",
+  "roleCreatePerson":"赵大",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"08",
+  "roleName":"系统管理员",
+  "roleDescribe":"负责系统所有功能",
+  "roleCreatePerson":"赵大",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"09",
+  "roleName":"系统管理员",
+  "roleDescribe":"负责系统所有功能",
+  "roleCreatePerson":"赵大",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"10",
+  "roleName":"系统管理员",
+  "roleDescribe":"负责系统所有功能",
+  "roleCreatePerson":"赵大",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},
+  {
+    "roleId":"01",
+    "roleName":"系统管理员",
+    "roleDescribe":"负责系统所有功能",
+    "roleCreatePerson":"赵大",
+    "roleCreateTime":"2015-05-3",
+    "roleUpdatePerson":"赵大",
+    "roleUpdateTime":"2015-10-6"
+
+  },{
+  "roleId":"02",
+  "roleName":"厂家管理员",
+  "roleDescribe":"厂家端系统管理员",
+  "roleCreatePerson":"钱二",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"03",
+  "roleName":"终端管理员",
+  "roleDescribe":"终端系统管理员",
+  "roleCreatePerson":"孙三",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"04",
+  "roleName":"终端员工",
+  "roleDescribe":"终端普通员工角色",
+  "roleCreatePerson":"赵大",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"05",
+  "roleName":"系统管理员",
+  "roleDescribe":"负责系统所有功能",
+  "roleCreatePerson":"赵大",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"06",
+  "roleName":"系统管理员",
+  "roleDescribe":"负责系统所有功能",
+  "roleCreatePerson":"赵大",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"07",
+  "roleName":"系统管理员",
+  "roleDescribe":"负责系统所有功能",
+  "roleCreatePerson":"赵大",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"08",
+  "roleName":"系统管理员",
+  "roleDescribe":"负责系统所有功能",
+  "roleCreatePerson":"赵大",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"09",
+  "roleName":"系统管理员",
+  "roleDescribe":"负责系统所有功能",
+  "roleCreatePerson":"赵大",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+},{
+  "roleId":"10",
+  "roleName":"系统管理员",
+  "roleDescribe":"负责系统所有功能",
+  "roleCreatePerson":"赵大",
+  "roleCreateTime":"2015-05-3",
+  "roleUpdatePerson":"赵大",
+  "roleUpdateTime":"2015-10-6"
+}
+]

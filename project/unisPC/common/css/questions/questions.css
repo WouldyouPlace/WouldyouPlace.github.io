@@ -1,0 +1,23 @@
+.content{
+    font-size: 18px;
+}
+h1 {
+    text-align: center;
+    margin:20px 0;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.questionItem{
+    height: 100%;
+    line-height: 30px;
+}
+.questionItem>li{
+    height: 10%;
+    padding: 10px 0 10px 2%;
+}
+.questionItem>li>p{
+    margin: 10px 0;
+}
+.questionItem>li>span{
+    display: block;
+}

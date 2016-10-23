@@ -1,0 +1,13 @@
+<ul class="nav nav-list" data-size="300">
+  <li ng-repeat="item in treeViewList">
+    <a href="{{isLeaf(item) ? item.link : 'javascript:void(0)'}}" ng-class="{true: 'dropdown-toggle'}[!isLeaf(item)]" ng-click="goItemPage(item)">
+      <i class="menu-icon fa {{item.icon}}"></i>
+        <span class="menu-text">
+            {{item.title}}
+        </span>
+      <b ng-if="!isLeaf(item)" class="arrow fa fa-angle-down"></b>
+    </a>
+    <b class="arrow"></b>
+    <ul class="submenu" style="overflow: visible" ng-if="!isLeaf(item)" ng-include="'template/frame/treeView/aceTreeViewSub.html'"></ul>
+  </li>
+</ul>

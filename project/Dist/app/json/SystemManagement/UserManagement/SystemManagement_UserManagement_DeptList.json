@@ -1,0 +1,122 @@
+{
+  "status": true,
+  "errMsg": "",
+  "obj": [
+    {
+      "checked": "",
+      "children": [
+        {
+          "checked": "",
+          "children": [
+            {
+              "checked": "",
+              "children": [],
+              "icon": "",
+              "id": "111",
+              "link": "",
+              "orderNum": 0,
+              "pid": "11",
+              "state": 0,
+              "title": "机构1-1-1"
+            }
+          ],
+          "icon": "",
+          "id": "11",
+          "link": "",
+          "orderNum": 0,
+          "pid": "1",
+          "state": 0,
+          "title": "机构1-1"
+        },
+        {
+          "checked": "",
+          "children": [
+            {
+              "checked": "",
+              "children": [],
+              "icon": "",
+              "id": "121",
+              "link": "",
+              "orderNum": 0,
+              "pid": "11",
+              "state": 0,
+              "title": "机构1-2-1"
+            }
+          ],
+          "icon": "",
+          "id": "12",
+          "link": "",
+          "orderNum": 0,
+          "pid": "1",
+          "state": 0,
+          "title": "机构1-2"
+        }
+      ],
+      "icon": "",
+      "id": "1",
+      "link": "",
+      "orderNum": 0,
+      "pid": "0",
+      "state": 0,
+      "title": "机构1"
+    },
+    {
+      "checked": "",
+      "children": [
+        {
+          "checked": "",
+          "children": [
+            {
+              "checked": "",
+              "children": [],
+              "icon": "",
+              "id": "211",
+              "link": "",
+              "orderNum": 0,
+              "pid": "11",
+              "state": 0,
+              "title": "机构2-1-1"
+            }
+          ],
+          "icon": "",
+          "id": "21",
+          "link": "",
+          "orderNum": 0,
+          "pid": "1",
+          "state": 0,
+          "title": "机构2-1"
+        },
+        {
+          "checked": "",
+          "children": [
+            {
+              "checked": "",
+              "children": [],
+              "icon": "",
+              "id": "221",
+              "link": "",
+              "orderNum": 0,
+              "pid": "11",
+              "state": 0,
+              "title": "机构2-2-1"
+            }
+          ],
+          "icon": "",
+          "id": "22",
+          "link": "",
+          "orderNum": 0,
+          "pid": "1",
+          "state": 0,
+          "title": "机构2-2"
+        }
+      ],
+      "icon": "",
+      "id": "2",
+      "link": "",
+      "orderNum": 0,
+      "pid": "0",
+      "state": 0,
+      "title": "机构2"
+    }
+  ]
+}

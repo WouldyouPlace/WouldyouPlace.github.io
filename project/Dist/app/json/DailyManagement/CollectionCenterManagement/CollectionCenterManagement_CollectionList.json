@@ -1,0 +1,59 @@
+{
+  "errMsg": "",
+  "obj": {
+    "autoCount": true,
+    "first": 1,
+    "pageNo": 1,
+    "pageSize": 10,
+    "result": [
+      {
+        "address": "天津市 百脑汇",
+        "cCcId": "0012h8j9nd1u3c90u09un0cas**%SJ89q9qU*#",
+        "cCcName": "天软采集点",
+        "centerIP": "192.168.241.29",
+        "comment": "",
+        "dept": {
+          "address": "",
+          "cid": "",
+          "code": "",
+          "id": "1",
+          "name": "部门1",
+          "note": "",
+          "phone": 0,
+          "pid": ""
+        },
+        "describe": "",
+        "line": {
+          "cOrgCode": "",
+          "cid": "",
+          "iBasePrice": "",
+          "iDownlinkTerminus": "",
+          "iLineCode": "",
+          "iLineId": 0,
+          "iMaxPrice": "",
+          "iRegionCode": "",
+          "iStationId": 0,
+          "iUplinkTerminus": "",
+          "iValType": "",
+          "iValue": "",
+          "isTranship": "",
+          "name": "867路",
+          "pid": "",
+          "station": []
+        },
+        "phone": "4005858581",
+        "team": {
+          "cid": "",
+          "code": "",
+          "id": "143",
+          "name": "路队1",
+          "note": "",
+          "pid": ""
+        },
+        "valid": 0
+      }
+    ],
+    "totalCount": 5
+  },
+  "status": true
+}

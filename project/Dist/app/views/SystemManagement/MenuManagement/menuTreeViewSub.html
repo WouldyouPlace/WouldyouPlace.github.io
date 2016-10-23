@@ -1,0 +1,16 @@
+<li ng-repeat="item in item.children">
+    <a ng-href="{{isLeaf(item) ? item.link : 'javascript:void(0)'}}"
+       ng-class="{true: 'dropdown-toggle'}[!isLeaf(item)]">
+        <i class="menu-icon fa " ng-class="{true: 'fa-caret-right'}[!isLeaf(item)]"></i>
+        {{item.title}}
+        <div class="btn-group btn-group-xs menu-tree" role="group">
+            <button type="button" class="btn btn-info" ng-click="editMenu(item)"><b class="ace-icon fa fa-edit icon-only"></b></button>
+            <button type="button" class="btn btn-danger" ng-click="delMenu(item)"><b class="ace-icon fa fa-trash icon-only"></b></button>
+        </div>
+        <b ng-if="!isLeaf(item)" class="arrow fa fa-angle-down"></b>
+    </a>
+    <b class="arrow"></b>
+    <ul class="submenu" style="overflow: visible; display: block;" ng-if="!isLeaf(item)"
+        ng-include="'views/SystemManagement/MenuManagement/menuTreeViewSub.html'"></ul>
+</li>
+

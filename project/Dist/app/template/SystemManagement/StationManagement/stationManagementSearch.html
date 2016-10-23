@@ -1,0 +1,31 @@
+<form>
+    
+    <!-- 车站名称 -->
+    <div class="form-group">
+        <label for="search_name">车站名称</label>
+        <input type="text" class="form-control" name="search_name" id="search_name" placeholder="车站名称" ng-model="queryObject.name">
+    </div>
+
+    <!-- 等级 -->
+    <div class="form-group">
+        <label for="search_delFlag">等级</label>
+        <select name="search_delFlag" id="search_delFlag" class="form-control" ng-options="item.id as item.name for item in delFlagArray" ng-model="queryObject.delFlag"></select>
+    </div>
+
+    <!-- 内容 -->
+    <div class="form-group">
+        <label for="search_content">内容</label>
+        <textarea class="form-control" name="search_content" id="search_content" rows="3" ng-model="queryObject.content"
+                  placeholder="内容"></textarea>
+    </div>
+
+
+    <div class="btn-group btn-group-xs btn-group-justified" role="group">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-success" ng-click="searchStation()">确定</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" ng-click="resetQuery()">重置</button>
+        </div>
+    </div>
+</form>

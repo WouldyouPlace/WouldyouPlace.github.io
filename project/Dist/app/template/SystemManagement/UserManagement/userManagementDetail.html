@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-xs-6">
+        <dl class="dl-horizontal">
+            <dt>用户名</dt>
+            <dd>{{formObject.nameCN}}</dd>
+            <dt>登录账号</dt>
+            <dd>{{formObject.loginName}}</dd>
+            <dt>性别</dt>
+            <dd>{{getSex(formObject)}}</dd>
+            <dt>启用状态</dt>
+            <dd>{{getUserState(formObject)}}</dd>
+            <dt>联系电话</dt>
+            <dd>{{formObject.phone}}</dd>
+            <dt>所属部门</dt>
+            <dd>{{formObject.dept.name}}</dd>
+            <dt>所属路队</dt>
+            <dd>{{formObject.team.name}}</dd>
+            <dt>出生日期</dt>
+            <dd>{{formObject.birthday}}</dd>
+            <dt>身份证号</dt>
+            <dd>{{formObject.cardID}}</dd>
+            <dt>家庭住址</dt>
+            <dd>{{formObject.address}}</dd>
+        </dl>
+    </div>
+    <div class="col-xs-6">
+        <dl class="dl-horizontal">
+            <dt>紧急联系电话</dt>
+            <dd>{{formObject.tel}}</dd>
+            <dt>驾驶证号</dt>
+            <dd>{{formObject.license}}</dd>
+            <dt>初次领证日期</dt>
+            <dd>{{formObject.licensingDate}}</dd>
+            <dt>准驾车型</dt>
+            <dd>{{formObject.carType}}</dd>
+            <dt>有效起始日期</dt>
+            <dd>{{formObject.validBeginDate}}</dd>
+            <dt>有效限期</dt>
+            <dd>{{formObject.validYear ? formObject.validYear + '年' : ''}}</dd>
+            <dt>工号</dt>
+            <dd>{{formObject.jobNumber}}</dd>
+            <dt>工作地点</dt>
+            <dd>{{formObject.location}}</dd>
+            <dt>备注</dt>
+            <dd>{{formObject.remark}}</dd>
+            <dt>用户角色名</dt>
+            <dd>{{formObject.role.nameCN}}</dd>
+            <dt>车牌号</dt>
+            <dd>
+                <div class="row" ng-repeat="carItem in formObject.carNum">
+                    <div class="col-xs-12">
+                        {{carItem.carNum}}
+                    </div>
+                </div>
+            </dd>
+        </dl>
+    </div>
+</div>

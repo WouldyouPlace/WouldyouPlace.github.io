@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>配置项维护</title>
+    <link rel="stylesheet" type="text/css" href="../../common/js/greateJs/themes/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/js/greateJs/themes/icon.css" />
+    <link rel="stylesheet" href="../../common/css/CertificationBasis/configItem.css">
+    <script type="text/javascript" src="../../common/js/greateJs/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../../common/js/greateJs/jquery.easyui.min.js"></script>
+</head>
+<body class="easyui-layout">
+    <div region="center" class="easyui-tabs"style="padding: 10px">
+        <div title="工具设置" class="tool" fit="true">
+            <table id="toolInfo"  class="easyui-datagrid">
+                <thead>
+                    <tr>
+                        <th field="toolId" width="50">编号</th>
+                        <th field="toolName" width="50">名称</th>
+                        <th field="toolMode" width="50">认证方式</th>
+                        <th field="toolInfoUpdate" width="10">编辑</th>
+                        <th field="toolInfoDelete" width="10">删除</th>
+                    </tr>
+                </thead>
+            </table>
+            <div id="toolBar">
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newToolInfo()">添加工具</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editToolInfo()">修改工具</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteToolInfo()">删除工具</a>
+            </div>
+            <!--增改dialog-->
+            <div id="toolInfoOptionDlg" class="easyui-dialog" style="width:400px" closed="true" buttons="#toolInfoOptionDgBtn">
+                <form id="toolInfoForm" method="post" novalidate style="margin:0;padding:20px 50px">
+                    <div style="margin-bottom:20px;font-size:14px;border-bottom:1px solid #ccc">工具信息</div>
+                    <table>
+                        <tr>
+                            <td>编号:</td>
+                            <td><input name="toolId" class="easyui-textbox" required="true" style="width:100%"></td>
+                        </tr>
+                        <tr>
+                            <td>名称:</td>
+                            <td>
+                                <input name="toolName" class="easyui-textbox" required="true" style="width:100%">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                认证方式:
+                            </td>
+                            <td>
+                                <input name="toolMode" class="easyui-textbox" required="true" style="width:100%">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div id="toolInfoOptionDgBtn">
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" onclick="saveToolInfo()" style="width:90px">保存</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#toolInfoOptionDlg').dialog('close')" style="width:90px">取消</a>
+            </div>
+        </div>
+        <div title="考核项分类" style="padding:10px">
+            <table id="examineItemInfo"  class="easyui-datagrid" toolbar="#examineItemBar"
+                   url="../../json/examineItem.json" fit="true" singleSelect="true" fitColumns="true" pagination="true" >
+                <thead>
+                    <tr>
+                        <th field="dimension" width="50">维度</th>
+                        <th field="firstLevel" width="50">一级分类</th>
+                        <th field="secondLevel" width="50">二级分类</th>
+                        <th field="edit" width="50">编辑</th>
+                        <th field="delete" width="50">删除</th>
+                    </tr>
+                </thead>
+            </table>
+            <div id="examineItemBar">
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newClassifyInfo()">添加分类</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editClassifyInfo()">修改分类</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyClassifyInfo()">删除分类</a>
+            </div>
+            <!--增改dialog-->
+            <div id="examineItemDg" class="easyui-dialog" style="width:400px" closed="true" buttons="#examineItemDgBtn">
+                <form id="examineItemForm" method="post" novalidate style="margin:0;padding:20px 50px">
+                    <div style="margin-bottom:20px;font-size:14px;border-bottom:1px solid #ccc">分类信息</div>
+                    <table>
+                        <tr>
+                            <td>维度：</td>
+                            <td>
+                                <input name="dimension" class="easyui-textbox" required="true" style="width:100%">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                一级分类：
+                            </td>
+                            <td>
+                                <input name="firstLevel" class="easyui-textbox" required="true" style="width:100%">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                二级分类：
+                            </td>
+                            <td>
+                                <input name="secondLevel" class="easyui-textbox" required="true" style="width:100%">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div id="examineItemDgBtn">
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" onclick="saveClassifyInfo()" style="width:90px">保存</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#examineItemDg').dialog('close')" style="width:90px">取消</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="../../common/js/CertificationBasis/configItem.js"></script>
+</body>
+</html>

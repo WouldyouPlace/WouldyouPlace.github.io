@@ -1,0 +1,53 @@
+{
+  "errMsg": "",
+  "obj": {
+    "autoCount": true,
+    "first": 1,
+    "pageNo": 1,
+    "pageSize": 10,
+    "result": [
+      {
+        "id": "1",
+        "level": 1,
+        "nameCN": "superadmin",
+        "orderNum": 1,
+        "remark": "",
+        "valid": 1
+      },
+      {
+        "id": "2",
+        "level": 2,
+        "nameCN": "massage",
+        "orderNum": 2,
+        "remark": "",
+        "valid": 1
+      },
+      {
+        "id": "3",
+        "level": 3,
+        "nameCN": "caption",
+        "orderNum": 3,
+        "remark": "",
+        "valid": 1
+      },
+      {
+        "id": "4",
+        "level": 4,
+        "nameCN": "driver",
+        "orderNum": 4,
+        "remark": "",
+        "valid": 1
+      },
+      {
+        "id": "5",
+        "level": 5,
+        "nameCN": "yardman",
+        "orderNum": 5,
+        "remark": "",
+        "valid": 1
+      }
+    ],
+    "totalCount": 5
+  },
+  "status": true
+}

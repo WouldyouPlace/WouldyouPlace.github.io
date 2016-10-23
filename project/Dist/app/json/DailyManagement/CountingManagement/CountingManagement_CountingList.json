@@ -1,0 +1,137 @@
+{
+  "status": true,
+  "errMsg": "",
+  "obj": {
+    "autoCount": true,
+    "first": 1,
+    "pageNo": 1,
+    "pageSize": 10,
+    "result": [
+      {
+        "bus": {
+          "cBusCode": "这是辆车",
+          "cOrgCode": "",
+          "iBusId": "",
+          "iBusType": "",
+          "iDelFlag": "",
+          "iLineCode": "",
+          "iRegionCode": ""
+        },
+        "busId": 1,
+        "coinMoney": 100,
+        "dept": {
+          "address": "",
+          "cid": "",
+          "code": "",
+          "id": "1",
+          "name": "机构1",
+          "note": "",
+          "phone": 0,
+          "pid": ""
+        },
+        "deptOID": "1",
+        "distributedList": [],
+        "fakeMoney": 0,
+        "line": {
+          "cOrgCode": "",
+          "cid": "",
+          "iBasePrice": "",
+          "iDownlinkTerminus": "",
+          "iLineCode": "17",
+          "iLineId": 0,
+          "iMaxPrice": "",
+          "iRegionCode": "",
+          "iStationId": 0,
+          "iStationName": 0,
+          "iUplinkTerminus": "",
+          "iValType": "",
+          "iValue": "",
+          "isTranship": "",
+          "name": "95路",
+          "pid": "",
+          "station": []
+        },
+        "lineId": 101,
+        "moneyBagNum": "$998",
+        "paperMoney": 100,
+        "recordId": "0b4e5803b30642cfbc1b71199a925956",
+        "recordTime": "2016-08-23 10:36:09.0",
+        "remark": "备注",
+        "team": {
+          "cid": "",
+          "code": "",
+          "id": "",
+          "name": "路队2",
+          "note": "",
+          "pid": ""
+        },
+        "teamOID": "11",
+        "tradeDate": "2016-08-23",
+        "validMoney": 200
+      },
+      {
+        "bus": {
+          "cBusCode": "这是辆车",
+          "cOrgCode": "",
+          "iBusId": "",
+          "iBusType": "",
+          "iDelFlag": "",
+          "iLineCode": "",
+          "iRegionCode": ""
+        },
+        "busId": 1,
+        "coinMoney": 50,
+        "dept": {
+          "address": "",
+          "cid": "",
+          "code": "",
+          "id": "",
+          "name": "机构1",
+          "note": "",
+          "phone": 0,
+          "pid": ""
+        },
+        "deptOID": "1",
+        "distributedList": [],
+        "fakeMoney": 10,
+        "line": {
+          "cOrgCode": "",
+          "cid": "",
+          "iBasePrice": "",
+          "iDownlinkTerminus": "",
+          "iLineCode": "",
+          "iLineId": 0,
+          "iMaxPrice": "",
+          "iRegionCode": "",
+          "iStationId": 0,
+          "iStationName": 0,
+          "iUplinkTerminus": "",
+          "iValType": "",
+          "iValue": "",
+          "isTranship": "",
+          "name": "95路",
+          "pid": "",
+          "station": []
+        },
+        "lineId": 101,
+        "moneyBagNum": "$888",
+        "paperMoney": 200,
+        "recordId": "f01d70d21f144ef0ad33a820d14808a8",
+        "recordTime": "2016-08-18 14:34:09.0",
+        "remark": "没啥备注",
+        "team": {
+          "cid": "",
+          "code": "",
+          "id": "",
+          "name": "路队2",
+          "note": "",
+          "pid": ""
+        },
+        "teamOID": "11",
+        "tradeDate": "2016-08-18",
+        "validMoney": 240
+      }
+    ],
+    "totalCount": 2
+  }
+}

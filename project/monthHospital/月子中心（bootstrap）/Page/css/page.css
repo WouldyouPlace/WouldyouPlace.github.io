@@ -1,0 +1,89 @@
+.context{
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+}
+.context-server{
+    height:550px;
+}
+.context-recruit{
+    margin-top: 20px;
+    width: 100%;
+    height: 550px;
+}
+.context-recruit h1{
+    font-weight: bolder;
+    font-family: fantasy;
+    margin-bottom: 0px;
+    padding-bottom:0px ;
+}
+.context .pagination a {
+    background-color: #6d496d;
+    color: #ffffff;
+    border:1px solid #6d496d;
+}
+.context .pagination a:hover{
+    background-color: #6d496d;
+    border:1px solid #6d496d;
+    color: #080808;
+}
+.context .pagination a:active,.context .pagination a:focus{
+    border:1px solid royalblue;
+    background-color: #6d496d;
+    color: #080808;
+}
+.content{
+    width: 100%;
+    height: 600px;
+    padding-top:100px;
+    background-image: url("../../images/slider4.png");
+    background-size: 100% 600px;
+}
+.content form{
+    padding: 10px;
+    z-index: 10;
+    display: block;
+}
+.content form h2{
+    margin-bottom: 2px;
+    margin-left: 10px;
+    font-family: Arial;
+}
+.content form hr{
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    border: 1px solid #999999;
+}
+.content form .inp{
+    margin-bottom: 30px;
+}
+.content form .btn-login{
+    margin-top:50px;
+    margin-bottom: 10px;
+}
+.content form a{
+    margin: 5px;
+    float: right;
+}
+.content form a,.content form a:hover,.content form a:active{
+    text-decoration: none;
+}
+.content form a:active{
+    color: #c7254e;
+}
+.login-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    border-radius:5px;
+    background-color: #ebebeb;
+}
+.container hr{
+    border: 1px solid #080808;
+}
+.erweima{
+    float:right;
+    margin-right: 200px;
+}

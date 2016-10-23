@@ -1,0 +1,31 @@
+{
+  "errMsg": "",
+  "obj": {
+    "autoCount": true,
+    "first": 1,
+    "pageNo": 1,
+    "pageSize": 10,
+    "result": [
+      {
+        "cFileName": "主程序_app",
+        "cURL": "www.baidu.com",
+        "cVersion": "0",
+        "dtSync": "2016-08-30 14:44:44.0",
+        "iDataFileId": 1,
+        "iFileType": 1,
+        "iIsSync": 0
+      },
+      {
+        "cFileName": "主程序_app",
+        "cURL": "www.baidu.com",
+        "cVersion": "1",
+        "dtSync": "2016-08-30 14:45:02.0",
+        "iDataFileId": 2,
+        "iFileType": 1,
+        "iIsSync": 1
+      }
+    ],
+    "totalCount": 2
+  },
+  "status": true
+}

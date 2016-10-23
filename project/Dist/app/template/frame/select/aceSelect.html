@@ -1,0 +1,11 @@
+<div class="dropdown dropdown-menu-block">
+    <button class="btn btn-default dropdown-toggle form-control" type="button" id="dropdownMenuUserTeam" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        {{bindObject[keyTitle]}}
+        <span class="caret pull-right"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-tree" aria-labelledby="dropdownMenuUserTeam">
+        <li ng-repeat="arrayItem in bindArray">
+            <a href="javascript:void(0)" ng-click="setBindObj(arrayItem)"><i ng-if="isSelectObj(arrayItem)" class="ace-icon fa fa-check"></i>{{arrayItem[keyTitle]}}</a>
+        </li>
+    </ul>
+</div>

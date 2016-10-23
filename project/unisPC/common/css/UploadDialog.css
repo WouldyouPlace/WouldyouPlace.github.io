@@ -1,0 +1,94 @@
+html,body,div{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+img{
+    position: absolute;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -100;
+}
+
+.mask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(10,10,10,0.5);
+    z-index: 1000;
+/*    display: none;*/
+}
+.frame{
+    position: absolute;
+    left: 38%;
+    top: 20%;
+    padding: 5px;
+    background-color: #aac5e7;
+    min-width: 300px;
+    border-radius: 2%;
+    overflow: auto;
+/*    display: none;*/
+    z-index: 10000;
+}
+
+
+.frame>.top{
+    height: 25px;
+    overflow: auto;
+}
+.frame>.top>.text{
+     float: left;
+ }
+
+.frame>.top>.closed{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    float: right;
+    display: block;
+    background-color: #CC2222;
+}
+.frame>.top>.closed:hover{
+    background-color: sienna;
+    cursor: pointer;
+}
+
+.frame>.panel{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.frame>.panel>.content{
+    margin-top: 5px;
+    width: 100%;
+    height: 90px;
+    background-color: #ffffff;
+    overflow: auto;
+}
+.frame>.panel>.footer{
+    padding: 5px;
+    background-color: #ccc;
+    overflow: auto;
+}
+.frame>.panel>.footer>.dialog-btnGroup{
+    float: right;
+}
+.frame>.panel>.footer>.dialog-btnGroup>button{
+    border-radius: 10px;
+}
+.frame>.panel>.footer>.dialog-btnGroup>button:focus{
+    outline: 0 none;
+}
+.showDialog{
+    display: block;
+}

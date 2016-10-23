@@ -1,0 +1,42 @@
+<form class="form-horizontal" name="paramManagementForm" novalidate ng-submit="submitForm()">
+    <div class="row">
+        <div class="col-xs-12">
+            
+            <!-- 参数名称 -->
+            <div class="form-group">
+                <label for="name" class="col-sm-3 control-label">参数名称*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="参数名称" ng-model="formObject.name" required>
+                    <small class="red" ng-show="paramManagementForm.name.$invalid">必填项, 请输入参数名称</small>
+                </div>
+            </div>
+
+            <!-- 参数中文名 -->
+            <div class="form-group">
+                <label for="nameCN" class="col-sm-3 control-label">参数中文名*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="nameCN" id="nameCN" placeholder="参数中文名" ng-model="formObject.nameCN" required>
+                    <small class="red" ng-show="paramManagementForm.nameCN.$invalid">必填项, 请输入参数中文名</small>
+                </div>
+            </div>
+
+            <!-- 参数值 -->
+            <div class="form-group">
+                <label for="value" class="col-sm-3 control-label">参数值*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="value" id="value" placeholder="参数值" ng-model="formObject.value" required>
+                    <small class="red" ng-show="paramManagementForm.value.$invalid">必填项, 请输入参数值</small>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group modal-btn-block">
+                <button class="btn btn-primary btn-block" type="submit" ng-disabled="!verifyForm()">确认</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</form>

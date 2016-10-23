@@ -1,0 +1,10 @@
+{
+  "errMsg": "",
+  "obj": {
+    "id": 1,
+    "name": "cost",
+    "nameCN": "线路标准票价",
+    "value": "200"
+  },
+  "status": true
+}

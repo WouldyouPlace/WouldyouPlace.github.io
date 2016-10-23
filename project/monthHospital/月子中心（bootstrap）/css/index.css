@@ -1,0 +1,104 @@
+.row h2{
+    font-family: Menlo;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.row h3{
+    font-family: Menlo;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.sidebar{
+    position: fixed;
+    top: 15%;
+    right: 0px;
+    z-index: 1;
+    display: block;
+
+}
+.header{
+    padding: 0px;
+    margin: 0px;
+}
+.header .contact{
+    font-weight: 800;
+    font-size: 18px;
+}
+.header .contact .btn-group{
+    padding: 0px;
+    margin:0px;
+    height:50px;
+}
+.header .contact .btn-group .btn{
+    padding: 21px;
+}
+.navbar{
+    padding: 0px;
+    margin: 0px;
+    background-color:#6d496d;
+    border: 0px;
+    border-radius:0 ;
+}
+.nav a{
+    color: #fff;
+    height: 50px;
+    border-top:2px solid #6d496d;
+}
+.nav a:hover,.nav a:focus,.nav a:active,.nav .active{
+    color: #fff;
+    background-color: #8a578b !important;
+    border-top:2px solid #ff3fba;
+}
+.navbar-bottom{
+   background-color: #f8f8f8;
+    color: #080808;
+    line-height: 20px;
+}
+.nav-btn{
+    color: #000;
+    text-align: center;
+    line-height: 50px;
+    padding: 20px;
+}
+.navbar-bottom a:hover,.navbar-bottom a:focus,.navbar-bottom a:active{
+    color: #1b6d85;
+    text-decoration: none;
+}
+.present{
+    color: darkorchid;
+    padding: 20px;
+}
+.present a{
+    color: darkorchid;
+}
+.present a:hover,.present a:focus,.present a:active{
+    text-decoration: none;
+    color: darkorchid;
+}
+.present span{
+    font-weight: bolder;
+    font-size: 22px;
+}
+.present small{
+    font-size: 15px;
+}
+.footer{
+    width: 100%;
+    height: 145px;
+    margin: 0px;
+    color: #f8f8f8;
+    background-image: url("../images/footer.jpg");
+}
+.footer p{
+    font-size: 10px;
+}
+.navbar-fixed-bottom{
+    height: 60px;
+   background-color: rgba(0,0,0,.5);
+}
+.navbar-fixed-bottom .btn-group{
+    margin-top: 15px;
+}
+.navbar-fixed-bottom h2{
+    color: #f8f8f8;
+}

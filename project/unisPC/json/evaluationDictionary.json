@@ -1,0 +1,63 @@
+[{
+  "id":1,
+  "text":"形象品味",
+  "children":[{
+    "text":"硬件设施",
+    "checked":true,
+    "children":[{
+      "text":"硬件设施"
+    },{
+      "text":"客户体验"
+    },{
+      "text":"创新案例"
+    }]
+  },{
+    "text":"细节品味",
+    "state":"open",
+    "attributes":{
+      "url":"/demo/book/abc",
+      "price":100
+    },
+    "children":[{
+      "text":"装修细节",
+      "checked":true
+    },{
+      "id": 8,
+      "text":"营造氛围",
+      "state":"closed"
+    },{
+      "text":"客户感知",
+      "checked":true
+    },{
+      "id": 8,
+      "text":"加分项",
+      "state":"closed"
+    }]
+  },{
+    "text":"服务品味",
+    "state":"open",
+    "attributes":{
+      "url":"/demo/book/abc",
+      "price":100
+    },
+    "children":[{
+      "text":"仪容仪表",
+      "checked":true
+    },{
+      "id": 8,
+      "text":"客户感知",
+      "state":"closed"
+    }]
+  }]
+},{
+  "text":"忠诚服务",
+  "state":"closed",
+  "children":[{
+    "text":"服务理念",
+    "children":[{
+      "text":"服务理念"
+    }]
+  },{
+    "text":"。。。"
+  }]
+}]

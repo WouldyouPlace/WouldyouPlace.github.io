@@ -1,0 +1,4 @@
+<li ng-repeat="dataItem in dataItem.children">
+    <a href="javascript:void(0)" ng-click="setBindObj(dataItem)"><i ng-if="isSelectObj(dataItem)" class="ace-icon fa fa-check"></i>{{dataItem[keyTitle]}}</a>
+    <ul ng-if="!isLeaf(dataItem)" class="dropdown-menu-tree-sub" ng-include="'template/frame/selectTree/aceSelectTreeSub.html'"></ul>
+</li>

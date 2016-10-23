@@ -1,0 +1,59 @@
+<form class="form-horizontal" name="menuTreeForm" novalidate ng-submit="submitForm()">
+    <!-- 菜单名称 -->
+    <div class="form-group">
+        <label for="menuName" class="col-sm-2 control-label">菜单名称</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="menuName" id="menuName" placeholder="菜单名称" ng-model="formObject.name">
+        </div>
+    </div>
+    <!-- 菜单路径 -->
+    <div class="form-group">
+        <label for="menuUrl" class="col-sm-2 control-label">菜单路径</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="menuUrl" id="menuUrl" placeholder="菜单路径" ng-model="formObject.url">
+        </div>
+    </div>
+    <!-- 菜单图标 -->
+    <div class="form-group">
+        <label for="menuImg" class="col-sm-2 control-label">菜单图标</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="menuImg" id="menuImg" placeholder="菜单图标" ng-model="formObject.img">
+
+        </div>
+    </div>
+    <!-- 父级节点 -->
+    <div class="form-group">
+        <label for="menuParentId" class="col-sm-2 control-label">父级节点*</label>
+        <div class="col-sm-10">
+            <select class="form-control" name="menuParentId" id="menuParentId" ng-model="formObject.parentId" ng-options="item.id as item.name for item in parentIdList" required></select>
+            <small class="red" ng-show="menuTreeForm.menuParentId.$invalid">必选项, 请选择父级节点</small>
+        </div>
+
+    </div>
+    <!-- 激活状态 -->
+    <div class="form-group">
+        <label for="menuState" class="col-sm-2 control-label">激活状态*</label>
+        <div class="col-sm-10">
+            <select class="form-control" name="menuState" id="menuState" ng-model="formObject.state" required>
+                <option value="0">禁用</option>
+                <option value="1">启用</option>
+            </select>
+            <small class="red" ng-show="menuTreeForm.menuState.$invalid">必选项, 请选择激活状态</small>
+        </div>
+
+    </div>
+    <!-- 同级权值 -->
+    <div class="form-group">
+        <label for="menuOrderNum" class="col-sm-2 control-label">同级权值*</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" name="menuOrderNum" id="menuOrderNum" placeholder="同级权值" ng-model="formObject.orderNum" required>
+            <small class="red" ng-show="menuTreeForm.menuOrderNum.$invalid">必选项, 请输入正整数, 用于设置同级菜单的权值</small>
+        </div>
+
+    </div>
+
+    <!-- Submit -->
+    <div class="form-group modal-btn-block">
+        <button class="btn btn-primary btn-block" type="submit">确认</button>
+    </div>
+</form>

@@ -1,0 +1,44 @@
+<div class="navbar navbar-default navbar-collapse navbar-fixed-top" id="navbar">
+  <div ace-navbar navbar-info="navbarInfo" change-password="changePassword()" sign-out="signOut()" user-info="userInfo"></div>
+</div>
+
+<div class="main-container" id="main-container">
+
+  <div class="sidebar responsive menu-min sidebar-fixed sidebar-scroll" id="sidebar">
+    <!-- 侧边栏快捷按钮 -->
+    <!--<div manster-ace-sidebar-shortcuts></div>-->
+    <!-- 树形菜单 -->
+    <div ace-tree-view tree-view-list="treeViewList"></div>
+    <!-- 切换按钮 -->
+    <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+      <i class="ace-icon fa fa-angle-double-right" data-icon1="ace-icon fa fa-angle-double-left"
+         data-icon2="ace-icon fa fa-angle-double-right"></i>
+    </div> <!-- / .sidebar-collapse -->
+  </div> <!-- .sidebar-->
+
+  <div class="main-content">
+    <!-- 面包屑导航 -->
+    <div class="breadcrumbs breadcrumbs-fixed">
+      <!--<div manster-ace-breadcrumbs></div>-->
+      <div ace-breadcrumb></div>
+    </div> <!-- .breadcrumbs-->
+    <!-- 页面内容 -->
+    <div class="page-content">
+      <!--<div class="page-header">-->
+        <!--<h1>{{pageHeader.title}}</h1>-->
+      <!--</div>-->
+      <div class="row">
+        <div class="col-xs-12">
+          <div ui-view="content"></div>
+        </div>
+      </div>
+    </div> <!-- /.page-content -->
+
+  </div> <!-- /.main-content -->
+
+  <div id="modalView_Msg">
+    <div ace-modal-view modal-title="modalViewConf.title" modal-btn-text="modalViewConf.btnText" modal-show="modalViewConf.show" modal-footer-block="modalViewConf.modalFooterBlock">
+      {{modalViewConf.message}}
+    </div>
+  </div>
+</div>

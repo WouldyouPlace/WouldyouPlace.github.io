@@ -1,0 +1,34 @@
+<form>
+    <!-- SIM卡号码 -->
+    <div class="form-group">
+        <label for="search_simCode">SIM卡号码</label>
+        <input type="text" class="form-control" id="search_simCode" placeholder="SIM卡号码" ng-model="queryObject.simCode">
+    </div>
+    
+    <!-- 机具编号 -->
+    <div class="form-group">
+        <label for="search_devCode">机具编号</label>
+        <input type="text" class="form-control" id="search_devCode" placeholder="机具编号" ng-model="queryObject.devCode">
+    </div>
+
+    <!-- 线路编号 -->
+    <div class="form-group">
+        <label for="search_lineCode">线路编号</label>
+        <input type="text" class="form-control" id="search_lineCode" placeholder="线路编号" ng-model="queryObject.lineCode">
+    </div>
+
+    <!-- 车辆号 -->
+    <div class="form-group">
+        <label for="search_busCode">车辆号</label>
+        <input type="text" class="form-control" id="search_busCode" placeholder="车辆号" ng-model="queryObject.busCode">
+    </div>
+
+    <div class="btn-group btn-group-xs btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-success" ng-click="searchList()">确定</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" ng-click="resetQuery()">重置</button>
+        </div>
+    </div>
+</form>

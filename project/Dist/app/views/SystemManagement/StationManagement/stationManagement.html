@@ -1,0 +1,66 @@
+<div>
+    <div class="row">
+        <div class="col-xs-3">
+
+            <div class="btn-group btn-group-xs" role="group" aria-label="...">
+                <button type="button" class="btn btn-primary" ng-click="addStation()"><b class="ace-icon fa fa-plus"></b>添加</button>
+                <button type="button" class="btn btn-info2" ng-click="searchStation()"><i class="ace-icon fa fa-search"></i>查询条件</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>车站名称</th>
+                    <th>经度</th>
+                    <th>纬度</th>
+                    <th>内容</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="stationItem in stationList">
+                    <th>{{(paginationConf.currentPage - 1) * paginationConf.itemsPerPage + $index + 1}}</th>
+                    <td>{{stationItem.name}}</td>
+                    <td>{{stationItem.longitude}}</td>
+                    <td>{{stationItem.latitude}}</td>
+                    <td>{{stationItem.content}}</td>
+                    <td ng-class="{true: 'red'}[isStationDel(stationItem)]">{{getStationStatus(stationItem)}}</td>
+                    <td>
+                        <div class="btn-group btn-group-xs" role="group">
+                            <button type="button" class="btn btn-info" ng-click="editStation(stationItem)" ng-if="!isStationDel(stationItem)"><i class="ace-icon fa fa-edit"></i>修改</button>
+                            <button type="button" class="btn btn-danger" ng-click="delStation(stationItem)" ng-if="!isStationDel(stationItem)"><i class="ace-icon fa fa-trash"></i>删除</button>
+                            <button type="button" class="btn btn-danger" ng-click="reDelStation(stationItem)" ng-if="isStationDel(stationItem)"><i class="ace-icon fa fa-reply-all"></i>撤销删除</button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div ace-pagination pagination-conf="paginationConf" pagination-click="updateList()"></div>
+        </div>
+    </div>
+    <div ace-modal-view modal-title="modalViewConf.title" modal-size="modalViewConf.size" modal-show="modalViewConf.show" modal-footer-block="modalViewConf.modalFooterBlock" modal-view-close="closeModalView()">
+        <div station-management-form  form-object="formObject" modal-view-conf="modalViewConf" update-list="updateList()"></div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_del.title" modal-show="modalViewConf_del.show" modal-footer-block="modalViewConf_del.modalFooterBlock" modal-view-close="closeModalView()">
+        <div station-management-del form-object="formObject" modal-view-conf="modalViewConf_del" update-list="updateList()"></div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_query.title" modal-show="modalViewConf_query.show" modal-footer-block="modalViewConf_query.modalFooterBlock">
+        <div station-management-search query-object="queryObject" modal-view-conf="modalViewConf_query" update-list="updateList()" reset-query="resetQuery()"></div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_reDel.title" modal-show="modalViewConf_reDel.show" modal-footer-block="modalViewConf_reDel.modalFooterBlock" modal-view-close="closeModalView()">
+        <div station-management-re-del form-object="formObject" modal-view-conf="modalViewConf_del" update-list="updateList()"></div>
+    </div>
+
+</div>

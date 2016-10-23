@@ -1,0 +1,7 @@
+<li ng-repeat="dataItem in dataItem.children">
+    <a class="menu-item-title" href="javascript:void(0)">
+        <input type="checkbox" ng-model="dataItem[keyCheck]" ng-click="checkObj()">
+        {{dataItem[keyTitle]}}
+    </a>
+    <ul ng-if="!isLeaf(dataItem)" class="dropdown-menu-tree-sub" ng-include="'template/frame/selectTreeCheck/aceSelectTreeCheckSub.html'"></ul>
+</li>

@@ -1,0 +1,15 @@
+<div class="dropdown dropdown-menu-block">
+    <button class="btn btn-default dropdown-toggle form-control" type="button" id="dropdownMenuUserDept" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        请选择
+        <span class="caret pull-right"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-tree" aria-labelledby="dropdownMenuUserDept"  style="max-height: 400px; overflow-y: scroll;">
+        <li ng-repeat="dataItem in bindArray">
+            <a class="menu-item-title" href="javascript:void(0)">
+                <input type="checkbox" ng-model="dataItem[keyCheck]" ng-click="checkObj()">
+                {{dataItem[keyTitle]}}
+            </a>
+            <ul ng-if="!isLeaf(dataItem)" class="dropdown-menu-tree-sub" ng-include="'template/frame/selectTreeCheck/aceSelectTreeCheckSub.html'"></ul>
+        </li>
+    </ul>
+</div>

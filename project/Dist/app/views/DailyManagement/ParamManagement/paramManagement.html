@@ -1,0 +1,53 @@
+<div>
+    <div class="row">
+        <div class="col-xs-3">
+
+            <div class="btn-group btn-group-xs" role="group" aria-label="...">
+                <button type="button" class="btn btn-primary" ng-click="addItem()"><b class="ace-icon fa fa-plus"></b>添加</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>参数名称</th>
+                    <th>参数中文名</th>
+                    <th>参数值</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="rowItem in tableDataList">
+                    <th>{{$index + 1}}</th>
+                    <td>{{rowItem.name}}</td>
+                    <td>{{rowItem.nameCN}}</td>
+                    <td>{{rowItem.value}}</td>
+                    <td>
+                        <div class="btn-group btn-group-xs" role="group">
+                            <button type="button" class="btn btn-info" ng-click="detailItem(rowItem)"><i class="ace-icon fa fa-search"></i>详情</button>
+                            <button type="button" class="btn btn-info" ng-click="editItem(rowItem)"><i class="ace-icon fa fa-edit"></i>修改</button>
+                            <button type="button" class="btn btn-danger" ng-click="delItem(rowItem)"><i class="ace-icon fa fa-trash"></i>删除</button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div ace-modal-view modal-title="modalViewConf.title" modal-size="modalViewConf.size" modal-show="modalViewConf.show" modal-footer-block="modalViewConf.modalFooterBlock" modal-view-close="closeModalView()">
+        <div param-management-form form-object="formObject" modal-view-conf="modalViewConf" update-list="updateList()"></div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_detail.title" modal-size="modalViewConf_detail.size" modal-show="modalViewConf_detail.show" modal-footer-block="modalViewConf_detail.modalFooterBlock" modal-view-close="closeModalView()">
+        <div param-management-detail form-object="formObject" modal-view-conf="modalViewConf_detail"></div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_del.title" modal-show="modalViewConf_del.show" modal-footer-block="modalViewConf_del.modalFooterBlock" modal-view-close="closeModalView()">
+        <div param-management-del form-object="formObject" modal-view-conf="modalViewConf_del" update-list="updateList()"></div>
+    </div>
+
+
+</div>

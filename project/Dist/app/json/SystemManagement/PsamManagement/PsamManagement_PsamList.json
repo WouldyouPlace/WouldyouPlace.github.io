@@ -1,0 +1,65 @@
+{
+    "errMsg": "",
+    "obj": {
+        "autoCount": true,
+        "first": 1,
+        "pageNo": 1,
+        "pageSize": 10,
+        "result": [
+            {
+                "cIssuerCode": "1",
+                "dIssueTime": "2016-08-25 16:51:20.0",
+                "device": {
+                    "busCode": "",
+                    "delFlag": 0,
+                    "devCode": "1010",
+                    "devType": 0,
+                    "devVerNo": "",
+                    "id": 0,
+                    "lineCode": 0,
+                    "meiCode": "",
+                    "orgCode": "",
+                    "readVerNo": "",
+                    "regionCode": 0,
+                    "simCode": "",
+                    "useFlag": 0
+                },
+                "iCardStatus": 0,
+                "iDevId": 1,
+                "iKeyVerNo": 1,
+                "iPSAMCode": "1",
+                "iPSAMId": 1,
+                "iSAMNum": 1,
+                "iSAMVerNo": 1
+            },
+            {
+                "cIssuerCode": "2",
+                "dIssueTime": "2016-08-25 16:51:38.0",
+                "device": {
+                    "busCode": "",
+                    "delFlag": 0,
+                    "devCode": "1011",
+                    "devType": 0,
+                    "devVerNo": "",
+                    "id": 0,
+                    "lineCode": 0,
+                    "meiCode": "",
+                    "orgCode": "",
+                    "readVerNo": "",
+                    "regionCode": 0,
+                    "simCode": "",
+                    "useFlag": 0
+                },
+                "iCardStatus": 1,
+                "iDevId": 2,
+                "iKeyVerNo": 2,
+                "iPSAMCode": "2",
+                "iPSAMId": 2,
+                "iSAMNum": 2,
+                "iSAMVerNo": 2
+            }
+        ],
+        "totalCount": 2
+    },
+    "status": true
+}

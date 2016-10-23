@@ -1,0 +1,26 @@
+{
+    "errMsg": "",
+    "obj": {
+        "autoCount": true,
+        "first": 1,
+        "pageNo": 1,
+        "pageSize": 10,
+        "result": [
+            {
+                "id": "YB&*DTBnsnHSDASD*p",
+                "cBusCode": "867",
+                "driverId": "Manny",
+                "steward": "Jossy",
+                "offDateTime": "2016-08-27 16:38:14",
+                "station": "滨江道",
+                "money": "200",
+                "mileage": "300",
+                "backDateTime": "2016-08-27 19:38:14",
+                "remark": "备注点啥好呢",
+                "operator": "孙师傅"
+            }
+        ],
+        "totalCount": 5
+    },
+    "status": true
+}

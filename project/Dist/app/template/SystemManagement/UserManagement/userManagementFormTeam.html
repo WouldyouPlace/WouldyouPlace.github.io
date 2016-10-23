@@ -1,0 +1,11 @@
+<div class="dropdown dropdown-menu-block">
+    <button class="btn btn-default dropdown-toggle form-control" type="button" id="dropdownMenuUserTeam" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        {{teamObject.name}}
+        <span class="caret pull-right"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-tree" aria-labelledby="dropdownMenuUserTeam">
+        <li ng-repeat="teamItem in teamList">
+            <a href="javascript:void(0)" ng-click="setTeamObj(teamItem)"><i ng-if="isSelectObj(teamItem)" class="ace-icon fa fa-check"></i>{{teamItem.name}}</a>
+        </li>
+    </ul>
+</div>

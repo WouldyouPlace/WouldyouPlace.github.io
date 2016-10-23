@@ -1,0 +1,48 @@
+<form>
+
+    <!-- 线路 -->
+    <div class="form-group">
+        <label for="search_lineId">线路</label>
+        <select name="search_lineId" id="search_lineId" class="form-control" ng-options="item.id as item.name for item in lineList" ng-model="queryObject.lineId" ng-change="onLineChanged()"></select>
+    </div>
+    
+    <!-- 班次日期 -->
+    <div class="form-group">
+        <label for="search_numberDate">班次日期</label>
+        <input ace-datetimepicker date-object="queryObject.numberDate" readonly unselectable="on" type="text" class="form-control" name="search_numberDate" id="search_numberDate" placeholder="班次日期" language="zh-CN" max-view="4" min-view="2" date-format="yyyy-MM-dd">
+    </div>
+
+    <!-- 车号 -->
+    <div class="form-group">
+        <label for="search_busId">车号</label>
+        <input type="text" class="form-control" id="search_busId" placeholder="车号" ng-model="queryObject.busId">
+    </div>
+
+    <!-- 驾驶员姓名 -->
+    <div class="form-group">
+        <label for="search_driver">驾驶员姓名</label>
+        <div ace-query-control id="search_driver" bind-object="queryObject.driver" bind-array="queryList" key-title="name" key-id="" on-query="onQuery()"></div>
+    </div>
+    
+    <!-- 发车站 -->
+    <div class="form-group">
+        <label for="search_beginStationId">发车站</label>
+        <select name="search_beginStationId" id="search_beginStationId" class="form-control" ng-options="item.id as item.name for item in stationList" ng-model="queryObject.beginStationId"></select>
+    </div>
+
+    <!-- 收车站 -->
+    <div class="form-group">
+        <label for="search_endStationId">收车站</label>
+            <select name="search_endStationId" id="search_endStationId" class="form-control" ng-options="item.id as item.name for item in stationList" ng-model="queryObject.endStationId"></select>
+    </div>
+    
+
+    <div class="btn-group btn-group-xs btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-success" ng-click="searchList()">确定</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" ng-click="resetQuery()">重置</button>
+        </div>
+    </div>
+</form>

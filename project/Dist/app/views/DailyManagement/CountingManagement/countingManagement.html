@@ -1,0 +1,69 @@
+<div>
+    <div class="row">
+        <div class="col-xs-3">
+
+            <div class="btn-group btn-group-xs" role="group" aria-label="...">
+                <button type="button" class="btn btn-primary" ng-click="addItem()"><b class="ace-icon fa fa-plus"></b>添加</button>
+                <button type="button" class="btn btn-info2" ng-click="searchList()"><i class="ace-icon fa fa-search"></i>查询条件</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>钱袋编号</th>
+                    <th>交易日期</th>
+                    <th>所属部门名称</th>
+                    <th>所属路队名称</th>
+                    <th>所属车辆编号</th>
+                    <th>有效金额</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="countingItem in countingList">
+                    <th>{{(paginationConf.currentPage - 1) * paginationConf.itemsPerPage + $index + 1}}</th>
+                    <td>{{countingItem.moneyBagNum}}</td>
+                    <td>{{countingItem.tradeDate}}</td>
+                    <td>{{countingItem.dept.title}}</td>
+                    <td>{{countingItem.team.name}}</td>
+                    <td>{{countingItem.bus.cBusCode}}</td>
+                    <td>{{countingItem.validMoney}}</td>
+                    <td>
+                        <div class="btn-group btn-group-xs" role="group">
+                            <button type="button" class="btn btn-info" ng-click="detailItem(countingItem)"><i class="ace-icon fa fa-search"></i>详情</button>
+                            <button type="button" class="btn btn-info" ng-click="editItem(countingItem)"><i class="ace-icon fa fa-edit"></i>修改</button>
+                            <button type="button" class="btn btn-danger" ng-click="delItem(countingItem)"><i class="ace-icon fa fa-trash"></i>删除</button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div ace-pagination pagination-conf="paginationConf" pagination-click="updateList()"></div>
+        </div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf.title" modal-size="modalViewConf.size" modal-show="modalViewConf.show" modal-footer-block="modalViewConf.modalFooterBlock" modal-view-close="closeModalView()">
+        <div counting-management-form form-object="formObject" modal-view-conf="modalViewConf" update-list="updateList()"></div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_detail.title" modal-size="modalViewConf_detail.size" modal-show="modalViewConf_detail.show" modal-footer-block="modalViewConf_detail.modalFooterBlock" modal-view-close="closeModalView()">
+        <div counting-management-detail form-object="formObject" modal-view-conf="modalViewConf_detail" update-list="updateList()"></div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_del.title" modal-size="modalViewConf_del.size" modal-show="modalViewConf_del.show" modal-footer-block="modalViewConf_del.modalFooterBlock" modal-view-close="closeModalView()">
+        <div counting-management-del form-object="formObject" modal-view-conf="modalViewConf_del" update-list="updateList()"></div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_query.title" modal-show="modalViewConf_query.show" modal-footer-block="modalViewConf_query.modalFooterBlock">
+        <div counting-management-query query-object="queryObject" modal-view-conf="modalViewConf_query" update-list="updateList()" reset-query="resetQuery()"></div>
+    </div>
+    <!--<div ace-query-control bind-object="bindObj" bind-array="teamList" key-title="name" key-id="id" on-query="onQuery()"></div>-->
+</div>

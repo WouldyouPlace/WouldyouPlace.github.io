@@ -1,0 +1,63 @@
+<form class="form-horizontal" name="collectionForm" novalidate ng-submit="submitForm()">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <!-- 采集中心名称 -->
+            <div class="form-group">
+                <label for="cCcName" class="col-sm-3 control-label">采集中心名称*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="cCcName" id="cCcName" placeholder="采集中心名称" ng-model="formObject.cCcName" required>
+                </div>
+            </div>
+
+            <!-- 部门 -->
+            <div class="form-group">
+                <label for="deptOID" class="col-sm-3 control-label">所属部门*</label>
+                <div class="col-sm-9" id="deptOID">
+                    <div ace-select-tree bind-object="formObject.dept" bind-array="deptList" key-title="title" key-id="id"></div>
+                    <small class="red" ng-show="!formObject.dept">必选项, 请选择部门</small>
+                </div>
+            </div>
+
+            <!-- 所属路队 -->
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="teamOID">所属路队*</label>
+                <div class="col-sm-9">
+                    <select name="teamOID" id="teamOID" class="form-control" ng-options="item.id as item.name for item in teamList" ng-model="formObject.teamOID" required></select>
+                    <small class="red" ng-show="collectionForm.teamOID.$invalid">必选项, 请选择路队</small>
+                </div>
+            </div>
+
+            <!-- 所属线路 -->
+            <div class="form-group">
+                <label for="lineId" class="col-sm-3 control-label">所属线路*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="lineId" id="lineId" placeholder="所属线路" ng-model="formObject.lineName" required>
+                </div>
+            </div>
+
+            <!-- 联系电话 -->
+            <div class="form-group">
+                <label for="phone" class="col-sm-3 control-label">联系电话*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="联系电话" ng-model="formObject.phone" required>
+                </div>
+            </div>
+
+            <!-- 采集中心IP -->
+            <div class="form-group">
+                <label for="centerIP" class="col-sm-3 control-label">采集中心IP</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="centerIP" id="centerIP" placeholder="采集中心IP" ng-model="formObject.centerIP">
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group modal-btn-block">
+                <button class="btn btn-primary btn-block" type="submit">确认</button>
+            </div>
+        </div>
+    </div>
+
+
+</form>

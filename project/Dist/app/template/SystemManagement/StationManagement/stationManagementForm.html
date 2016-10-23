@@ -1,0 +1,57 @@
+<form class="form-horizontal" name="stationManagementForm" novalidate ng-submit="submitForm()">
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- 车站名称 -->
+            <div class="form-group">
+                <label for="name" class="col-sm-3 control-label">车站名称*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="车站名称" ng-model="formObject.name" required>
+                    <small class="red" ng-show="stationManagementForm.name.$invalid">必填项, 请输入车站名称</small>
+                </div>
+            </div>
+
+            <!-- 区域标识 -->
+            <div class="form-group">
+                <label for="regionCode" class="col-sm-3 control-label">区域标识*</label>
+                <div class="col-sm-9" id="regionCode">
+                    <!--<div ace-select bind-object="formObject.region" bind-array="regionList" key-title="regionName" key-id="regionCode"></div>-->
+                    <input type="text" class="form-control" name="regionCode" id="regionCode" placeholder="区域标识" ng-model="formObject.regionCode" required>
+                    <small class="red" ng-show="stationManagementForm.regionCode.$invalid">必填项, 请输入区域标识</small>
+                </div>
+            </div>
+
+            <!-- 经度 -->
+            <div class="form-group">
+                <label for="longitude" class="col-sm-3 control-label">经度*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="longitude" id="longitude" placeholder="经度" ng-model="formObject.longitude" required>
+                    <small class="red" ng-show="stationManagementForm.longitude.$invalid">必填项, 请输入经度</small>
+                </div>
+            </div>
+
+            <!-- 纬度 -->
+            <div class="form-group">
+                <label for="latitude" class="col-sm-3 control-label">纬度*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="latitude" id="latitude" placeholder="纬度" ng-model="formObject.latitude" required>
+                    <small class="red" ng-show="stationManagementForm.latitude.$invalid">必填项, 请输入纬度</small>
+                </div>
+            </div>
+
+            <!-- 内容 -->
+            <div class="form-group">
+                <label for="content" class="col-sm-3 control-label">内容</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" name="content" id="content" rows="3"  ng-model="formObject.content" placeholder="内容"></textarea>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group modal-btn-block">
+                <button class="btn btn-primary btn-block" type="submit">确认</button>
+            </div>
+        </div>
+    </div>
+
+
+</form>

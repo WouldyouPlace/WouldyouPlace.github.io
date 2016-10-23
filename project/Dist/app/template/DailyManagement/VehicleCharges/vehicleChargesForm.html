@@ -1,0 +1,82 @@
+<form class="form-horizontal" name="vehicleChargesForm" novalidate ng-submit="submitForm()">
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- 车辆编号 -->
+            <div class="form-group">
+                <label for="cBusCode" class="col-sm-3 control-label">车辆编号*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="cBusCode" id="cBusCode" placeholder="车辆编号" ng-model="formObject.cBusCode" required>
+                    <small class="red" ng-show="vehicleChargesForm.cBusCode.$invalid">必填项, 请输入车辆编号</small>
+                </div>
+            </div>
+
+            <!-- 规费名称 -->
+            <div class="form-group">
+                <label for="registerName" class="col-sm-3 control-label">规费名称*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="registerName" id="registerName" placeholder="规费名称" ng-model="formObject.registerName" required>
+                    <small class="red" ng-show="vehicleChargesForm.registerName.$invalid">必填项, 请输入规费名称</small>
+                </div>
+            </div>
+
+            <!-- 地址 -->
+            <div class="form-group">
+                <label for="address" class="col-sm-3 control-label">地址*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="address" id="address" placeholder="地址" ng-model="formObject.address" required>
+                    <small class="red" ng-show="vehicleChargesForm.address.$invalid">必填项, 请输入地址</small>
+                </div>
+            </div>
+
+            <!-- 日期 -->
+            <div class="form-group">
+                <label for="datetime" class="col-sm-3 control-label">日期*</label>
+                <div class="col-sm-9">
+                    <input ace-datetimepicker date-object="formObject.datetime" readonly unselectable="on" type="text" class="form-control" name="datetime" id="datetime" placeholder="日期" language="zh-CN" max-view="4" min-view="2" date-format="yyyy-MM-dd">
+                    <small class="red" ng-show="!formObject.datetime">必选项, 请选择日期</small>
+                </div>
+            </div>
+
+            <!-- 现付金额 -->
+            <div class="form-group">
+                <label for="payedMoney" class="col-sm-3 control-label">现付金额</label>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" name="payedMoney" id="payedMoney" placeholder="现付金额" ng-model="formObject.payedMoney">
+                </div>
+            </div>
+
+            <!-- 总金额 -->
+            <div class="form-group">
+                <label for="totalMoney" class="col-sm-3 control-label">总金额</label>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" name="totalMoney" id="totalMoney" placeholder="总金额" ng-model="formObject.totalMoney">
+                </div>
+            </div>
+
+            <!-- 帐号 -->
+            <div class="form-group">
+                <label for="account" class="col-sm-3 control-label">帐号</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="account" id="account" placeholder="帐号" ng-model="formObject.account">
+                </div>
+            </div>
+
+            <!-- 备注 -->
+            <div class="form-group">
+                <label for="remark" class="col-sm-3 control-label">备注</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" name="remark" id="remark" rows="3"  ng-model="formObject.remark" placeholder="备注"></textarea>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group modal-btn-block">
+                <button class="btn btn-primary btn-block" type="submit" ng-disabled="!verifyForm()">确认</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</form>

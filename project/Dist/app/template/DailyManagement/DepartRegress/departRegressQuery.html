@@ -1,0 +1,70 @@
+<form>
+    <!-- 车号 -->
+    <div class="form-group">
+        <label for="search_cBusCode">车号</label>
+
+        <input type="text" class="form-control" name="search_cBusCode" id="search_cBusCode" placeholder="车号"
+               ng-model="queryObject.cBusCode">
+    </div>
+
+    <!-- 司机 -->
+    <div class="form-group">
+        <label for="search_driverId">司机</label>
+
+        <input type="text" class="form-control" name="search_driverId" id="search_driverId" placeholder="司机"
+               ng-model="queryObject.driverId">
+    </div>
+
+    <!-- 乘务员 -->
+    <div class="form-group">
+        <label for="search_steward">乘务员</label>
+        <input type="text" class="form-control" name="search_steward" id="search_steward" placeholder="乘务员"
+               ng-model="queryObject.steward">
+    </div>
+
+    <!-- 出场时间 -->
+    <div class="form-group">
+        <label for="search_offDateTime">出场时间</label>
+        <input ace-datetimepicker date-object="queryObject.offDateTime" readonly unselectable="on" type="text"
+               class="form-control" name="search_offDateTime" id="search_offDateTime" placeholder="出场时间"
+               language="zh-CN"
+               max-view="4" min-view="0" date-format="yyyy-MM-dd HH:mm:ss">
+    </div>
+
+    <!-- 回场时间 -->
+    <div class="form-group">
+        <label for="search_backDateTime">回场时间</label>
+        <input ace-datetimepicker date-object="queryObject.backDateTime" readonly unselectable="on" type="text"
+               class="form-control" name="search_backDateTime" id="search_backDateTime" placeholder="回场时间"
+               language="zh-CN"
+               max-view="4" min-view="0" date-format="yyyy-MM-dd HH:mm:ss">
+    </div>
+
+    <!-- 登记人 -->
+    <div class="form-group">
+        <label for="search_operator">登记人</label>
+        <input type="text" class="form-control" name="search_operator" id="search_operator" placeholder="登记人"
+               ng-model="queryObject.operator">
+    </div>
+
+
+    <!-- 备注 -->
+    <div class="form-group">
+        <label for="search_remark">备注</label>
+            <textarea class="form-control" name="search_remark" id="search_remark" rows="3" ng-model="queryObject.remark"
+                      placeholder="备注">
+            </textarea>
+    </div>
+
+
+    <div class="btn-group btn-group-xs btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-success" ng-click="searchList()">确定</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" ng-click="resetQuery()">重置</button>
+        </div>
+    </div>
+
+
+</form>

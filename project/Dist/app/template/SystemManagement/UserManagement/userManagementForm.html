@@ -1,0 +1,228 @@
+<form class="form-horizontal" name="userManagementForm" novalidate ng-submit="submitForm()">
+    <div class="row">
+        <div class="col-xs-6">
+            <!-- 菜单名称 -->
+            <div class="form-group">
+                <label for="nameCN" class="col-sm-3 control-label">用户名*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="nameCN" id="nameCN" placeholder="用户名" ng-model="formObject.nameCN" required>
+                    <small class="red" ng-show="userManagementForm.nameCN.$invalid">必填项, 请输入用户名</small>
+                </div>
+            </div>
+
+            <!-- 登录账号 -->
+            <div class="form-group">
+                <label for="loginName" class="col-sm-3 control-label">登录账号*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="loginName" id="loginName" placeholder="登录账号" ng-model="formObject.loginName" required>
+                    <small class="red" ng-show="userManagementForm.loginName.$invalid">必填项, 请输入登录账号</small>
+                </div>
+            </div>
+
+            <!-- 登录密码 -->
+            <div class="form-group">
+                <label for="password" class="col-sm-3 control-label">登录密码</label>
+                <div class="col-sm-9">
+                    <input type="password" class="form-control" name="password" id="password" placeholder="登录密码" ng-model="formObject.password">
+                </div>
+            </div>
+
+            <!-- 性别 -->
+            <div class="form-group">
+                <label for="sex" class="col-sm-3 control-label">性别*</label>
+                <div class="col-sm-9">
+                    <select class="form-control" name="sex" id="sex" ng-model="formObject.sex" required>
+                        <option value="0">男</option>
+                        <option value="1">女</option>
+                    </select>
+                    <small class="red" ng-show="userManagementForm.sex.$invalid">必选项, 请选择性别</small>
+                </div>
+            </div>
+
+            <!-- 启用状态 -->
+            <div class="form-group">
+                <label for="state" class="col-sm-3 control-label">是否启用*</label>
+                <div class="col-sm-9">
+                    <select class="form-control" name="state" id="state" ng-model="formObject.state" ng-options="item.value as item.name for item in stateArray" required></select>
+                    <small class="red" ng-show="userManagementForm.state.$invalid">必选项, 请选择启用状态</small>
+                </div>
+            </div>
+
+            <!-- 联系电话 -->
+            <div class="form-group">
+                <label for="phone" class="col-sm-3 control-label">联系电话</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="联系电话" ng-model="formObject.phone">
+                </div>
+            </div>
+
+            <!-- 群组 -->
+            <div class="form-group">
+                <label for="group" class="col-sm-3 control-label">群组</label>
+                <div class="col-sm-9" id="group">
+                    <div ace-select bind-object="formObject.group" bind-array="groupList" key-title="name" key-id="id"></div>
+                </div>
+            </div>
+
+            <!-- 部门 -->
+            <div class="form-group">
+                <label for="deptOID" class="col-sm-3 control-label">所属部门*</label>
+                <div class="col-sm-9" id="deptOID">
+                    <!--<div user-management-form-dept-tree dept-object="formObject.dept" dept-tree="deptList"></div>-->
+                    <div ace-select-tree bind-object="formObject.dept" bind-array="deptList" key-title="title" key-id="id"></div>
+                    <small class="red" ng-show="deptOrTeam()">部门和路队至少选则一项</small>
+                </div>
+            </div>
+
+            <!-- 路队 -->
+            <div class="form-group">
+                <label for="team" class="col-sm-3 control-label">所属路队*</label>
+                <div class="col-sm-9" id="team">
+                    <div ace-select bind-object="formObject.team" bind-array="teamList" key-title="name" key-id="id"></div>
+                    <small class="red" ng-show="deptOrTeam()">部门和路队至少选则一项</small>
+                </div>
+            </div>
+
+            <!-- 出生日期 -->
+            <div class="form-group">
+                <label for="birthday" class="col-sm-3 control-label">出生日期</label>
+                <div class="col-sm-9">
+                    <input ace-datetimepicker date-object="formObject.birthday" readonly unselectable="on" type="text" class="form-control" name="birthday" id="birthday" placeholder="出生日期" language="zh-CN" max-view="4" min-view="2" date-format="yyyy-MM-dd">
+                </div>
+            </div>
+
+            <!-- 身份证号 -->
+            <div class="form-group">
+                <label for="cardID" class="col-sm-3 control-label">身份证号*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="cardID" id="cardID" placeholder="身份证号" ng-model="formObject.cardID" required ng-minlength="18" ng-maxlength="18">
+                    <small class="red" ng-show="userManagementForm.cardID.$invalid">必填项, 请输入18位身份证号码</small>
+                </div>
+            </div>
+
+            <!-- 家庭住址 -->
+            <div class="form-group">
+                <label for="address" class="col-sm-3 control-label">家庭住址</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="address" id="address" placeholder="家庭住址" ng-model="formObject.address">
+                </div>
+            </div>
+
+            <!-- 紧急联系电话 -->
+            <div class="form-group">
+                <label for="tel" class="col-sm-3 control-label">紧急联系电话*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="tel" id="tel" placeholder="紧急联系电话" ng-model="formObject.tel" required>
+                    <small class="red" ng-show="userManagementForm.tel.$invalid">必填项, 请输入紧急联系电话</small>
+                </div>
+            </div>
+
+            <!-- 驾驶证号 -->
+            <div class="form-group">
+                <label for="license" class="col-sm-3 control-label">驾驶证号</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="license" id="license" placeholder="驾驶证号" ng-model="formObject.license">
+                    <small class="red" ng-show="isBelongToTeam(formObject.license)">路队用户必填项, 请输入驾驶证号</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+
+
+            <!-- 初次领证日期 -->
+            <div class="form-group">
+                <label for="licensingDate" class="col-sm-3 control-label">初次领证日期</label>
+                <div class="col-sm-9">
+                    <input ace-datetimepicker date-object="formObject.licensingDate" readonly unselectable="on" type="text" class="form-control" name="licensingDate" id="licensingDate" placeholder="初次领证日期" language="zh-CN" max-view="4" min-view="2" date-format="yyyy-MM-dd">
+                    <small class="red" ng-show="isBelongToTeam(formObject.licensingDate)">路队用户必填项, 请选择初次领证日期</small>
+                </div>
+            </div>
+
+            <!-- 准驾类型 -->
+            <div class="form-group">
+                <label for="carType" class="col-sm-3 control-label">准驾类型</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="carType" id="carType" placeholder="准驾类型" ng-model="formObject.carType">
+                    <small class="red" ng-show="isBelongToTeam(formObject.carType)">路队用户必填项, 请输入驾驶证号</small>
+                </div>
+            </div>
+
+            <!-- 有效起始日期 -->
+            <div class="form-group">
+                <label for="validBeginDate" class="col-sm-3 control-label">有效起始日期</label>
+                <div class="col-sm-9">
+                    <input ace-datetimepicker date-object="formObject.validBeginDate" readonly unselectable="on" type="text" class="form-control" name="validBeginDate" id="validBeginDate" placeholder="有效起始日期" language="zh-CN" max-view="4" min-view="2" date-format="yyyy-MM-dd">
+                    <small class="red" ng-show="isBelongToTeam(formObject.validBeginDate)">路队用户必填项, 请选择有效起始日期</small>
+                </div>
+            </div>
+
+            <!-- 有效限期(单位：年) -->
+            <div class="form-group">
+                <label for="validYear" class="col-sm-3 control-label">有效限期(单位：年)</label>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" name="validYear" id="validYear" placeholder="有效限期" ng-model="formObject.validYear" >
+                    <small class="red" ng-show="isBelongToTeam(formObject.validYear)">路队用户必填项, 请输入驾驶证号</small>
+                </div>
+            </div>
+
+            <!-- 工号 -->
+            <div class="form-group">
+                <label for="jobNumber" class="col-sm-3 control-label">工号*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="jobNumber" id="jobNumber" placeholder="工号" ng-model="formObject.jobNumber" required>
+                    <small class="red" ng-show="userManagementForm.jobNumber.$invalid">必填项, 请输入工号</small>
+                </div>
+            </div>
+
+            <!-- 工作地点 -->
+            <div class="form-group">
+                <label for="location" class="col-sm-3 control-label">工作地点*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="location" id="location" placeholder="工作地点" ng-model="formObject.location" required>
+                    <small class="red" ng-show="userManagementForm.location.$invalid">必填项, 请输入工作地点</small>
+                </div>
+            </div>
+
+            <!-- 用户角色名 -->
+            <div class="form-group">
+                <label for="roleName" class="col-sm-3 control-label">用户角色名*</label>
+                <div class="col-sm-9" id="roleName">
+                    <!--<input type="text" class="form-control" name="roleName" id="roleName" placeholder="用户角色名" ng-model="formObject.roleName" required>-->
+                    <!--<div user-management-form-role role-object="formObject.role" role-list="roleList"></div>-->
+                    <div ace-select bind-object="formObject.role" bind-array="roleList" key-title="nameCN" key-id="id"></div>
+                    <small class="red" ng-show="!formObject.role">必填项, 请输入用户角色名</small>
+                </div>
+            </div>
+
+            <!-- 备注 -->
+            <div class="form-group">
+                <label for="remark" class="col-sm-3 control-label">备注</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" name="remark" id="remark" rows="3"  ng-model="formObject.remark" placeholder="备注"></textarea>
+                </div>
+            </div>
+
+            <!-- 车辆牌照 -->
+            <div class="form-group">
+                <label for="carNum" class="col-sm-3 control-label">车辆牌照</label>
+                <div class="col-sm-8" id="carNum">
+                    <div class="row" ng-repeat="carNumItem in formObject.carNum track by $index">
+                        <div class="col-xs-12">
+                            <input type="text" class="form-control" name="carNumGroup" placeholder="车辆牌照" ng-model="carNumItem.num">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-xs btn-primary" ng-click="addCarNumItem()"><i class="ace-icon fa fa-plus icon-only"></i></button>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group modal-btn-block">
+                <button class="btn btn-primary btn-block" type="submit">确认</button>
+            </div>
+        </div>
+    </div>
+
+
+</form>

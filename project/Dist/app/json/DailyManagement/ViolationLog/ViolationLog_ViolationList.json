@@ -1,0 +1,26 @@
+{
+    "errMsg": "",
+    "obj": {
+        "autoCount": true,
+        "first": 1,
+        "pageNo": 1,
+        "pageSize": 10,
+        "result": [
+            {
+                "id": "YB&*DTBnsnHSDASD*p",
+                "cBusCode": "867",
+                "driverId": "张师傅",
+                "violationProject": "压线",
+                "violationDate": "2016-08-27 16:38:14",
+                "violationPlace": "滨江道",
+                "money": "200",
+                "points": "2",
+                "note": "又扣工资了吧?",
+                "account": "建行",
+                "registrar": "孙师傅"
+            }
+        ],
+        "totalCount": 5
+    },
+    "status": true
+}

@@ -1,0 +1,121 @@
+<form class="form-horizontal" name="scheduleManagementForm" novalidate ng-submit="submitForm()">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <!-- 线路 -->
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="lineId">线路*</label>
+                <div class="col-sm-9">
+                    <select name="lineId" id="lineId" class="form-control" ng-options="item.id as item.name for item in lineList" ng-model="formObject.lineId" required ng-change="onLineChanged()"></select>
+                    <small class="red" ng-show="scheduleManagementForm.lineId.$invalid">必选项, 请选择线路</small>
+                </div>
+            </div>
+
+            <!-- 班次日期 -->
+            <div class="form-group">
+                <label for="numberDate" class="col-sm-3 control-label">班次日期*</label>
+                <div class="col-sm-9">
+                    <input ace-datetimepicker date-object="formObject.numberDate" readonly unselectable="on" type="text" class="form-control" name="numberDate" id="numberDate" placeholder="班次日期" language="zh-CN" max-view="4" min-view="2" date-format="yyyy-MM-dd" required>
+                    <small class="red" ng-show="scheduleManagementForm.numberDate.$invalid">必选项, 请选择交易日期</small>
+                </div>
+            </div>
+
+            <!-- 车号 -->
+            <div class="form-group">
+                <label for="busId" class="col-sm-3 control-label">车号*</label>
+                <div class="col-sm-9">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="busId" id="busId" placeholder="车号" ng-model="formObject.busId" required>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-sm btn-info" ng-click="verifyBusId()"><i class="ace-icon fa fa-check"></i>验证</button>
+                            </span>
+                    </div><!-- /input-group -->
+
+                    <small class="red" ng-show="scheduleManagementForm.busId.$invalid">必填项, 请输入车号并进行验证</small>
+                    <small class="red" ng-show="scheduleManagementForm.busId.$dirty && !verifyBusIdResult">验证未通过</small>
+                    <small class="green" ng-show="verifyBusIdResult && scheduleManagementForm.busId.$valid"><i class="ace-icon fa fa-check"></i> 验证通过</small>
+                </div>
+            </div>
+
+            <!-- 驾驶员姓名 -->
+            <div class="form-group">
+                <label for="driver" class="col-sm-3 control-label">驾驶员姓名*</label>
+                <div class="col-sm-9" id="driver">
+                    <!--<input type="text" class="form-control" name="iRegionCode" id="iRegionCode" placeholder="区域代码" ng-model="formObject.iRegionCode" required>-->
+                    <div ace-query-control bind-object="formObject.driver" bind-array="queryList" key-title="name" key-id="" on-query="onQuery()"></div>
+                    <small class="red" ng-show="!formObject.driver">必填项, 请输入驾驶员姓名</small>
+                </div>
+            </div>
+
+             <!--乘务员-->
+            <div class="form-group">
+                <label for="steward" class="col-sm-3 control-label">乘务员</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="steward" id="steward" placeholder="乘务员" ng-model="formObject.steward">
+                </div>
+            </div>
+
+            <!-- 发车站 -->
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="beginStationId">发车站*</label>
+                <div class="col-sm-9">
+                    <select name="beginStationId" id="beginStationId" class="form-control" ng-options="item.id as item.name for item in stationList" ng-model="formObject.beginStationId" ng-disabled="!formObject.lineId" required></select>
+                    <small class="red" ng-show="!formObject.lineId">请先选择线路</small>
+                    <small class="red" ng-show="formObject.lineId && scheduleManagementForm.beginStationId.$invalid">必选项, 请选择发车站</small>
+                </div>
+            </div>
+
+            <!-- 发车时间 -->
+            <div class="form-group">
+                <label for="beginTime" class="col-sm-3 control-label">发车时间*</label>
+                <div class="col-sm-9">
+                    <input ace-datetimepicker date-object="formObject.beginTime" readonly unselectable="on" type="text" class="form-control" name="beginTime" id="beginTime" placeholder="班次日期" language="zh-CN" max-view="4" min-view="0" date-format="yyyy-MM-dd HH:mm:ss" required>
+                    <small class="red" ng-show="scheduleManagementForm.beginTime.$invalid">必选项, 请选择发车时间</small>
+                </div>
+            </div>
+
+            <!-- 收车站 -->
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="endStationId">收车站*</label>
+                <div class="col-sm-9">
+                    <select name="endStationId" id="endStationId" class="form-control" ng-options="item.id as item.name for item in stationList" ng-model="formObject.endStationId" ng-disabled="!formObject.lineId" required></select>
+                    <small class="red" ng-show="!formObject.lineId">请先选择线路</small>
+                    <small class="red" ng-show="formObject.lineId && scheduleManagementForm.endStationId.$invalid">必选项, 请选择收车站</small>
+                </div>
+            </div>
+
+            <!-- 收车时间 -->
+            <div class="form-group">
+                <label for="endTime" class="col-sm-3 control-label">收车时间*</label>
+                <div class="col-sm-9">
+                    <input ace-datetimepicker date-object="formObject.endTime" readonly unselectable="on" type="text" class="form-control" name="endTime" id="endTime" placeholder="班次日期" language="zh-CN" max-view="4" min-view="0" date-format="yyyy-MM-dd HH:mm:ss" required>
+                    <small class="red" ng-show="scheduleManagementForm.endTime.$invalid">必选项, 请选择发车时间</small>
+                </div>
+            </div>
+
+            <!-- 班次状态 -->
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="numberStatus">班次状态*</label>
+                <div class="col-sm-9">
+                    <select name="numberStatus" id="numberStatus" class="form-control" ng-options="item.id as item.name for item in numberStatusArray" ng-model="formObject.numberStatus" ng-disabled="!formObject.lineId" required></select>
+                    <small class="red" ng-show="scheduleManagementForm.numberStatus.$invalid">必选项, 请选择班次状态</small>
+                </div>
+            </div>
+
+            <!-- 备注 -->
+            <div class="form-group">
+                <label for="remark" class="col-sm-3 control-label">备注</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" name="remark" id="remark" rows="3"  ng-model="formObject.remark" placeholder="备注"></textarea>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group modal-btn-block">
+                <button class="btn btn-primary btn-block" type="submit">确认</button>
+            </div>
+        </div>
+    </div>
+
+
+</form>

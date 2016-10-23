@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/UploadDialog.css">
+</head>
+<body>
+    <img src="../images/1.jpg">
+    <button type="button" onclick="show()" >显示</button>
+    <div class="mzy-dialog">
+        大家好
+        <!--<input type="text" id="uName" label="用户名：">
+        <input type="text" id="uPwd" label="密码：">-->
+    </div>
+
+    <script src="../js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../js/UploadDialog.js"></script>
+    <script>
+        $(".mzy-dialog").hide();
+        function show(){
+            $(".mzy-dialog").modal({
+                width:'300',
+                height:'300',
+                top:'45%',
+                left:'45%',
+                content:$(".mzy-dialog").html(),
+                btnOk:function(){
+                    dialog("您点击的确定");
+                }
+            })
+            /*$("#md").modal({
+                title:'警告',
+                width:'400',
+                height:'200',
+                top:'40%',
+                left:'40%',
+                content:$("#md").html()
+            });*/
+        }
+    </script>
+</body>
+</html>

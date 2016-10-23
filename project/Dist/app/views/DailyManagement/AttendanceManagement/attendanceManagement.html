@@ -1,0 +1,44 @@
+<div>
+    <div class="row">
+        <div class="col-xs-3">
+
+            <div class="btn-group btn-group-xs" role="group" aria-label="...">
+                <button type="button" class="btn btn-info2" ng-click="searchList()"><i class="ace-icon fa fa-search"></i>查询条件</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>姓名</th>
+                    <th>打卡时间</th>
+                    <th>卡号</th>
+                    <th>车辆编号</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="attendanceItem in attendanceList">
+                    <th>{{(paginationConf.currentPage - 1) * paginationConf.itemsPerPage + $index + 1}}</th>
+                    <td>{{attendanceItem.name}}</td>
+                    <td>{{attendanceItem.dtTrade}}</td>
+                    <td>{{attendanceItem.driverCode}}</td>
+                    <td>{{attendanceItem.busCode}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div ace-pagination pagination-conf="paginationConf" pagination-click="updateList()"></div>
+        </div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_query.title" modal-show="modalViewConf_query.show" modal-footer-block="modalViewConf_query.modalFooterBlock">
+        <div attendance-management-search query-object="queryObject" modal-view-conf="modalViewConf_query" update-list="updateList()" reset-query="resetQuery()"></div>
+    </div>
+
+</div>

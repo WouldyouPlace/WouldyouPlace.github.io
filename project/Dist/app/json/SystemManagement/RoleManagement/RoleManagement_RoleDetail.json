@@ -1,0 +1,374 @@
+{
+  "errMsg": "",
+  "obj": {
+    "privilege": [
+      {
+        "checked": true,
+        "children": [
+          {
+            "checked": true,
+            "children": [
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "10",
+                "link": "",
+                "orderNum": 4,
+                "pid": "2",
+                "state": 1,
+                "title": "组织机构管理"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "11",
+                "link": "",
+                "orderNum": 5,
+                "pid": "2",
+                "state": 1,
+                "title": "车站信息"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "12",
+                "link": "",
+                "orderNum": 6,
+                "pid": "2",
+                "state": 1,
+                "title": "公交车信息"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "13",
+                "link": "",
+                "orderNum": 7,
+                "pid": "2",
+                "state": 1,
+                "title": "车载机登记"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "7",
+                "link": "",
+                "orderNum": 1,
+                "pid": "2",
+                "state": 1,
+                "title": "菜单管理"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "8",
+                "link": "",
+                "orderNum": 2,
+                "pid": "2",
+                "state": 1,
+                "title": "用户管理"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "9",
+                "link": "",
+                "orderNum": 3,
+                "pid": "2",
+                "state": 1,
+                "title": "角色管理"
+              }
+            ],
+            "icon": "",
+            "id": "2",
+            "link": "",
+            "orderNum": 1,
+            "pid": "1",
+            "state": 1,
+            "title": "系统管理"
+          },
+          {
+            "checked": false,
+            "children": [],
+            "icon": "",
+            "id": "2f846d7388474e7889399167c8f2e2d5",
+            "link": "",
+            "orderNum": 5,
+            "pid": "1",
+            "state": 0,
+            "title": "ceshi"
+          },
+          {
+            "checked": true,
+            "children": [
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "22",
+                "link": "",
+                "orderNum": 9,
+                "pid": "3",
+                "state": 1,
+                "title": "车辆违规登记"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "23",
+                "link": "",
+                "orderNum": 10,
+                "pid": "3",
+                "state": 1,
+                "title": "数据采集与设置"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "24",
+                "link": "",
+                "orderNum": 11,
+                "pid": "3",
+                "state": 1,
+                "title": "黑名单管理"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "14",
+                "link": "",
+                "orderNum": 1,
+                "pid": "3",
+                "state": 1,
+                "title": "管理卡发放"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "15",
+                "link": "",
+                "orderNum": 2,
+                "pid": "3",
+                "state": 1,
+                "title": "考勤管理"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "16",
+                "link": "",
+                "orderNum": 3,
+                "pid": "3",
+                "state": 1,
+                "title": "采集点管理"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "17",
+                "link": "",
+                "orderNum": 4,
+                "pid": "3",
+                "state": 1,
+                "title": "排班管理"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "18",
+                "link": "",
+                "orderNum": 5,
+                "pid": "3",
+                "state": 1,
+                "title": "出车与回场登记"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "19",
+                "link": "",
+                "orderNum": 6,
+                "pid": "3",
+                "state": 1,
+                "title": "sim卡欠费报警"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "20",
+                "link": "",
+                "orderNum": 7,
+                "pid": "3",
+                "state": 1,
+                "title": "点钞管理"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "21",
+                "link": "",
+                "orderNum": 8,
+                "pid": "3",
+                "state": 1,
+                "title": "事故登记"
+              }
+            ],
+            "icon": "",
+            "id": "3",
+            "link": "",
+            "orderNum": 2,
+            "pid": "1",
+            "state": 1,
+            "title": "日常管理"
+          },
+          {
+            "checked": true,
+            "children": [
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "25",
+                "link": "",
+                "orderNum": 1,
+                "pid": "4",
+                "state": 1,
+                "title": "投诉与表扬登记"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "26",
+                "link": "",
+                "orderNum": 2,
+                "pid": "4",
+                "state": 1,
+                "title": "投诉处理"
+              }
+            ],
+            "icon": "",
+            "id": "4",
+            "link": "",
+            "orderNum": 3,
+            "pid": "1",
+            "state": 1,
+            "title": "客户维系"
+          },
+          {
+            "checked": true,
+            "children": [
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "27",
+                "link": "",
+                "orderNum": 1,
+                "pid": "5",
+                "state": 1,
+                "title": "车辆定位与行驶情况"
+              }
+            ],
+            "icon": "",
+            "id": "5",
+            "link": "",
+            "orderNum": 4,
+            "pid": "1",
+            "state": 1,
+            "title": "车辆监控"
+          },
+          {
+            "checked": true,
+            "children": [
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "31",
+                "link": "",
+                "orderNum": 4,
+                "pid": "6",
+                "state": 1,
+                "title": "司机运营明细"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "28",
+                "link": "",
+                "orderNum": 1,
+                "pid": "6",
+                "state": 1,
+                "title": "员工卡发卡明细"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "29",
+                "link": "",
+                "orderNum": 2,
+                "pid": "6",
+                "state": 1,
+                "title": "线路运营明细"
+              },
+              {
+                "checked": true,
+                "children": [],
+                "icon": "",
+                "id": "30",
+                "link": "",
+                "orderNum": 3,
+                "pid": "6",
+                "state": 1,
+                "title": "车辆运营明细"
+              }
+            ],
+            "icon": "",
+            "id": "6",
+            "link": "",
+            "orderNum": 5,
+            "pid": "1",
+            "state": 1,
+            "title": "KPI"
+          }
+        ],
+        "icon": "",
+        "id": "1",
+        "link": "",
+        "orderNum": 1,
+        "pid": "0",
+        "state": 1,
+        "title": "导航菜单"
+      }
+    ],
+    "role": {
+      "id": "1",
+      "level": 1,
+      "name": "superadmin",
+      "orderNum": 1,
+      "remark": "",
+      "valid": 1
+    }
+  },
+  "status": true
+}

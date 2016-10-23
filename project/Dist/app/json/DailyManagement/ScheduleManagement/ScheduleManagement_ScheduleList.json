@@ -1,0 +1,60 @@
+{
+    "errMsg": "",
+    "obj": {
+        "autoCount": true,
+        "first": 1,
+        "pageNo": 1,
+        "pageSize": 10,
+        "result": [
+            {
+                "beginStation": {
+                    "content": "",
+                    "delFlag": 0,
+                    "id": 0,
+                    "latitude": "",
+                    "longitude": "",
+                    "name": "车站1",
+                    "region": null,
+                    "regionCode": 0
+                },
+                "beginStationId": 1,
+                "beginTime": "2016-08-23 11:22:29.0",
+                "busId": 1,
+                "coreBus": {
+                    "cBusCode": "这是辆车",
+                    "cOrgCode": "",
+                    "iBusId": "",
+                    "iBusType": "",
+                    "iDelFlag": "",
+                    "iLineCode": "",
+                    "iRegionCode": ""
+                },
+                "coreLine": {
+                    "id": 102,
+                    "name": "872"
+                },
+                "driver": "Manny",
+                "endStation": {
+                    "content": "",
+                    "delFlag": 0,
+                    "id": 0,
+                    "latitude": "",
+                    "longitude": "",
+                    "name": "车站2",
+                    "region": null,
+                    "regionCode": 0
+                },
+                "endStationId": 2,
+                "endTime": "2016-08-24 11:22:36.0",
+                "id": "1",
+                "lineId": 102,
+                "numberDate": "2016-08-23",
+                "numberStatus": 1,
+                "remark": "1",
+                "steward": "Jossy"
+            }
+        ],
+        "totalCount": 1
+    },
+    "status": true
+}

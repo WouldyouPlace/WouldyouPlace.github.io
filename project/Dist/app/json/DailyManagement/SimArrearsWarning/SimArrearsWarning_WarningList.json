@@ -1,0 +1,48 @@
+{
+    "errMsg": "",
+    "obj": {
+        "autoCount": true,
+        "first": 1,
+        "pageNo": 1,
+        "pageSize": 10,
+        "result": [
+            {
+                "simCode": "139020102020",
+                "devCode": "11111",
+                "lineCode": "1001",
+                "busCode": "10102",
+                "offDays": "5"
+            },
+            {
+                "simCode": "139020102020",
+                "devCode": "11111",
+                "lineCode": "1001",
+                "busCode": "10102",
+                "offDays": "5"
+            },
+            {
+                "simCode": "139020102020",
+                "devCode": "11111",
+                "lineCode": "1001",
+                "busCode": "10102",
+                "offDays": "5"
+            },
+            {
+                "simCode": "139020102020",
+                "devCode": "11111",
+                "lineCode": "1001",
+                "busCode": "10102",
+                "offDays": "5"
+            },
+            {
+                "simCode": "139020102020",
+                "devCode": "11111",
+                "lineCode": "1001",
+                "busCode": "10102",
+                "offDays": "5"
+            }
+        ],
+        "totalCount": 5
+    },
+    "status": true
+}

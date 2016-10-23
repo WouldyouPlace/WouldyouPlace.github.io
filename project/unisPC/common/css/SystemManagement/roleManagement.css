@@ -1,0 +1,19 @@
+.title{
+    margin: 20px  0 0 20px;
+    font-size: 30px;
+    font-family: "Angsana New";
+}
+.searchbox{
+    float: right;
+    margin: 20px 20px 0 0;
+}
+.role-table {
+    clear: both;
+}
+.header-layout{
+    padding:5px 20px 0 20px  ;
+}
+.subBar{
+    margin-left: 100px;
+    float: right;
+}

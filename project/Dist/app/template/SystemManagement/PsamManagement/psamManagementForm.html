@@ -1,0 +1,91 @@
+<form class="form-horizontal" name="psamManagementForm" novalidate ng-submit="submitForm()">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <!-- PSAM卡编号 -->
+            <div class="form-group">
+                <label for="iPSAMCode" class="col-sm-3 control-label">PSAM卡编号*</label>
+                <div class="col-sm-9">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="iPSAMCode" id="iPSAMCode" placeholder="PSAM卡编号" ng-model="formObject.iPSAMCode" ng-change="onPsamCodeChanged()" required>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-sm btn-info" ng-click="verifySimCode()" ng-disabled="!psamManagementForm.iPSAMCode.$valid"><i class="ace-icon fa fa-check"></i>验证</button>
+                            </span>
+                    </div><!-- /input-group -->
+
+                    <small class="red" ng-show="psamManagementForm.iPSAMCode.$invalid">必填项, 请输入PSAM卡编号并进行验证</small>
+                    <small class="red" ng-show="psamManagementForm.iPSAMCode.$dirty && !verifyPsamState">验证未通过</small>
+                    <small class="green" ng-show="verifyPsamState && psamManagementForm.iPSAMCode.$valid"><i class="ace-icon fa fa-check"></i> 验证通过</small>
+                </div>
+            </div>
+
+            <!-- 卡座编号 -->
+            <div class="form-group">
+                <label for="iPSAMId" class="col-sm-3 control-label">卡座编号</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="iPSAMId" id="iPSAMId" placeholder="卡座编号" ng-model="formObject.iPSAMId">
+                </div>
+            </div>
+
+            <!-- 终端设备ID -->
+            <div class="form-group">
+                <label for="iDevId" class="col-sm-3 control-label">终端设备</label>
+                <div class="col-sm-9">
+                    <select class="form-control" name="iDevId" id="iDevId" ng-model="formObject.iDevId" ng-options="item.id as item.name for item in deviceList"></select>
+                </div>
+            </div>
+
+            <!-- 发卡机构标识 -->
+            <div class="form-group">
+                <label for="cIssuerCode" class="col-sm-3 control-label">发卡机构标识*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="cIssuerCode" id="cIssuerCode" placeholder="发卡机构标识" ng-model="formObject.cIssuerCode" required>
+                    <small class="red" ng-show="psamManagementForm.cIssuerCode.$invalid">必填项, 请输入发卡机构标识</small>
+                </div>
+            </div>
+
+            <!-- SAM卡版本号 -->
+            <div class="form-group">
+                <label for="iSAMVerNo" class="col-sm-3 control-label">SAM卡版本号*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="iSAMVerNo" id="iSAMVerNo" placeholder="SAM卡版本号" ng-model="formObject.iSAMVerNo" required>
+                    <small class="red" ng-show="psamManagementForm.iSAMVerNo.$invalid">必填项, 请输入SAM卡版本号</small>
+                </div>
+            </div>
+
+            <!-- 密钥版本号 -->
+            <div class="form-group">
+                <label for="iKeyVerNo" class="col-sm-3 control-label">密钥版本号*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="iKeyVerNo" id="iKeyVerNo" placeholder="密钥版本号" ng-model="formObject.iKeyVerNo" required>
+                    <small class="red" ng-show="psamManagementForm.iKeyVerNo.$invalid">必填项, 请输入密钥版本号</small>
+                </div>
+            </div>
+
+            <!-- 发卡时间 -->
+            <div class="form-group">
+                <label for="dIssueTime" class="col-sm-3 control-label">发卡时间*</label>
+                <div class="col-sm-9">
+                    <input ace-datetimepicker date-object="formObject.dIssueTime" readonly unselectable="on" type="text" class="form-control" name="dIssueTime" id="dIssueTime" placeholder="发卡时间" language="zh-CN" max-view="4" min-view="2" date-format="yyyy-MM-dd" required>
+                    <small class="red" ng-show="!formObject.dIssueTime">必选项, 请选择发卡时间</small>
+                </div>
+            </div>
+
+            <!-- 卡状态 -->
+            <div class="form-group">
+                <label for="iCardStatus" class="col-sm-3 control-label">卡状态*</label>
+                <div class="col-sm-9">
+                    <select class="form-control" name="iCardStatus" id="iCardStatus" ng-model="formObject.iCardStatus" ng-options="item.id as item.name for item in stateArray" required></select>
+                    <small class="red" ng-show="psamManagementForm.iCardStatus.$invalid">必选项, 请选择卡状态</small>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group modal-btn-block">
+                <button class="btn btn-primary btn-block" type="submit" ng-disabled="!verifyForm()">确认</button>
+            </div>
+        </div>
+    </div>
+
+
+</form>

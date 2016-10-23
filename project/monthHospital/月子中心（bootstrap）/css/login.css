@@ -1,0 +1,19 @@
+.top{
+    margin-top: 100px;
+}
+
+.main{
+    margin-top:50px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    border-radius: 5px;
+    background-color:#efefef;
+}
+.login{
+    margin-top: 30px;
+}
+#txt_errorMsg{
+    color: #ff0000;
+    font-family: Arial;
+}

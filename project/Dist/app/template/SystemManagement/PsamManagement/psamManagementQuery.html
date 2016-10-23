@@ -1,0 +1,42 @@
+<form>
+
+
+    <!-- 卡座编号 -->
+    <div class="form-group">
+        <label for="search_iSAMNum">卡座编号</label>
+        <input type="text" class="form-control" id="search_iSAMNum" placeholder="卡座编号" ng-model="queryObject.iSAMNum">
+    </div>
+
+    <!-- 终端设备ID -->
+    <div class="form-group">
+        <label for="search_iDevId">终端设备ID</label>
+        <select class="form-control" name="search_iDevId" id="search_iDevId" ng-model="queryObject.iDevId" ng-options="item.id as item.name for item in deviceList"></select>
+    </div>
+
+    <!-- 发卡机构标识 -->
+    <div class="form-group">
+        <label for="search_cIssuerCode">发卡机构标识</label>
+        <input type="text" class="form-control" id="search_cIssuerCode" placeholder="发卡机构标识" ng-model="queryObject.cIssuerCode">
+    </div>
+
+    <!-- 发卡时间 -->
+    <div class="form-group">
+        <label for="search_dIssueTime">发卡时间</label>
+        <input ace-datetimepicker date-object="queryObject.dIssueTime" readonly unselectable="on" type="text" class="form-control" name="search_dIssueTime" id="search_dIssueTime" placeholder="发卡时间" language="zh-CN" max-view="4" min-view="2" date-format="yyyy-MM-dd">
+    </div>
+
+    <!-- 卡状态 -->
+    <div class="form-group">
+        <label for="search_iCardStatus">卡状态</label>
+        <select class="form-control" name="search_iCardStatus" id="search_iCardStatus" ng-model="queryObject.iCardStatus" ng-options="item.id as item.name for item in stateArray"></select>
+    </div>
+
+    <div class="btn-group btn-group-xs btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-success" ng-click="searchList()">确定</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" ng-click="resetQuery()">重置</button>
+        </div>
+    </div>
+</form>

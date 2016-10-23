@@ -1,0 +1,181 @@
+<!doctype html>
+<html ng-app="angularAceAdminApp">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Angular Ace Admin</title>
+
+  <meta name="description" content="page description"/>
+
+  <link rel="stylesheet" href="../lib/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bower_components/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="../lib/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../lib/assets/css/ace-fonts.css">
+  <link rel="stylesheet" href="../lib/assets/css/ace.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" href="../lib/assets/css/ace-part2.min.css">
+  <![endif]-->
+
+  <script src="../lib/assets/js/ace-extra.min.js"></script>
+
+  <script src="../lib/assets/js/jquery.min.js"></script>
+  <!--[if lte IE 9]>
+  <script src="../lib/assets/js/jquery1x.min.js"></script>
+  <![endif]-->
+  <script src="../lib/assets/js/bootstrap.min.js"></script>
+
+  <!-- ie8 canvas if required for plugins such as charts, etc -->
+  <!--[if lte IE 8]>
+  <script src="../lib/assets/js/excanvas.min.js"></script>
+  <![endif]-->
+
+  <script src="../lib/assets/js/ace-elements.min.js"></script>
+  <script src="../lib/assets/js/ace.min.js"></script>
+
+  <!--[if lte IE 8]>
+  <script src="../lib/assets/js/html5shiv.min.js"></script>
+  <script src="../lib/assets/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="no-skin">
+
+<div ui-view></div>
+
+
+<!-- bower:js -->
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="../bower_components/angular-cookies/angular-cookies.min.js"></script>
+<script src="../bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="../bower_components/ui-route/release/angular-ui-router.min.js"></script>
+<script src="../bower_components/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../bower_components/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="../bower_components/ng-file-upload/ng-file-upload-all.min.js"></script>
+<!-- endbower -->
+
+<!-- interface -->
+<script src="../lib/NetControl/NetControl.js"></script>
+<script src="../lib/NetControl/NetControl_Frame.js"></script>
+<script src="../lib/NetControl/NetControl_User.js"></script>
+<script src="../lib/NetControl/NetControl_SystemManagement.js"></script>
+<script src="../lib/NetControl/NetControl_DailyManagementInterface.js"></script>
+<!-- endinterface -->
+
+<!-- build:js({.tmp,app}) app/scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/frame/main.js"></script>
+<script src="scripts/controllers/frame/login.js"></script>
+<script src="scripts/services/Navigation/navigationServices.js"></script>
+<script src="scripts/directives/frame/treeView/aceTreeView.js"></script>
+<script src="scripts/directives/frame/navbar/aceNavbarUserMenu.js"></script>
+<script src="scripts/directives/frame/navbar/aceNavbar.js"></script>
+<script src="scripts/directives/frame/breadcrumb/aceBreadcrumb.js"></script>
+<script src="scripts/controllers/DailyManagement/cardGrant.js"></script>
+<script src="scripts/directives/frame/toggleButton/aceToggleButton.js"></script>
+<script src="scripts/directives/frame/modalView/aceModalView.js"></script>
+<script src="scripts/controllers/DailyManagement/cardGrant.js"></script>
+<script src="scripts/services/DailyManagement/dailyManagementService.js"></script>
+<script src="scripts/directives/frame/acePagination/acePagination.js"></script>
+<script src="scripts/services/User/userServices.js"></script>
+<script src="scripts/controllers/SystemManagement/menuManagement.js"></script>
+<script src="scripts/services/SystemManagement/systemManagementService.js"></script>
+<script src="scripts/directives/SystemManagement/MenuManagement/menuTreeForm.js"></script>
+<script src="scripts/directives/SystemManagement/MenuManagement/menuTreeDel.js"></script>
+<script src="scripts/controllers/SystemManagement/userManagement.js"></script>
+<script src="scripts/services/Common/commonService.js"></script>
+<script src="scripts/directives/SystemManagement/UserManagement/userManagementForm.js"></script>
+<script src="scripts/directives/frame/datetimepicker/acedatetimepicker.js"></script>
+<script src="scripts/directives/SystemManagement/UserManagement/userManagementFormDeptTree.js"></script>
+<script src="scripts/directives/SystemManagement/UserManagement/userManagementFormDel.js"></script>
+<script src="scripts/directives/SystemManagement/UserManagement/userManagementSearch.js"></script>
+<script src="scripts/directives/SystemManagement/UserManagement/userManagementDetail.js"></script>
+<script src="scripts/directives/SystemManagement/UserManagement/userManagementFormTeam.js"></script>
+<script src="scripts/directives/SystemManagement/UserManagement/userManagementFormRole.js"></script>
+<script src="scripts/filters/SystemManagement/userManagementFilter.js"></script>
+<script src="scripts/directives/frame/selectTree/aceSelectTree.js"></script>
+<script src="scripts/directives/frame/select/aceSelect.js"></script>
+<script src="scripts/controllers/SystemManagement/roleManagement.js"></script>
+<script src="scripts/directives/SystemManagement/RoleManagement/roleManagementForm.js"></script>
+<script src="scripts/directives/SystemManagement/RoleManagement/roleManagementFormDel.js"></script>
+<script src="scripts/directives/SystemManagement/RoleManagement/roleManagementSearch.js"></script>
+<script src="scripts/directives/frame/selectTreeCheck/aceSelectTreeCheck.js"></script>
+<script src="scripts/controllers/SystemManagement/organizationManagement.js"></script>
+<script src="scripts/controllers/SystemManagement/stationManagement.js"></script>
+<script src="scripts/directives/SystemManagement/StationManagement/stationManagementForm.js"></script>
+<script src="scripts/directives/SystemManagement/StationManagement/stationManagementSearch.js"></script>
+<script src="scripts/directives/SystemManagement/StationManagement/stationManagementDel.js"></script>
+<script src="scripts/directives/SystemManagement/StationManagement/stationManagementReDel.js"></script>
+<script src="scripts/filters/SystemManagement/stationManagementFilter.js"></script>
+<script src= "scripts/controllers/SystemManagement/busManagement.js"></script>
+<script src="scripts/directives/SystemManagement/BusManagement/busManagementForm.js"></script>
+<script src="scripts/directives/SystemManagement/BusManagement/busManagementSearch.js"></script>
+<script src="scripts/controllers/DailyManagement/attendanceManagement.js"></script>
+<script src="scripts/directives/DailyManagement/AttendanceManagement/attendanceManagementSearch.js"></script>
+<script src="scripts/filters/DailyManagement/attendanceManagementFilter.js"></script>
+<script src="scripts/filters/Common/commonFilter.js"></script>
+<script src="scripts/directives/DailyManagement/CardGrant/cardGrantSearch.js"></script>
+<script src="scripts/controllers/DailyManagement/countingManagement.js"></script>
+<script src="scripts/directives/frame/queryControll/aceQueryControl.js"></script>
+<script src="scripts/directives/DailyManagement/CountingManagement/countingManagementForm.js"></script>
+<script src="scripts/filters/DailyManagement/countingManagementFilter.js"></script>
+<script src="scripts/directives/DailyManagement/CountingManagement/countingManagementQuery.js"></script>
+<script src="scripts/directives/DailyManagement/CountingManagement/countingManagementDetail.js"></script>
+<script src="scripts/directives/DailyManagement/CountingManagement/countingManagementDel.js"></script>
+<script src="scripts/controllers/DailyManagement/scheduleManagement.js"></script>
+<script src="scripts/filters/DailyManagement/scheduleManagementFilter.js"></script>
+<script src="scripts/directives/DailyManagement/ScheduleManagement/scheduleManagementForm.js"></script>
+<script src="scripts/directives/DailyManagement/ScheduleManagement/scheduleManagementSearch.js"></script>
+<script src="scripts/directives/DailyManagement/ScheduleManagement/scheduleManagementDel.js"></script>
+<script src="scripts/controllers/DailyManagement/simArrearsWarning.js"></script>
+<script src="scripts/directives/DailyManagement/SimArrearsWarning/simArrearsWarningQuery.js"></script>
+<script src="scripts/controllers/DailyManagement/collectionCenterManagement.js"></script>
+<script src="scripts/filters/DailyManagement/collectionFilter.js"></script>
+<script src="scripts/directives/DailyManagement/CollectionCenterManagement/collectionCenterManagementForm.js"></script>
+<script src="scripts/directives/DailyManagement/CollectionCenterManagement/collectionCenterManagementQuery.js"></script>
+<script src="scripts/directives/DailyManagement/CollectionCenterManagement/collectionCenterManagementDel.js"></script>
+<script src="scripts/controllers/SystemManagement/simManagement.js"></script>
+<script src="scripts/filters/SystemManagement/simManagementFilter.js"></script>
+<script src="scripts/directives/SystemManagement/SimManagement/simManagementForm.js"></script>
+<script src="scripts/directives/SystemManagement/SimManagement/simManagementDel.js"></script>
+<script src="scripts/directives/SystemManagement/SimManagement/simManagementQuery.js"></script>
+<script src="scripts/controllers/DailyManagement/violationLog.js"></script>
+<script src="scripts/filters/DailyManagement/violationFilter.js"></script>
+<script src="scripts/directives/DailyManagement/ViolationLog/violationLogForm.js"></script>
+<script src="scripts/directives/DailyManagement/ViolationLog/violationLogQuery.js"></script>
+<script src="scripts/controllers/DailyManagement/departRegress.js"></script>
+<script src="scripts/filters/DailyManagement/departRegressFilter.js"></script>
+<script src="scripts/directives/DailyManagement/DepartRegress/departRegressForm.js"></script>
+<script src="scripts/directives/DailyManagement/DepartRegress/departRegressQuery.js"></script>
+<script src="scripts/controllers/DailyManagement/paramManagement.js"></script>
+<script src="scripts/directives/DailyManagement/ParamManagement/paramManagementForm.js"></script>
+<script src="scripts/directives/DailyManagement/ParamManagement/paramManagementDetail.js"></script>
+<script src="scripts/directives/DailyManagement/ParamManagement/paramManagementDel.js"></script>
+<script src="scripts/controllers/DailyManagement/vehicleCharges.js"></script>
+<script src="scripts/filters/DailyManagement/vehicleChargesFilter.js"></script>
+<script src="scripts/directives/DailyManagement/VehicleCharges/vehicleChargesForm.js"></script>
+<script src="scripts/directives/DailyManagement/VehicleCharges/vehicleChargesQuery.js"></script>
+<script src="scripts/directives/DailyManagement/VehicleCharges/vehicleChargesDel.js"></script>
+<script src="scripts/controllers/SystemManagement/psamManagement.js"></script>
+<script src="scripts/filters/SystemManagement/psamManagementFilter.js"></script>
+<script src="scripts/directives/SystemManagement/PsamManagement/psamManagementForm.js"></script>
+<script src="scripts/directives/SystemManagement/PsamManagement/psamManagementQuery.js"></script>
+<script src="scripts/directives/SystemManagement/PsamManagement/psamManagementDel.js"></script>
+<script src="scripts/controllers/DailyManagement/mainAppManagement.js"></script>
+<script src="scripts/filters/DailyManagement/mainAppManagementFilter.js"></script>
+<script src="scripts/directives/DailyManagement/MainAppManagement/mainAppManagementForm.js"></script>
+<script src="scripts/directives/DailyManagement/MainAppManagement/mainAppManagementDel.js"></script>
+<script src="scripts/controllers/DailyManagement/whiteList.js"></script>
+<script src="scripts/filters/DailyManagement/whiteListFilter.js"></script>
+<script src="scripts/directives/DailyManagement/WhiteList/whiteListDel.js"></script>
+<script src="scripts/controllers/DailyManagement/rwBoardManagement.js"></script>
+<script src="scripts/directives/DailyManagement/RwBoardAppManagement/rwBoardAppManagementForm.js"></script>
+<script src="scripts/directives/DailyManagement/RwBoardAppManagement/rwBoardAppDel.js"></script>
+<script src="scripts/controllers/DailyManagement/blacklistManagement.js"></script>
+<script src="scripts/directives/DailyManagement/BlacklistManagement/blacklistManagementDel.js"></script>
+<!-- endbuild -->
+</body>
+</html>

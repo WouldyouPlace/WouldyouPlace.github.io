@@ -1,0 +1,49 @@
+{
+  "errMsg": "",
+  "obj": {
+    "autoCount": true,
+    "first": 1,
+    "pageNo": 1,
+    "pageSize": 10,
+    "result": [
+      {
+        "cardNo":"11111",
+        "coreCard":{
+          "cardNo":"11111",
+          "cardType":2
+        },
+        "dtTime":"2016-08-01 16:58:23.0",
+        "groupName":"班组2",
+        "lineName":"872路",
+        "nameCN":"司机1",
+        "userId":"6"
+      },
+      {
+        "cardNo":"11111",
+        "coreCard":{
+          "cardNo":"11111",
+          "cardType":2
+        },
+        "dtTime":"2016-08-18 16:58:40.0",
+        "groupName":"班组1",
+        "lineName":"95路",
+        "nameCN":"司机2",
+        "userId":"7"
+      },
+      {
+        "cardNo":"25454",
+        "coreCard":{
+          "cardNo":"25454",
+          "cardType":1
+        },
+        "dtTime":"2016-08-03 16:58:59.0",
+        "groupName":"班组1",
+        "lineName":"95路",
+        "nameCN":"司机3",
+        "userId":"8"
+      }
+    ],
+    "totalCount": 5
+  },
+  "status": true
+}

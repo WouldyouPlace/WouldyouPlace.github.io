@@ -1,0 +1,162 @@
+{
+    "errMsg": "",
+    "obj": [
+        {
+            "id": 1,
+            "name": "cost",
+            "nameCN": "线路标准票价",
+            "value": "200"
+        },
+        {
+            "id": 2,
+            "name": "maxCost",
+            "nameCN": "线路最高票价",
+            "value": "200"
+        },
+        {
+            "id": 3,
+            "name": "data_day",
+            "nameCN": "数据保存天数",
+            "value": "15"
+        },
+        {
+            "id": 4,
+            "name": "version",
+            "nameCN": "参数版本号",
+            "value": "0"
+        },
+        {
+            "id": 5,
+            "name": "date",
+            "nameCN": "发布时间",
+            "value": ""
+        },
+        {
+            "id": 6,
+            "name": "tradeType",
+            "nameCN": "消费类型",
+            "value": "6"
+        },
+        {
+            "id": 7,
+            "name": "serverIP",
+            "nameCN": "服务器地址或域名",
+            "value": "192.168.101.8"
+        },
+        {
+            "id": 8,
+            "name": "serverUrl",
+            "nameCN": "服务器url地址",
+            "value": "http://htguoxintest.com"
+        },
+        {
+            "id": 9,
+            "name": "serverPort",
+            "nameCN": "服务器端口",
+            "value": "888"
+        },
+        {
+            "id": 10,
+            "name": "gps_delay",
+            "nameCN": "GPS上报间隔",
+            "value": "3000"
+        },
+        {
+            "id": 11,
+            "name": "deviceID",
+            "nameCN": "设备号",
+            "value": ""
+        },
+        {
+            "id": 12,
+            "name": "orgCode",
+            "nameCN": "商家代码",
+            "value": ""
+        },
+        {
+            "id": 13,
+            "name": "cityCode",
+            "nameCN": "城市代码",
+            "value": ""
+        },
+        {
+            "id": 14,
+            "name": "acceptOrgCode",
+            "nameCN": "受理机构代码",
+            "value": ""
+        },
+        {
+            "id": 15,
+            "name": "acceptCityCode",
+            "nameCN": "受理城市代码",
+            "value": ""
+        },
+        {
+            "id": 16,
+            "name": "devCode",
+            "nameCN": "终端号",
+            "value": ""
+        },
+        {
+            "id": 17,
+            "name": "provinceCode",
+            "nameCN": "省际代码",
+            "value": ""
+        },
+        {
+            "id": 18,
+            "name": "internationalCodenew",
+            "nameCN": "国际代码",
+            "value": ""
+        },
+        {
+            "id": 19,
+            "name": "carNo",
+            "nameCN": "车号",
+            "value": ""
+        },
+        {
+            "id": 20,
+            "name": "lineNo",
+            "nameCN": "线路号",
+            "value": ""
+        },
+        {
+            "id": 21,
+            "name": "transferState",
+            "nameCN": "是否支持转乘优惠",
+            "value": ""
+        },
+        {
+            "id": 22,
+            "name": "transferType",
+            "nameCN": "转乘优惠类型",
+            "value": ""
+        },
+        {
+            "id": 23,
+            "name": "transferTime",
+            "nameCN": "转乘优惠时间",
+            "value": ""
+        },
+        {
+            "id": 24,
+            "name": "transferValue",
+            "nameCN": "转乘优惠值",
+            "value": ""
+        },
+        {
+            "id": 25,
+            "name": "discountTime",
+            "nameCN": "优惠卡刷卡间隔",
+            "value": ""
+        },
+        {
+            "id": 26,
+            "name": "busCompanyName",
+            "nameCN": "公交公司名",
+            "value": ""
+        }
+    ],
+    "status": true
+}

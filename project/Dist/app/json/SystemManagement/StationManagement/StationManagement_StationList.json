@@ -1,0 +1,55 @@
+{
+    "errMsg": "",
+    "obj": {
+        "autoCount": true,
+        "first": 1,
+        "pageNo": 1,
+        "pageSize": 10,
+        "result": [
+            {
+                "content": "",
+                "delFlag": 0,
+                "id": 1,
+                "latitude": "3.1415926",
+                "longitude": "",
+                "name": "车站1",
+                "region": {
+                    "regionCode": 1,
+                    "regionName": "天津",
+                    "tailNum": 0
+                },
+                "regionCode": 1
+            },
+            {
+                "content": "",
+                "delFlag": 1,
+                "id": 2,
+                "latitude": "",
+                "longitude": "",
+                "name": "车站2",
+                "region": {
+                    "regionCode": 0,
+                    "regionName": "北京",
+                    "tailNum": 0
+                },
+                "regionCode": 2
+            },
+            {
+                "content": "",
+                "delFlag": 1,
+                "id": 3,
+                "latitude": "",
+                "longitude": "",
+                "name": "车站3",
+                "region": {
+                    "regionCode": 3,
+                    "regionName": "上海",
+                    "tailNum": 0
+                },
+                "regionCode": 3
+            }
+        ],
+        "totalCount": 3
+    },
+    "status": true
+}

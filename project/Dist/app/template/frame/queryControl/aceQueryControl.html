@@ -1,0 +1,10 @@
+<div class="dropdown query-control">
+    <input class="form-control" type="text" ng-model="bindObject[keyTitle]" ng-change="onQuery()">
+    <ul class="query-menu" ng-if="bindArray">
+        <li ng-repeat="item in bindArray"><a href="javascript:void(0)" ng-click="setBindObj(item)">{{item[keyTitle]}}</a></li>
+    </ul>
+
+    <!--<div class="btn-group-vertical btn-group-sm query-menu" role="group">-->
+        <!--<button class="btn btn-white" ng-repeat="item in bindArray" ng-click="setBindObj(item)">{{item[keyTitle]}}</button>-->
+    <!--</div>-->
+</div>

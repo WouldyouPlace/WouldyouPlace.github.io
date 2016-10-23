@@ -1,0 +1,65 @@
+<form class="form-horizontal" name="roleManagementForm" novalidate ng-submit="submitForm()">
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- 角色名称 -->
+            <div class="form-group">
+                <label for="nameCN" class="col-sm-3 control-label">角色名称*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="nameCN" id="nameCN" placeholder="角色名称" ng-model="formObject.nameCN" required>
+                    <small class="red" ng-show="roleManagementForm.name.$invalid">必填项, 请输入角色名称</small>
+                </div>
+            </div>
+
+            <!-- 等级 -->
+            <div class="form-group">
+                <label for="level" class="col-sm-3 control-label">等级*</label>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" name="level" id="level" placeholder="等级" ng-model="formObject.level" required>
+                    <small class="red" ng-show="roleManagementForm.level.$invalid">必填项, 请输入等级</small>
+                </div>
+            </div>
+
+            <!-- 显示权重 -->
+            <div class="form-group">
+                <label for="orderNum" class="col-sm-3 control-label">显示权重*</label>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" name="orderNum" id="orderNum" placeholder="显示权重" ng-model="formObject.orderNum" required>
+                    <small class="red" ng-show="roleManagementForm.orderNum.$invalid">必填项, 请输入显示权重</small>
+                </div>
+            </div>
+
+            <!-- 启用状态 -->
+            <div class="form-group">
+                <label for="valid" class="col-sm-3 control-label">是否启用*</label>
+                <div class="col-sm-9">
+                    <select class="form-control" name="valid" id="valid" ng-model="formObject.valid" ng-options="item.value as item.name for item in stateArray" required></select>
+                    <small class="red" ng-show="roleManagementForm.valid.$invalid">必选项, 请选择启用状态</small>
+                </div>
+            </div>
+
+            <!-- 菜单权限 -->
+            <div class="form-group">
+                <label for="privilege" class="col-sm-3 control-label">菜单权限</label>
+                <div class="col-sm-9" id="privilege">
+                    <div ace-select-tree-check bind-array="permissionList" checked-array="formObject.privilege" key-title="title" key-id="id" key-check="checked"></div>
+                    <!--<small class="red" ng-show="roleManagementForm.valid.$invalid">必选项, 请选择启用状态</small>-->
+                </div>
+            </div>
+
+            <!-- 备注 -->
+            <div class="form-group">
+                <label for="remark" class="col-sm-3 control-label">备注</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" name="remark" id="remark" rows="3"  ng-model="formObject.remark" placeholder="备注"></textarea>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group modal-btn-block">
+                <button class="btn btn-primary btn-block" type="submit">确认</button>
+            </div>
+        </div>
+    </div>
+
+
+</form>

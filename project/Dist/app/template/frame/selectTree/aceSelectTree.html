@@ -1,0 +1,12 @@
+<div class="dropdown dropdown-menu-block">
+    <button class="btn btn-default dropdown-toggle form-control" type="button" id="dropdownMenuUserDept" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        {{bindObject[keyTitle]}}
+        <span class="caret pull-right"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-tree" aria-labelledby="dropdownMenuUserDept">
+        <li ng-repeat="dataItem in bindArray">
+            <a href="javascript:void(0)" ng-click="setBindObj(dataItem)"><i ng-if="isSelectObj(dataItem)" class="ace-icon fa fa-check"></i>{{dataItem[keyTitle]}}</a>
+            <ul ng-if="!isLeaf(dataItem)" class="dropdown-menu-tree-sub" ng-include="'template/frame/selectTree/aceSelectTreeSub.html'"></ul>
+        </li>
+    </ul>
+</div>

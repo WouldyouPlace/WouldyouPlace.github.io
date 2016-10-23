@@ -1,0 +1,34 @@
+{
+  "errMsg": "",
+  "obj": [
+    {
+      "distributeId": "55a9b4b7c94c43e2a0b00aac7032ffae",
+      "OID": "12212",
+      "nameCN": "钱莹莹",
+      "money": 100,
+      "recordId": "f01d70d21f144ef0ad33a820d14808a8"
+    },
+    {
+      "distributeId": "95766092d2164daaa0547ce72561bc5a",
+      "OID": "2",
+      "nameCN": "吴怀禹",
+      "money": 140,
+      "recordId": "f01d70d21f144ef0ad33a820d14808a8"
+    },
+    {
+      "distributeId": "95766092d2164daaa0547ce72561bc5a",
+      "OID": "3",
+      "nameCN": "孟宪邦",
+      "money": 1231,
+      "recordId": "f01d70d21f144ef0ad33a820d14808a8"
+    },
+    {
+      "distributeId": "95766092d2164daaa0547ce72561bc5a",
+      "OID": "4",
+      "nameCN": "土豆豆",
+      "money": 1513,
+      "recordId": "f01d70d21f144ef0ad33a820d14808a8"
+    }
+  ],
+  "status": true
+}

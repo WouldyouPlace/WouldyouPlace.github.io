@@ -1,0 +1,60 @@
+<div>
+    <div class="row">
+        <div class="col-xs-3">
+
+            <div class="btn-group btn-group-xs" role="group" aria-label="...">
+                <button type="button" class="btn btn-primary" ng-click="addItem()"><b class="ace-icon fa fa-plus"></b>添加</button>
+                <button type="button" class="btn btn-info2" ng-click="searchList()"><i class="ace-icon fa fa-search"></i>查询条件</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>车号</th>
+                    <th>司机</th>
+                    <th>乘务员</th>
+                    <th>出场时间</th>
+                    <th>回场时间</th>
+                    <th>备注</th>
+                    <th>登记人</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="rowItem in tableDataList">
+                    <th>{{(paginationConf.currentPage - 1) * paginationConf.itemsPerPage + $index + 1}}</th>
+                    <td>{{rowItem.cBusCode}}</td>
+                    <td>{{rowItem.driverId}}</td>
+                    <td>{{rowItem.steward}}</td>
+                    <td>{{rowItem.offDateTime | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+                    <td>{{rowItem.backDateTime | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+                    <td>{{rowItem.remark}}</td>
+                    <td>{{rowItem.operator}}</td>
+                    <td>
+                        <div class="btn-group btn-group-xs" role="group">
+                            <button type="button" class="btn btn-info" ng-click="editItem(rowItem)"><i class="ace-icon fa fa-edit"></i>修改</button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div ace-pagination pagination-conf="paginationConf" pagination-click="updateList()"></div>
+        </div>
+    </div>
+    <div ace-modal-view modal-title="modalViewConf.title" modal-size="modalViewConf.size" modal-show="modalViewConf.show" modal-footer-block="modalViewConf.modalFooterBlock" modal-view-close="closeModalView()">
+        <div depart-regress-form form-object="formObject" modal-view-conf="modalViewConf" update-list="updateList()"></div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_query.title" modal-show="modalViewConf_query.show" modal-footer-block="modalViewConf_query.modalFooterBlock">
+        <div depart-regress-query query-object="queryObject" modal-view-conf="modalViewConf_query" update-list="updateList()" reset-query="resetQuery()"></div>
+    </div>
+
+</div>

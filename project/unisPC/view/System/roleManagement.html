@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>角色管理</title>
+    <link rel="stylesheet" type="text/css" href="../../common/js/greateJS/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../common/js/greateJS/themes/icon.css">
+    <link rel="stylesheet" href="../../common/css/main.css">
+    <link rel="stylesheet" href="../../common/css/SystemManagement/roleManagement.css">
+    <style>
+        .panel>.panel-header{
+            padding: 2px 5px;
+            overflow-y: auto;
+        }
+        .panel>.panel-header>.panel-title{
+            height: 26px;
+        }
+    </style>
+</head>
+<body class="easyui-layout" style="overflow-y: hidden">
+
+<div id="content-header" title=" " style="height: 100px" region="north">
+    <table class="header-layout" >
+        <tr>
+            <td>角色编号：</td>
+            <td><input type="text"></td>
+            <td>角色名称：</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr style="padding: 10px 0">
+            <td> 创建人：</td>
+            <td><input type="text"></td>
+            <td>创建时间：</td>
+            <td>
+                <input class="easyui-datebox">至<input class="easyui-datebox">
+            </td>
+        </tr>
+    </table>
+</div>
+<div region="center" >
+    <table  id="roleInfo"  fit="true">
+        <thead>
+        <tr>
+            <th field="roleId" width="50" data-options="field:'title', align:'left',halign: 'center'" >角色编号</th>
+            <th field="roleName" width="50" data-options="field:'title', align:'left',halign: 'center'" >角色名称</th>
+            <th field="roleDescribe" width="50" data-options="field:'title', align:'left',halign: 'center'" >角色描述</th>
+            <th field="roleCreatePerson" width="50" data-options="field:'title', align:'left',halign: 'center'" >创建人</th>
+            <th field="roleCreateTime" width="50" data-options="field:'title', align:'left',halign: 'center'" >创建时间</th>
+            <th field="roleUpdatePerson" width="50" data-options="field:'title', align:'left',halign: 'center'" >更新人</th>
+            <th field="roleUpdateTime" width="50" data-options="field:'title', align:'left'" >更新时间</th>
+            <th data-options="field:'update',width:10,align:'center',formatter:updateBtn" >修改</th>
+            <th data-options="field:'delete',width:10,align:'center',formatter:destroyBtn">删除</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+<div id="toolbar">
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">添加用户</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">修改用户</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">删除用户</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="searchRole()">查询</a>
+</div>
+<!--增改框-->
+<div id="roleOption" class="easyui-dialog" title="修改角色信息" style="width: 2px" closed="true" buttons="#roleOptionDlgBtns">
+    <form id="roleForm"  method="post" style="margin:0;padding:20px 20px;width: 300px">
+        <div style="margin-bottom:20px;font-size:14px;border-bottom:1px solid #ccc">角色信息</div>
+        <table>
+            <tr>
+                <td>角色编号：</td>
+                <td>
+                    <input name="roleId" class="easyui-textbox" required="true">
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>角色名称：</td>
+                <td>
+                    <input name="roleName" class="easyui-validatebox" >
+                </td>
+            </tr>
+            <tr>
+                <td>角色描述：</td>
+                <td>
+                    <input name="roleDescribe" class="easyui-validatebox" >
+                </td>
+            </tr>
+            <tr>
+                <td>创建人：</td>
+                <td>
+                    <input name="roleCreatePerson" class="easyui-validatebox">
+                </td>
+            </tr>
+            <tr>
+                <td>创建时间：</td>
+                <td>
+                    <input name="roleCreateTime" class="easyui-datebox"  style="margin:1px">
+                </td>
+            </tr>
+            <tr>
+                <td>更新人：</td>
+                <td>
+                    <input name="roleUpdatePerson" class="easyui-validateboxx">
+                </td>
+            </tr>
+            <tr>
+                <td>更新时间：</td>
+                <td>
+                    <input name="roleUpdateTime" class="easyui-datebox" >
+                </td>q
+            </tr>
+        </table>
+
+    </form>
+</div>
+<div id="roleOptionDlgBtns">
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" onclick="saveUser()">保存</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#roleOption').dialog('close')">取消</a>
+</div>
+<script type="text/javascript" src="../../common/js/greateJS/jquery.min.js"></script>
+<script type="text/javascript" src="../../common/js/greateJS/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../../common/js/SystemManagement/roleManagement.js"></script>
+</body>
+</html>

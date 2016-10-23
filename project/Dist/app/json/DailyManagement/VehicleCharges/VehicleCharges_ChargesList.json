@@ -1,0 +1,25 @@
+{
+  "errMsg": "",
+  "obj": {
+    "autoCount": true,
+    "first": 1,
+    "pageNo": 1,
+    "pageSize": 10,
+    "result": [
+      {
+        "id": "1wd19i0ds)#WFD",
+        "cBusCode": "867",
+        "registerName": "过路费",
+        "datetime": "2016-07-28",
+        "address": "天津市 西青区 津港高速",
+        "payedMoney": "100",
+        "totalMoney": "200",
+        "account": "UserAccount",
+        "remark": "备注点啥?",
+        "operator": "操作人"
+      }
+    ],
+    "totalCount": 1
+  },
+  "status": true
+}

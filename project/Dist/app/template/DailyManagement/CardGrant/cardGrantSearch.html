@@ -1,0 +1,36 @@
+<form>
+
+    <!-- 用户名 -->
+    <div class="form-group">
+        <label for="search_nameCN">用户名</label>
+        <input type="text" class="form-control" name="search_nameCN" id="search_nameCN" placeholder="用户名" ng-model="queryObject.nameCN">
+    </div>
+
+    <!-- 所属线路 -->
+    <div class="form-group">
+        <label for="search_lineName">所属线路</label>
+        <input type="text" class="form-control" name="search_lineName" id="search_lineName" placeholder="所属线路" ng-model="queryObject.lineName">
+    </div>
+
+    <!-- 员工卡号 -->
+    <div class="form-group">
+        <label for="search_cardNo">员工卡号</label>
+        <input type="text" class="form-control" name="search_cardNo" id="search_cardNo" placeholder="员工卡号" ng-model="queryObject.cardNo">
+    </div>
+
+    <!-- 所属班组 -->
+    <div class="form-group">
+        <label for="search_groupName">所属班组</label>
+        <select name="search_groupName" id="search_groupName" class="form-control" ng-options="item.name as item.name for item in groupList" ng-model="queryObject.groupName"></select>
+    </div>
+
+
+    <div class="btn-group btn-group-xs btn-group-justified" role="group">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-success" ng-click="searchList()">确定</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" ng-click="resetQuery()">重置</button>
+        </div>
+    </div>
+</form>

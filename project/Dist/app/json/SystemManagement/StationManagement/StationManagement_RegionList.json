@@ -1,0 +1,26 @@
+{
+  "errMsg": "",
+  "obj": [
+    {
+      "regionCode": 1,
+      "regionName": "天津",
+      "tailNum": 0
+    },
+    {
+      "regionCode": 0,
+      "regionName": "北京",
+      "tailNum": 0
+    },
+    {
+      "regionCode": 3,
+      "regionName": "上海",
+      "tailNum": 0
+    },
+    {
+      "regionCode": 4,
+      "regionName": "深圳",
+      "tailNum": 0
+    }
+  ],
+  "status": true
+}

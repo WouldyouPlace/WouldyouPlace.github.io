@@ -1,0 +1,105 @@
+<form class="form-horizontal" name="departRegressForm" novalidate ng-submit="submitForm()">
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- 车号 -->
+            <div class="form-group">
+                <label for="cBusCode" class="col-sm-3 control-label">车号*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="cBusCode" id="cBusCode" placeholder="车号" ng-model="formObject.cBusCode" required>
+                    <small class="red" ng-show="departRegressForm.cBusCode.$invalid">必填项, 请输入车号</small>
+                </div>
+            </div>
+
+            <!-- 司机 -->
+            <div class="form-group">
+                <label for="driverId" class="col-sm-3 control-label">司机*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="driverId" id="driverId" placeholder="司机" ng-model="formObject.driverId" required>
+                    <small class="red" ng-show="departRegressForm.driverId.$invalid">必填项, 请输入司机</small>
+                </div>
+            </div>
+
+            <!-- 乘务员 -->
+            <div class="form-group">
+                <label for="steward" class="col-sm-3 control-label">乘务员*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="steward" id="steward" placeholder="乘务员" ng-model="formObject.steward" required>
+                    <small class="red" ng-show="departRegressForm.steward.$invalid">必填项, 请输入乘务员</small>
+                </div>
+            </div>
+
+            <!-- 出场时间 -->
+            <div class="form-group">
+                <label for="offDateTime" class="col-sm-3 control-label">出场时间*</label>
+                <div class="col-sm-9">
+                    <input ace-datetimepicker date-object="formObject.offDateTime" readonly unselectable="on" type="text" class="form-control" name="offDateTime" id="offDateTime" placeholder="出场时间" language="zh-CN" max-view="4" min-view="0" date-format="yyyy-MM-dd HH:mm:ss">
+                    <small class="red" ng-show="!formObject.offDateTime">必选项, 请选择出场时间</small>
+                </div>
+            </div>
+
+            <!-- 回场时间 -->
+            <div class="form-group">
+                <label for="backDateTime" class="col-sm-3 control-label">回场时间*</label>
+                <div class="col-sm-9">
+                    <input ace-datetimepicker date-object="formObject.backDateTime" readonly unselectable="on" type="text" class="form-control" name="backDateTime" id="backDateTime" placeholder="回场时间" language="zh-CN" max-view="4" min-view="0" date-format="yyyy-MM-dd HH:mm:ss">
+                    <small class="red" ng-show="!formObject.backDateTime">必选项, 请选择回场时间</small>
+                </div>
+            </div>
+
+
+            <!-- 站点 -->
+            <div class="form-group">
+                <label for="station" class="col-sm-3 control-label">站点*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="station" id="station" placeholder="站点" ng-model="formObject.station" required>
+                    <small class="red" ng-show="departRegressForm.station.$invalid">必填项, 请输入站点</small>
+                </div>
+            </div>
+
+            <!-- 金额 -->
+            <div class="form-group">
+                <label for="money" class="col-sm-3 control-label">金额*</label>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" name="money" id="money" placeholder="金额" ng-model="formObject.money" required>
+                    <small class="red" ng-show="departRegressForm.money.$invalid">必填项, 请输入金额</small>
+                </div>
+            </div>
+
+            <!-- 公里数 -->
+            <div class="form-group">
+                <label for="mileage" class="col-sm-3 control-label">公里数*</label>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" name="mileage" id="mileage" placeholder="公里数" ng-model="formObject.mileage" required>
+                    <small class="red" ng-show="departRegressForm.mileage.$invalid">必填项, 请输入公里数</small>
+                </div>
+            </div>
+
+            <!-- 登记人 -->
+            <div class="form-group">
+                <label for="operator" class="col-sm-3 control-label">登记人*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="operator" id="operator" placeholder="登记人" ng-model="formObject.operator" required>
+                    <small class="red" ng-show="departRegressForm.operator.$invalid">必填项, 请输入登记人</small>
+                </div>
+            </div>
+
+
+            <!-- 备注 -->
+            <div class="form-group">
+                <label for="remark" class="col-sm-3 control-label">备注</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" name="remark" id="remark" rows="3"  ng-model="formObject.remark" placeholder="备注"></textarea>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group modal-btn-block">
+                <button class="btn btn-primary btn-block" type="submit" ng-disabled="!verifyForm()">确认</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</form>

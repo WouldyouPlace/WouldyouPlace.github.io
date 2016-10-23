@@ -1,0 +1,249 @@
+[
+  {
+    "menuid": "1",
+    "icon": "icon-sys",
+    "menuname": "系统管理",
+    "menus": [
+      {
+        "menuid": "13",
+        "menuname": "角色管理",
+        "icon": "icon-users",
+        "url": "/page/System/roleManagement.html"
+      },
+      {
+        "menuid": "12",
+        "menuname": "用户管理",
+        "icon": "icon-add",
+        "url": "demo1.html"
+      },
+      {
+        "menuid": "14",
+        "menuname": "菜单管理",
+        "icon": "icon-role",
+        "url": "demo2.html"
+      },
+      {
+        "menuid": "15",
+        "menuname": "厂家员工管理",
+        "icon": "icon-set",
+        "url": "demo.html"
+      },
+      {
+        "menuid": "16",
+        "menuname": "旧档案系统修改",
+        "icon": "icon-log",
+        "url": "demo1.html"
+      },
+      {
+        "menuid": "16",
+        "menuname": "系统日志管理",
+        "icon": "icon-log",
+        "url": "demo1.html"
+      }
+    ]
+  },
+  {
+    "menuid": "8",
+    "icon": "icon-sys",
+    "menuname": "认证基础设置",
+    "menus": [
+      {
+        "menuid": "21",
+        "menuname": "配置项维护",
+        "icon": "icon-nav",
+        "url": "demo.html"
+      },
+      {
+        "menuid": "22",
+        "menuname": "评价模型字典",
+        "icon": "icon-nav",
+        "url": "demo1.html"
+      },
+      {
+        "menuid": "22",
+        "menuname": "题库(考核项)管理",
+        "icon": "icon-nav",
+        "url": "demo1.html"
+      }
+    ]
+  },
+  {
+    "menuid": "56",
+    "icon": "icon-sys",
+    "menuname": "认证批次创建",
+    "menus": [
+      {
+        "menuid": "31",
+        "menuname": "认证批次管理",
+        "icon": "icon-nav",
+        "url": "demo1.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "认证店面管理",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "认证人员管理",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "任务组管理",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "认证任务分配",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "评分任务分配",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "评价模型管理",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "考卷管理",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      }
+    ]
+  },
+  {
+    "menuid": "28",
+    "icon": "icon-sys",
+    "menuname": "认证过程管理",
+    "menus": [
+      {
+        "menuid": "31",
+        "menuname": "星级认证",
+        "icon": "icon-nav",
+        "url": "demo1.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "认证审核",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "认证评分",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "评分审核",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "成绩公布",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      }
+    ]
+  },
+  {
+    "menuid": "39",
+    "icon": "icon-sys",
+    "menuname": "星级认证终端",
+    "menus": [
+      {
+        "menuid": "31",
+        "menuname": "认证确认",
+        "icon": "icon-nav",
+        "url": "demo1.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "成绩公示",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "成绩查询",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      }
+    ]
+  },
+  {
+    "menuid": "39",
+    "icon": "icon-sys",
+    "menuname": "创新案例管理",
+    "menus": [
+      {
+        "menuid": "31",
+        "menuname": "案例任务",
+        "icon": "icon-nav",
+        "url": "demo1.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "案例审核",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "案例评分",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "案例公示",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "案例统计",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "案例验证",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      }
+    ]
+  },
+  {
+    "menuid": "39",
+    "icon": "icon-sys",
+    "menuname": "创新案例终端",
+    "menus": [
+      {
+        "menuid": "31",
+        "menuname": "案例任务",
+        "icon": "icon-nav",
+        "url": "demo1.html"
+      },
+      {
+        "menuid": "32",
+        "menuname": "案例宝藏",
+        "icon": "icon-nav",
+        "url": "demo2.html"
+      }
+    ]
+  }
+]

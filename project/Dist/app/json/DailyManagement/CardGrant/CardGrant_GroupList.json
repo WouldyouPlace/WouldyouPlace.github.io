@@ -1,0 +1,36 @@
+{
+    "errMsg": "",
+    "obj": [
+        {
+            "cid": "1",
+            "code": "1",
+            "iLineId": "1",
+            "id": "111",
+            "name": "群组1",
+            "note": "",
+            "pid": "",
+            "routeId": ""
+        },
+        {
+            "cid": "2",
+            "code": "2",
+            "iLineId": "2",
+            "id": "222",
+            "name": "群组2",
+            "note": "",
+            "pid": "",
+            "routeId": ""
+        },
+        {
+            "cid": "3",
+            "code": "3",
+            "iLineId": "3",
+            "id": "333",
+            "name": "群组3",
+            "note": "",
+            "pid": "",
+            "routeId": ""
+        }
+    ],
+    "status": true
+}

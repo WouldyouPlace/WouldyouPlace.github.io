@@ -1,0 +1,55 @@
+<form class="form-horizontal" name="simManagementForm" novalidate ng-submit="submitForm()">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <!-- SIM卡号 -->
+            <div class="form-group">
+                <label for="iSIMCode" class="col-sm-3 control-label">SIM卡号*</label>
+                <div class="col-sm-9">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="iSIMCode" id="iSIMCode" placeholder="SIM卡号" ng-model="formObject.iSIMCode" ng-change="onSimCodeChanged()" required>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-sm btn-info" ng-click="verifySimCode()" ng-disabled="!simManagementForm.iSIMCode.$valid"><i class="ace-icon fa fa-check"></i>验证</button>
+                            </span>
+                    </div><!-- /input-group -->
+
+                    <small class="red" ng-show="simManagementForm.iSIMCode.$invalid">必填项, 请输入SIM卡号并进行验证</small>
+                    <small class="red" ng-show="simManagementForm.iSIMCode.$dirty && !verifySimState">验证未通过</small>
+                    <small class="green" ng-show="verifySimState && simManagementForm.iSIMCode.$valid"><i class="ace-icon fa fa-check"></i> 验证通过</small>
+                </div>
+            </div>
+
+            <!-- 购买日期 -->
+            <div class="form-group">
+                <label for="dBuyDate" class="col-sm-3 control-label">购买日期*</label>
+                <div class="col-sm-9">
+                    <input ace-datetimepicker date-object="formObject.dBuyDate" readonly unselectable="on" type="text" class="form-control" name="dBuyDate" id="dBuyDate" placeholder="购买日期" language="zh-CN" max-view="4" min-view="2" date-format="yyyy-MM-dd" required>
+                    <small class="red" ng-show="!formObject.dBuyDate">必选项, 请选择购买日期</small>
+                </div>
+            </div>
+
+            <!-- 终端设备ID -->
+            <div class="form-group">
+                <label for="iDevId" class="col-sm-3 control-label">终端设备</label>
+                <div class="col-sm-9">
+                    <!--<div class="input-group">-->
+                        <!--<input type="text" class="form-control" name="iDevId" id="iDevId" placeholder="终端设备ID" ng-model="formObject.iDevId" ng-change="onDevIdChanged()">-->
+                            <!--<span class="input-group-btn">-->
+                                <!--<button type="button" class="btn btn-sm btn-info" ng-click="verifyDevId()" ng-disabled="!formObject.iDevId"><i class="ace-icon fa fa-check"></i>验证</button>-->
+                            <!--</span>-->
+
+                    <!--</div>&lt;!&ndash; /input-group &ndash;&gt;-->
+                    <select class="form-control" name="iDevId" id="iDevId" ng-model="formObject.iDevId" ng-options="item.id as item.name for item in deviceList"></select>
+
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group modal-btn-block">
+                <button class="btn btn-primary btn-block" type="submit">确认</button>
+            </div>
+        </div>
+    </div>
+
+
+</form>

@@ -1,0 +1,65 @@
+<div>
+    <div class="row">
+        <div class="col-xs-3">
+
+            <div class="btn-group btn-group-xs" role="group" aria-label="...">
+                <button type="button" class="btn btn-primary" ng-click="addItem()"><b class="ace-icon fa fa-plus"></b>添加</button>
+                <button type="button" class="btn btn-info2" ng-click="searchList()"><i class="ace-icon fa fa-search"></i>查询条件</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>PSAM卡编号</th>
+                    <th>卡座编号</th>
+                    <th>发卡机构标识</th>
+                    <th>SAM卡版本号</th>
+                    <th>密钥版本号</th>
+                    <th>发卡时间</th>
+                    <th>卡状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="rowItem in tableDataList">
+                    <th>{{(paginationConf.currentPage - 1) * paginationConf.itemsPerPage + $index + 1}}</th>
+                    <td>{{rowItem.iPSAMCode}}</td>
+                    <td>{{rowItem.iSAMNum}}</td>
+                    <td>{{rowItem.cIssuerCode}}</td>
+                    <td>{{rowItem.iSAMVerNo}}</td>
+                    <td>{{rowItem.iKeyVerNo}}</td>
+                    <td>{{rowItem.dIssueTime | date: 'yyyy-MM-dd'}}</td>
+                    <td>{{getStatus(rowItem)}}</td>
+                    <td>
+                        <div class="btn-group btn-group-xs" role="group">
+                            <button type="button" class="btn btn-info" ng-click="editItem(rowItem)"><i class="ace-icon fa fa-edit"></i>修改</button>
+                            <button type="button" class="btn btn-danger" ng-click="delItem(rowItem)"><i class="ace-icon fa fa-trash"></i>删除</button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div ace-pagination pagination-conf="paginationConf" pagination-click="updateList()"></div>
+        </div>
+    </div>
+    <div ace-modal-view modal-title="modalViewConf.title" modal-size="modalViewConf.size" modal-show="modalViewConf.show" modal-footer-block="modalViewConf.modalFooterBlock" modal-view-close="closeModalView()">
+        <div psam-management-form  form-object="formObject" modal-view-conf="modalViewConf" update-list="updateList()"></div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_del.title" modal-show="modalViewConf_del.show" modal-footer-block="modalViewConf_del.modalFooterBlock" modal-view-close="closeModalView()">
+        <div psam-management-del form-object="formObject" modal-view-conf="modalViewConf_del" update-list="updateList()"></div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_query.title" modal-show="modalViewConf_query.show" modal-footer-block="modalViewConf_query.modalFooterBlock">
+        <div psam-management-query query-object="queryObject" modal-view-conf="modalViewConf_query" update-list="updateList()" reset-query="resetQuery()"></div>
+    </div>
+
+</div>

@@ -1,0 +1,66 @@
+<form class="form-horizontal" name="busManagementForm" novalidate ng-submit="submitForm()">
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- 公交车编号 -->
+            <div class="form-group">
+                <label for="cBusCode" class="col-sm-3 control-label">公交车编号*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="cBusCode" id="cBusCode" placeholder="公交车编号" ng-model="formObject.cBusCode" required>
+                    <small class="red" ng-show="busManagementForm.cBusCode.$invalid">必填项, 请输入公交车编号</small>
+                </div>
+            </div>
+
+            <!-- 区域代码 -->
+            <div class="form-group">
+                <label for="iRegionCode" class="col-sm-3 control-label">区域代码*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="iRegionCode" id="iRegionCode" placeholder="区域代码" ng-model="formObject.iRegionCode" required>
+                    <small class="red" ng-show="busManagementForm.iRegionCode.$invalid">必填项, 请输入区域代码</small>
+                </div>
+            </div>
+
+            <!-- 运营企业代码 -->
+            <div class="form-group">
+                <label for="cOrgCode" class="col-sm-3 control-label">运营企业代码*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="cOrgCode" id="cOrgCode" placeholder="运营企业代码" ng-model="formObject.cOrgCode" required>
+                    <small class="red" ng-show="busManagementForm.cOrgCode.$invalid">必填项, 请输入运营企业代码</small>
+                </div>
+            </div>
+
+            <!-- 公交线路号 -->
+            <div class="form-group">
+                <label for="iLineCode" class="col-sm-3 control-label">公交线路号*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="iLineCode" id="iLineCode" placeholder="公交线路号" ng-model="formObject.iLineCode" required>
+                    <small class="red" ng-show="busManagementForm.iLineCode.$invalid">必填项, 请输入公交线路号</small>
+                </div>
+            </div>
+
+            <!-- 公交车类型 -->
+            <div class="form-group">
+                <label for="iBusType" class="col-sm-3 control-label">公交车类型*</label>
+                <div class="col-sm-9">
+                    <select name="iBusType" id="iBusType" class="form-control" ng-options="item.id as item.name for item in busTypeList" ng-model="formObject.iBusType" required></select>
+                    <small class="red" ng-show="busManagementForm.iBusType.$invalid">必选项, 请选择公交车类型</small>
+                </div>
+            </div>
+
+            <!-- 状态 -->
+            <div class="form-group">
+                <label for="iDelFlag" class="col-sm-3 control-label">状态*</label>
+                <div class="col-sm-9">
+                    <select name="iDelFlag" id="iDelFlag" class="form-control" ng-options="item.id as item.name for item in delFlagArray" ng-model="formObject.iDelFlag" required></select>
+                    <small class="red" ng-show="busManagementForm.iDelFlag.$invalid">必选项, 请选择状态</small>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group modal-btn-block">
+                <button class="btn btn-primary btn-block" type="submit">确认</button>
+            </div>
+        </div>
+    </div>
+
+
+</form>

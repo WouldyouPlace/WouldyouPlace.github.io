@@ -1,0 +1,12 @@
+<div class="dropdown dropdown-menu-block">
+    <button class="btn btn-default dropdown-toggle form-control" type="button" id="dropdownMenuUserDept" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        {{deptObject.name}}
+        <span class="caret pull-right"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-tree" aria-labelledby="dropdownMenuUserDept">
+        <li ng-repeat="deptItem in deptTree">
+            <a href="javascript:void(0)" ng-click="setDeptObj(deptItem)"><i ng-if="isSelectObj(deptItem)" class="ace-icon fa fa-check"></i>{{deptItem.name}}</a>
+            <ul ng-if="!isLeaf(deptItem)" class="dropdown-menu-tree-sub" ng-include="'template/SystemManagement/UserManagement/userManagementFormDeptTreeSub.html'"></ul>
+        </li>
+    </ul>
+</div>

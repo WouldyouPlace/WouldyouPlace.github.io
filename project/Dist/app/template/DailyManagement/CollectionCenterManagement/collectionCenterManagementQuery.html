@@ -1,0 +1,48 @@
+<form>
+
+    <!-- 采集中心名称 -->
+    <div class="form-group">
+        <label for="search_cCcName">采集中心名称</label>
+        <input type="text" class="form-control" name="search_cCcName" id="search_cCcName" placeholder="采集中心名称" ng-model="queryObject.cCcName" >
+    </div>
+
+    <!-- 部门 -->
+    <div class="form-group">
+        <label for="search_deptOID">所属部门</label>
+        <div id="search_deptOID" ace-select-tree bind-object="queryObject.dept" bind-array="deptList" key-title="title" key-id="id"></div>
+    </div>
+
+    <!-- 所属路队 -->
+    <div class="form-group">
+        <label for="search_teamOID">所属路队</label>
+        <select name="search_teamOID" id="search_teamOID" class="form-control" ng-options="item.id as item.name for item in teamList" ng-model="queryObject.teamOID" ></select>
+    </div>
+
+    <!-- 所属线路 -->
+    <div class="form-group">
+        <label for="search_lineId">所属线路</label>
+        <input type="text" class="form-control" name="search_lineId" id="search_lineId" placeholder="所属线路" ng-model="queryObject.lineId" >
+    </div>
+
+    <!-- 联系电话 -->
+    <div class="form-group">
+        <label for="search_phone">联系电话</label>
+        <input type="text" class="form-control" name="search_phone" id="search_phone" placeholder="联系电话" ng-model="queryObject.phone" >
+    </div>
+
+    <!-- 采集中心IP -->
+    <div class="form-group">
+        <label for="search_centerIP">采集中心IP</label>
+        <input type="text" class="form-control" name="search_centerIP" id="search_centerIP" placeholder="采集中心IP" ng-model="queryObject.centerIP">
+    </div>
+
+
+    <div class="btn-group btn-group-xs btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-success" ng-click="searchList()">确定</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" ng-click="resetQuery()">重置</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,29 @@
+<form>
+    <!-- 角色名称 -->
+    <div class="form-group">
+        <label for="search_nameCN">角色名称</label>
+        <input type="text" class="form-control" id="search_nameCN" placeholder="角色名称" ng-model="queryObject.nameCN">
+    </div>
+
+    <!-- 等级 -->
+    <div class="form-group">
+        <label for="search_level">等级</label>
+        <input type="number" class="form-control" name="search_level" id="search_level" placeholder="等级" ng-model="queryObject.level" required>
+    </div>
+
+    <!-- 备注 -->
+    <div class="form-group">
+        <label for="search_remark">备注</label>
+        <textarea class="form-control" name="search_remark" id="search_remark" rows="3"  ng-model="queryObject.remark" placeholder="备注"></textarea>
+    </div>
+
+
+    <div class="btn-group btn-group-xs btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-success" ng-click="searchUser()">确定</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" ng-click="resetQuery()">重置</button>
+        </div>
+    </div>
+</form>

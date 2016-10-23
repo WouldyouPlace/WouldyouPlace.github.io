@@ -1,0 +1,33 @@
+<div class="ace-pagination">
+    <nav class="text-center">
+        <ul class="pagination">
+            <li>
+                <a href="javascript:void(0)" aria-label="Previous" ng-click="prevPage()">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li ng-repeat="pageItem in pageArray" ng-class="{true: 'active'}[paginationConf.currentPage == pageItem]">
+                <a href="javascript:void(0)" ng-click="pageClick(pageItem)">
+                    {{pageItem}}
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" aria-label="Next" ng-click="nextPage()">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+            <li class="current-page">
+                第
+                <input type="text" class="input-sm" ng-model="paginationConf.currentPage" ng-change="onPageChange()">
+                页 / 共 {{totalPage}} 页
+            </li>
+            <li class="current-page">
+                每页显示
+                <select class="input-sm" ng-model="paginationConf.itemsPerPage"
+                        ng-options="item for item in itemsPerPageOption"></select>
+                条
+            </li>
+        </ul>
+    </nav>
+
+</div>

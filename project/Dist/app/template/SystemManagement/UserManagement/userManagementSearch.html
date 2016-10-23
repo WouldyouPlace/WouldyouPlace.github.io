@@ -1,0 +1,51 @@
+<form>
+    <!-- 用户名 -->
+    <div class="form-group">
+        <label for="search_nameCN">用户名</label>
+        <input type="text" class="form-control" id="search_nameCN" placeholder="用户名" ng-model="queryObject.nameCN">
+    </div>
+
+    <!-- 所属部门 -->
+    <div class="form-group">
+        <label for="search_deptOID">所属部门</label>
+        <div id="search_deptOID" ace-select-tree bind-object="queryObject.dept" bind-array="deptList" key-title="title" key-id="id"></div>
+    </div>
+
+    <!-- 所属路队 -->
+    <div class="form-group">
+        <label for="search_teamOID">所属路队</label>
+        <div id="search_teamOID" ace-select bind-object="queryObject.team" bind-array="teamList" key-title="name" key-id="id"></div>
+    </div>
+
+    <!-- 用户角色名 -->
+    <div class="form-group">
+        <label for="search_roleName">用户角色名</label>
+        <!--<div id="search_roleName" user-management-form-role role-object="queryObject.role" role-list="roleList"></div>-->
+        <div id="search_roleName" ace-select bind-object="queryObject.role" bind-array="roleList" key-title="name" key-id="id"></div>
+    </div>
+
+    <!-- 工号 -->
+    <div class="form-group">
+        <label for="search_jobNumber">工号</label>
+        <input type="text" class="form-control" id="search_jobNumber" placeholder="工号" ng-model="queryObject.jobNumber">
+    </div>
+
+    <!-- 性别 -->
+    <div class="form-group">
+        <label for="search_sex">性别</label>
+        <select class="form-control" id="search_sex" ng-model="queryObject.sex">
+            <option value="">-- 请选择 --</option>
+            <option value="0">男</option>
+            <option value="1">女</option>
+        </select>
+    </div>
+
+    <div class="btn-group btn-group-xs btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-success" ng-click="searchUser()">确定</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" ng-click="resetQuery()">重置</button>
+        </div>
+    </div>
+</form>

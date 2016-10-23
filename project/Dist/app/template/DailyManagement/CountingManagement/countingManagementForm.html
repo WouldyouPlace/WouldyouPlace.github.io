@@ -1,0 +1,147 @@
+<form class="form-horizontal" name="countingManagementForm" novalidate ng-submit="submitForm()">
+    <div class="row">
+        <div class="col-xs-6">
+            <!-- 钱袋编号 -->
+            <div class="form-group">
+                <label for="moneyBagNum" class="col-sm-3 control-label">钱袋编号*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="moneyBagNum" id="moneyBagNum" placeholder="钱袋编号" ng-model="formObject.moneyBagNum" required>
+                    <small class="red" ng-show="countingManagementForm.moneyBagNum.$invalid">必填项, 请输入钱袋编号</small>
+                </div>
+            </div>
+
+            <!-- 交易日期 -->
+            <div class="form-group">
+                <label for="tradeDate" class="col-sm-3 control-label">交易日期*</label>
+                <div class="col-sm-9">
+                    <input ace-datetimepicker date-object="formObject.tradeDate" readonly unselectable="on" type="text" class="form-control" name="tradeDate" id="tradeDate" placeholder="交易日期" language="zh-CN" max-view="4" min-view="2" date-format="yyyy-MM-dd" required>
+                    <small class="red" ng-show="countingManagementForm.tradeDate.$invalid">必选项, 请选择交易日期</small>
+                </div>
+            </div>
+
+            <!-- 部门 -->
+            <div class="form-group">
+                <label for="deptOID" class="col-sm-3 control-label">所属部门*</label>
+                <div class="col-sm-9" id="deptOID">
+                    <div ace-select-tree bind-object="formObject.dept" bind-array="deptList" key-title="title" key-id="id"></div>
+                    <small class="red" ng-show="!formObject.dept">必选项, 请选择所属部门</small>
+                </div>
+            </div>
+
+            <!-- 路队 -->
+            <div class="form-group">
+                <label for="team" class="col-sm-3 control-label">所属路队</label>
+                <div class="col-sm-9" id="team">
+                    <div ace-select bind-object="formObject.team" bind-array="teamList" key-title="name" key-id="id"></div>
+                </div>
+            </div>
+
+            <!-- 所属线路 -->
+            <div class="form-group">
+                <!-- 修改参数为线路编号 by vern 2016-8-26 -->
+                <label for="line.iLineCode" class="col-sm-3 control-label">所属线路*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="line.iLineCode" id="line.iLineCode" placeholder="所属线路" ng-model="formObject.line.iLineCode" required>
+                    <small class="red" ng-show="countingManagementForm.line.iLineCode.$invalid">必填项, 请输入所属线路编号</small>
+                </div>
+            </div>
+
+            <!-- 所属车辆 -->
+            <div class="form-group">
+                <!-- 修改参数为车辆编号 by vern 2016-8-26 -->
+                <label for="bus.cBusCode" class="col-sm-3 control-label">所属车辆*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="bus.cBusCode" id="bus.cBusCode" placeholder="所属车辆" ng-model="formObject.bus.cBusCode" required>
+                    <small class="red" ng-show="countingManagementForm.bus.cBusCode.$invalid">必填项, 请输入所属车辆编号</small>
+                </div>
+            </div>
+
+            <!-- 点钞时间 -->
+            <div class="form-group">
+                <label for="recordTime" class="col-sm-3 control-label">点钞时间*</label>
+                <div class="col-sm-9">
+                    <input ace-datetimepicker date-object="formObject.recordTime" readonly unselectable="on" type="text" class="form-control" name="recordTime" id="recordTime" placeholder="点钞时间" language="zh-CN" max-view="4" min-view="0" date-format="yyyy-MM-dd HH:mm:ss" required>
+                    <small class="red" ng-show="countingManagementForm.recordTime.$invalid">必选项, 请选择点钞时间</small>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="col-xs-6">
+            <!-- 纸币金额 -->
+            <div class="form-group">
+                <label for="paperMoney" class="col-sm-3 control-label">纸币金额*</label>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" name="paperMoney" id="paperMoney" placeholder="纸币金额" ng-model="formObject.paperMoney" ng-change="getValidMoney()" required>
+                    <small class="red" ng-show="countingManagementForm.paperMoney.$invalid">必填项, 请输入纸币金额</small>
+                </div>
+            </div>
+
+            <!-- 硬币金额 -->
+            <div class="form-group">
+                <label for="coinMoney" class="col-sm-3 control-label">硬币金额*</label>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" name="coinMoney" id="coinMoney" placeholder="硬币金额" ng-model="formObject.coinMoney" ng-change="getValidMoney()" required>
+                    <small class="red" ng-show="countingManagementForm.coinMoney.$invalid">必填项, 请输入硬币金额</small>
+                </div>
+            </div>
+
+            <!-- 假币金额 -->
+            <div class="form-group">
+                <label for="fakeMoney" class="col-sm-3 control-label">假币金额*</label>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" name="fakeMoney" id="fakeMoney" placeholder="假币金额" ng-model="formObject.fakeMoney" ng-change="getValidMoney()" required>
+                    <small class="red" ng-show="countingManagementForm.fakeMoney.$invalid">必填项, 请输入假币金额</small>
+                </div>
+            </div>
+
+            <!-- 有效金额 -->
+            <div class="form-group">
+                <label for="validMoney" class="col-sm-3 control-label">有效金额*</label>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" name="validMoney" id="validMoney" placeholder="有效金额" ng-model="formObject.validMoney" required>
+                    <small class="red" ng-show="countingManagementForm.validMoney.$invalid">必填项, 请输入有效金额</small>
+                </div>
+            </div>
+
+            <!-- 金额分配 -->
+            <!--<div class="form-group">-->
+            <!--<label for="distributedList" class="col-sm-3 control-label">金额分配*</label>-->
+            <!--<div class="col-sm-8 distributed-list-block" id="distributedList">-->
+            <!--<div class="row" ng-repeat="disItem in formObject.distributedList">-->
+            <!--<div class="col-xs-12">-->
+            <!--&lt;!&ndash;<div ace-query-control bind-object="disItem" bind-array="driverList" key-title="driverName" key-id="driver" on-query="onQuery(disItem)"></div>&ndash;&gt;-->
+            <!--<div ace-query-control bind-object="disItem" bind-array="driverList" key-title="driverName" key-id="driver" on-query="onQuery(disItem)"></div>-->
+            <!--<input type="number" class="form-control" name="distributedList_money" id="distributedList_money" placeholder="有效金额" ng-model="disItem.money" required>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--<small class="red" ng-show="formObject.distributedList.length <= 0">至少选择一名司机</small>-->
+            <!--<small class="red" ng-show="!verifyMoneyCount()">分配金额总数与有效金额不一致</small>-->
+            <!--</div>-->
+            <!--<div class="col-sm-1">-->
+            <!--<button class="btn btn-info btn-xs" ng-click="addDriverItem()"><i class="ace-icon fa fa-plus icon-only"></i></button>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!-- 备注 -->
+            <div class="form-group">
+                <label for="remark" class="col-sm-3 control-label">备注</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" name="remark" id="remark" rows="3"  ng-model="formObject.remark" placeholder="备注"></textarea>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group modal-btn-block">
+                <button class="btn btn-primary btn-block" type="submit">确认</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</form>

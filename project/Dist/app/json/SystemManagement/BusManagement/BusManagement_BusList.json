@@ -1,0 +1,43 @@
+{
+  "errMsg": "",
+  "obj": {
+    "autoCount": true,
+    "first": 1,
+    "pageNo": 1,
+    "pageSize": 10,
+    "result": [
+      {
+        "id": 1,
+        "iBusId": "123",
+        "cBusCode": "328",
+        "iRegionCode": 0,
+        "cOrgCode": "1132",
+        "iLineCode": "321",
+        "iBusType": 1,
+        "iDelFlag": 1
+      },
+      {
+        "id": 2,
+        "iBusId": "456",
+        "cBusCode": "12321",
+        "iRegionCode": 3,
+        "cOrgCode": "52fd41s",
+        "iLineCode": "867",
+        "iBusType": 3,
+        "iDelFlag": 0
+      },
+      {
+        "id": 3,
+        "iBusId": "563",
+        "cBusCode": "3fdf3d",
+        "iRegionCode": 5,
+        "cOrgCode": "1w11",
+        "iLineCode": "机场3路",
+        "iBusType": 6,
+        "iDelFlag": 1
+      }
+    ],
+    "totalCount": 3
+  },
+  "status": true
+}

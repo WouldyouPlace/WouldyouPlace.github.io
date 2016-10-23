@@ -1,0 +1,44 @@
+<form>
+    <!-- 车号 -->
+    <div class="form-group">
+        <label for="search_cBusCode">车号</label>
+
+        <input type="text" class="form-control" name="search_cBusCode" id="search_cBusCode" placeholder="车号"
+               ng-model="queryObject.cBusCode">
+    </div>
+
+    <!-- 规费名称 -->
+    <div class="form-group">
+        <label for="search_registerName">规费名称</label>
+        <input type="text" class="form-control" name="search_registerName" id="search_registerName" placeholder="规费名称"
+               ng-model="queryObject.registerName">
+    </div>
+
+    <!-- 时间 -->
+    <div class="form-group">
+        <label for="search_datetime">时间</label>
+        <input ace-datetimepicker date-object="queryObject.datetime" readonly unselectable="on" type="text"
+               class="form-control" name="search_datetime" id="search_datetime" placeholder="时间"
+               language="zh-CN"
+               max-view="4" min-view="2" date-format="yyyy-MM-dd">
+    </div>
+
+    <!-- 操作人 -->
+    <div class="form-group">
+        <label for="search_operator">操作人</label>
+        <input type="text" class="form-control" name="search_operator" id="search_operator" placeholder="操作人"
+               ng-model="queryObject.operator">
+    </div>
+
+
+    <div class="btn-group btn-group-xs btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-success" ng-click="searchList()">确定</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" ng-click="resetQuery()">重置</button>
+        </div>
+    </div>
+
+
+</form>

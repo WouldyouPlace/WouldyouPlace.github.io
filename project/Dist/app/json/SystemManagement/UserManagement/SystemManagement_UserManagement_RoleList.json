@@ -1,0 +1,20 @@
+{
+  "status": true,
+  "obj": [
+    {
+      "name": "name3",
+      "nameCN": "角色中文名3",
+      "id": "3"
+    },
+    {
+      "name": "name2",
+      "nameCN": "角色中文名2",
+      "id": "2"
+    },
+    {
+      "name": "name1",
+      "nameCN": "系统管理员",
+      "id": "1"
+    }
+  ]
+}

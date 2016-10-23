@@ -1,0 +1,37 @@
+{
+    "errMsg": "",
+    "obj": {
+        "autoCount": true,
+        "first": 1,
+        "pageNo": 1,
+        "pageSize": 10,
+        "result": [
+            {
+                "dBuyDate": "2015-01-01",
+                "iDevId": 1,
+                "iSIMCode": "1311010101",
+                "iSIMId": 1
+            },
+            {
+                "dBuyDate": "2016-01-01",
+                "iDevId": 2,
+                "iSIMCode": "1391010101",
+                "iSIMId": 2
+            },
+            {
+                "dBuyDate": "2016-05-01",
+                "iDevId": 3,
+                "iSIMCode": "1381010101",
+                "iSIMId": 3
+            },
+            {
+                "dBuyDate": "2014-03-22",
+                "iDevId": 4,
+                "iSIMCode": "1371010101",
+                "iSIMId": 4
+            }
+        ],
+        "totalCount": 4
+    },
+    "status": true
+}

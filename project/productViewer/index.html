@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productViewer</title>
+    <link rel="stylesheet" href="stylesheet/productViewer.css">
+</head>
+<body>
+    <div id="productWapper" class="product-wapper">
+        <div class="viewer">
+            <img src="image/slide_loading.gif" class="loading" alt="加载中..." width="40%" />
+            <div class="product" data-image-src="image/alfa.png"></div>
+        </div>
+        <div class="handler">
+            <div class="progress transition"></div>
+            <span class="handle transition"></span>
+        </div>
+    </div>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <!--h5移动端框架，提供一些移动端和PC端兼容-->
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <script src="js/productViewer.js"></script>
+    <script>
+        $(function(){
+            //   $("#productWaapper").productViewer();
+            new productViewer(document.getElementById("productWapper"));
+        });
+    </script>
+</body>
+</html>

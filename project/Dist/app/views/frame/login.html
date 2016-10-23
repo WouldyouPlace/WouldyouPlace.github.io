@@ -1,0 +1,77 @@
+<div class="login-layout light-login">
+
+    <div class="main-container">
+
+        <div class="main-content">
+
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+
+                    <div class="login-container">
+                        <div id="login-box" class="login-box visible widget-box no-border">
+                            <div class="widget-body">
+                                <div class="widget-main">
+                                    <h4 class="header blue lighter bigger text-center">
+                                        {{loginInfo.title}}
+                                    </h4>
+
+                                    <form>
+                                        <fieldset>
+                                            <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="text" class="form-control" placeholder="用户名"
+                                                                   name="loginUsername" ng-model="userInfo.loginName">
+															<i class="ace-icon fa fa-user"></i>
+														</span>
+                                            </label>
+
+                                            <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password" class="form-control" placeholder="密码"
+                                                                   name="loginPassword" ng-model="userInfo.password">
+															<i class="ace-icon fa fa-lock"></i>
+														</span>
+                                            </label>
+
+                                            <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="text" class="form-control" placeholder="验证码"
+                                                                   name="loginUsername" ng-model="code">
+															<i class="ace-icon fa fa-user"></i>
+														</span>
+                                            </label>
+
+                                            <div class="space"></div>
+
+                                            <div class="clearfix">
+                                                <label class="inline">
+                                                    <input type="checkbox" class="ace">
+                                                    <!--<span class="lbl"> Remember Me</span>-->
+                                                </label>
+
+                                                <button type="submit" class="width-35 pull-right btn btn-sm btn-primary" ng-click="login()">
+                                                    <i class="ace-icon fa fa-key"></i>
+                                                    <span class="bigger-110">登录</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="space-4"></div>
+                                        </fieldset>
+                                    </form>
+                                </div><!-- /.widget-main -->
+
+                                <div class="toolbar clearfix"></div>
+                            </div><!-- /.widget-body -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div> <!-- /.main-content -->
+
+    </div> <!-- /.main-container -->
+
+
+</div> <!-- /.login-layout -->
+

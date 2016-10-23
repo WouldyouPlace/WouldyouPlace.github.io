@@ -1,0 +1,18 @@
+<div id="navbar-container" class="navbar-container">
+
+  <div class="navbar-header pull-left">
+    <a href="javascript:void(0)" class="navbar-brand">
+      <small>
+        <i class="ace-icon fa" ng-class="{true: navbarInfo.icon}[isShowIcon()]"></i>
+        {{navbarInfo.title}}
+      </small>
+    </a>
+  </div> <!-- /.navbar-header -->
+
+  <div class="navbar-buttons navbar-header navbar-right">
+    <ul class="nav ace-nav">
+      <div ace-navbar-user-menu change-password="changePassword()" sign-out="signOut()" user-info="userInfo"></div>
+    </ul> <!-- /.ace-nav -->
+  </div> <!-- /.navbar-buttons  -->
+
+</div> <!-- /.navbar-container -->

@@ -1,0 +1,675 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>天津阳光月子中心</title>
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../dist/pagination.js"></script>
+    <script src="../js/manager.js"></script>
+    <link href="../dist/pagination.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/app.css" type="text/css" />
+    <style type="text/css">
+        .pagination-demo1 ul,.pagination-demo1 li{
+            list-style: none;
+        }
+        .data-container{
+            margin-top: 5px;
+        }
+        .data-container ul{
+            padding: 0;
+            margin: 0;
+        }
+        .data-container li{
+            margin-bottom: 5px;
+            padding: 5px 10px;
+            background: #66677c;
+            color: #fff;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="wrapper">
+        <!--顶部导航栏-->
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container-fluid">
+                <header class="main-header row">
+                    <a href="major.html" class="logo col-lg-2">
+                        <b>天津阳光月子中心</b>
+                    </a>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-right ">
+                        <ul class="nav navbar-nav messages-dropdown">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i>Message<span class="badge">7</span><span class="caret"></span></a>
+                                <ul class="dropdown-menu message-menu">
+                                    <li class="dropdown-header">7new message</li>
+                                    <li class="message-preview">
+                                        <a href="#">
+                                            <span class="avater"><img src="../images/erweima.png"></span>
+                                            <span class="name">Jhon Smith</span>
+                                            <span class="message">Hey  there,I want to ask you somithing.....</span>
+                                            <span class="time"><i class="fa fa-clock-o"></i>4:30PM</span>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="message-preview">
+                                        <a href="#">
+                                            <span class="avater"><img src="../images/erweima.png"></span>
+                                            <span class="name">Jhon Smith</span>
+                                            <span class="message">Hey  there,I want to ask you somithing.....</span>
+                                            <span class="time"><i class="fa fa-clock-o"></i>4:30PM</span>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="message-preview">
+                                        <a href="#">
+                                            <span class="avater"><img src="../images/erweima.png"></span>
+                                            <span class="name">Jhon Smith</span>
+                                            <span class="message">Hey  there,I want to ask you somithing.....</span>
+                                            <span class="time"><i class="fa fa-clock-o"></i>4:30PM</span>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="message-preview">
+                                        <a href="#">
+                                            <span class="avater"><img src="../images/erweima.png"></span>
+                                            <span class="name">Jhon Smith</span>
+                                            <span class="message">Hey  there,I want to ask you somithing.....</span>
+                                            <span class="time"><i class="fa fa-clock-o"></i>4:30PM</span>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="message-preview">
+                                        <a href="#">
+                                            <span class="avater"><img src="../images/erweima.png"></span>
+                                            <span class="name">Jhon Smith</span>
+                                            <span class="message">Hey  there,I want to ask you somithing.....</span>
+                                            <span class="time"><i class="fa fa-clock-o"></i>4:30PM</span>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="message-preview">
+                                        <a href="#">
+                                            <span class="avater"><img src="../images/erweima.png"></span>
+                                            <span class="name">Jhon Smith</span>
+                                            <span class="message">Hey  there,I want to ask you somithing.....</span>
+                                            <span class="time"><i class="fa fa-clock-o"></i>4:30PM</span>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">View Inbox</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                    <i class="fa fa-bell"></i>Alerts<span class="badge">6</span><span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Defult<span class="label label-default">Defult</span></a></li>
+                                    <li><a href="#">Primary<span class="label label-primary">Primary</span></a></li>
+                                    <li><a href="#">Success<span class="label label-success">Success</span></a></li>
+                                    <li><a href="#">Info<span class="label label-info">Info</span></a></li>
+                                    <li><a href="#">Warning<span class="label label-warning">Warning</span></a></li>
+                                    <li><a href="#">Danger<span class="label label-danger">Danger</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-user"></i><span id="userInfo">Jhon Smitn</span><span class="badge">6</span><span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><i class="fa fa-user"></i>Profile</a></li>
+                                    <li><a href="#"><i class="fa fa-envelope"></i>Inbox<span class="badge">7</span></a></li>
+                                    <li><a href="#"><i class="fa fa-gear"></i>setting</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+        </nav>
+        <!--侧导航栏-->
+        <aside id="sidebar" class="main-sidebar">
+            <section class="sidebar">
+                <ul class="sidebar-menu">
+                    <li class="header">导航</li>
+                    <li><a href="#" class="active">人员管理</a></li>
+                    <li><a href="#">用户管理</a></li>
+                    <li><a href="#">套餐服务</a></li>
+                    <li><a href="#">团队服务</a></li>
+                    <li><a href="#">会员信息</a></li>
+                    <li><a href="#">招聘信息</a></li>
+                </ul>
+            </section>
+        </aside>
+        <!--内容-->
+        <div id="content-wrapper" class="panel-footer content-wrapper">
+            <div class="content-header">
+                <h2><b>月子中心管理<small>管理用户资源</small></b></h2>
+                <div  class="pull-right">
+                    <ol class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-dashboard"></i>月子中心</a></li>
+                        <li class="active">用户管理</li>
+                    </ol>
+                </div>
+            </div>
+            <!--table-->
+            <div class="table-content">
+                <div class="row">
+                    <h3 class="col-sm-12">
+                        <b>月子中心管理</b>
+                    </h3>
+                    <div class="col-sm-6">
+                        <div class="btn-group btn-operate">
+                            <button type="button" id="btnAdd" class="btn btn-primary" data-toggle="modal" data-target="#infoModal"><i class="fa fa-plus"></i>添加</button>
+                            <button type="button" id="btnUpdate" class="btn btn-primary" data-toggle="modal"><i class="fa fa-pencil"></i>修改</button>
+                            <button type="button" id="btnDelete" class="btn btn-primary"><i class="glyphicon glyphicon-remove"></i>删除</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <label class="pull-left">
+                            Show
+                            <select name="dataExample_length" aria-controls="dataExample" class="input-sm">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>entries
+                        </label>
+                    </div>
+                    <div class="col-sm-5">
+                        <label class="pull-right">
+                            Search: <input type="text" class="input-sm" placeholder="输入姓名" aria-controls="dataExample"/>
+                        </label>
+                    </div>
+                    <div class="col-sm-12">
+                        <table id="dataExample" class="table table-bordered table-hover table-side">
+                            <form>
+                                <thead>
+                                    <tr>
+                                        <th id="selectAll"><input type="checkbox"></th>
+                                            <th>姓名<i class="fa fa-sort"></i></th>
+                                            <th>性别<i class="fa fa-sort"></i></th>
+                                            <th>用户类型<i class="fa fa-sort"></i></th>
+                                            <th>生日<i class="fa fa-sort"></i></th>
+                                            <th>联系电话<i class="fa fa-sort"></i></th>
+                                            <th>电子邮箱<i class="fa fa-sort"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-body">
+                                   <tr>
+                                        <td><input type="checkbox" id="asd11" value="01" /></td>
+                                        <td>小红</td>
+                                        <td>女</td>
+                                        <td>VIP</td>
+                                        <td>1995-03-06</td>
+                                        <td>15675423615</td>
+                                        <td>1045467322@qq.com</td>
+                                    </tr>
+                                </tbody>
+                            </form>
+                        </table>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="data-container"></div>
+                        <div id="pagination-demo1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="main-footer" class="main-footer panel-footer">
+            <p>Copyright &copy; 2015 <a href="#">Company</a>. All rights reserved.</p>
+        </footer>
+    </div>
+    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="modal-header"><b>添加</b></h3>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="name" class="control-label pull-left">姓名</label>
+                                <div class="col-sm-12 input-group">
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-user"></span>
+                                                    </span>
+                                    <input class="form-control" type="text" id="name" name="name" placeholder="请输入您的姓名"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="control-label pull-left">性别:</label><br />
+                                <div class="radio-inline col-sm-1">
+                                    <label>
+                                        <input type="radio" name="sex" value="男">男
+                                    </label>
+                                </div>
+                                <div class="radio-inline col-sm-1">
+                                    <label>
+                                        <input type="radio" name="sex" value="女">女
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="control-label pull-left">用户类型</label>
+                                <select class="form-control" id="usertype" name="usertype">
+                                    <option>管理员</option>
+                                    <option>VIP</option>
+                                    <option>普通用户</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="control-label pull-left">生日</label>
+                                <div class="col-sm-12 input-group">
+                                                    <span class="input-group-addon">
+                                                        <span class="fa fa-clock-o"></span>
+                                                    </span>
+                                    <input type="date" class="form-control" id="birthday" name="birthday" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="phone" class="control-label pull-left">联系电话</label>
+                            <div class="col-sm-12 input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="fa fa-phone"></span>
+                                                </span>
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="联系电话" />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="control-label pull-left" for="email">电子邮箱</label>
+                            <div class="col-sm-12 input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="fa fa-envelope"></span>
+                                                </span>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="电子邮箱"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnOK" class="btn btn-primary">提交</button>
+                    <button id="btnExit" class="btn btn-primary" data-dismiss="modal">退出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            init_setup();
+            createDemo('demo1');
+        });
+        function init_setup() {
+            /*加载数据*/
+            $.getJSON("../json/personel.json", function (data) {
+                $.each(data, function (i, item) {
+                    $("tbody").append("<tr>" +
+                            "<td><input type='checkbox' value='" + data[i].Id + "' /></td><td>" +
+                            data[i].name + "</td><td>" + data[i].sex + "</td><td>" +
+                            data[i].type + "</td>><td>" + data[i].birthday + "</td><td>" +
+                            data[i].phone + "</td><td>" + data[i].email + "</td></tr>");
+                });
+            });
+            /*分页*/
+            $.ajax({
+                type: "post",
+                url: "",
+                datatype: "json",
+                success: function (data) {
+                    var pages = $("#pages").val();
+                    var currentPage = Math.ceil(100 / pages);
+                    for (var i = 1; i <= currentPage; i++) {
+                        $("#paging").append("<li><a href='#' onclick='table_load(" + i + ")'>" + i + "</a></li>");
+                    }
+                }
+            });
+            /*添加*/
+            $("#btnAdd").click(function () {
+                $("#modal-header").text("添加");
+            });
+            /*修改信息*/
+            $("#btnUpdate").click(function () {
+                if (checkboxchecked()) {
+                    var item = {};
+                    var datas = $("#table-body");
+                    $("#table-body :checkbox").each(function (key, value) {
+                        if ($(value).prop('checked')) {
+                            item.name = datas[0].rows[key].cells[1].innerHTML;
+                            item.sex = datas[0].rows[key].cells[2].innerHTML;
+                            item.usertype = datas[0].rows[key].cells[3].innerHTML;
+                            item.birthday = datas[0].rows[key].cells[4].innerHTML;
+                            item.phone = datas[0].rows[key].cells[5].innerHTML;
+                            item.email = datas[0].rows[key].cells[6].innerHTML;
+                        }
+                    });
+                    $("#name").val(item.name);
+                    if (item.sex == "男") {
+                        $("input[name='sex'][value='男']").prop("checked",true);
+                    } else {
+                        if (item.sex == "女") {
+                            $("input[name='sex'][value='女']").prop("checked",true);
+                        }else{
+                            $("input[name='sex'][value='男']").prop("checked",true);
+                        }
+                    }
+
+                    if (item.usertype == "管理员") {
+                        $("#usertype").val("管理员");
+                    } else if (item.usertype == "VIP") {
+                        $("#usertype").val("VIP");
+                    } else {
+                        $("#usertype").val("普通用户");
+                    }
+                    $("#birthday").val(item.birthday);
+                    $("#phone").val(item.phone);
+                    $("#email").val(item.email);
+                    $('#infoModal').modal('show');
+                } else {
+                    alert("请选择一条数据进行修改");
+                }
+                $("#modal-header").text("修改");
+            });
+            /*提交信息*/
+            $("#btnOK").click(function () {
+                var sex;
+                if ($("#radiowoman").is(":checked")) {
+                    sex = $("#radiowoman").val();
+                } else {
+                    sex = $("#radioman").val();
+                }
+                if ($("#modal-header").text() == "添加") {
+                    $.ajax({
+                        type: "post",
+                        url: "",
+                        data: {
+                            "name": $("#name").val(),
+                            "sex": sex,
+                            "userType": $("#usertype").val(),
+                            "birthday": $("#birthday").val(),
+                            "phone": $("#phone").val(),
+                            "email": $("#email").val()
+                        },
+                        dataType: "json",
+                        success: function (data) {
+                            alert("添加成功");
+                        },
+                        error: function () {
+                            alert("内部出现错误");
+                        }
+                    });
+                } else {
+                    var id = $("tbody input[type='checkbox']:checked").val();
+                    if ($("#modal-header").text() == "修改") {
+                        $.ajax({
+                            type: "post",
+                            url: "",
+                            data: {
+                                "name": $("#name").val(),
+                                "sex": sex,
+                                "userType": $("#usertype").val(),
+                                "birthday": $("#birthday").val(),
+                                "phone": $("#phone").val(),
+                                "email": $("#email").val()
+                            },
+                            dataType: "json",
+                            success: function (data) {
+                                alert("修改成功");
+                                window.location.reload();
+                            },
+                            error: function () {
+                                alert("内部出现错误");
+                                window.location.reload();
+                            }
+                        });
+                    }
+                }
+
+            });
+            /*退出modal*/
+            $("#btnExit").click(function () {
+                window.location.reload();
+            });
+            /*删除信息*/
+            $("#btnDel").click(function () {
+                if (checkboxchecked()) {
+                    $.ajax({
+                        type: "post",
+                        datatype: "json",
+                        url: "",
+                        data: {"userid": $("tbody input[type='checkbox']:checked").val()},
+                        success: function (data) {
+
+                        },
+                        error: function () {
+                            alert("内部出现错误");
+                        }
+                    });
+                } else {
+                    alert("请选择一条进行删除");
+                }
+
+            });
+            /*判断被选中的行数*/
+            function checkboxchecked() {
+                var count = 0;
+                $("#table-body :checkbox").each(function (key, value) {
+                    if ($(value).prop('checked')) {
+                        count++;
+                    }
+                });
+                if (count == 1) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            /*表格数据加载*/
+            function table_load(num) {
+                var numPerPage = $("#pages").val();
+                $.ajax({
+                    type: "post",
+                    url: "",
+                    data: {"pageNum": num, "numPerPage": numPerPage},
+                    datatype: "json",
+                    success: function (data) {
+
+                    },
+                    error: function () {
+                        alert("内部出现错误");
+                    }
+                });
+            }
+            /*分页*/
+            function pageChange() {
+                var pages = $("#pages").val();
+                $.ajax({
+                    type: "post",
+                    url: "",
+                    data: {"pageNum": pages},
+                    datatype: "json",
+                    success: function (data) {
+
+                    },
+                    error: function () {
+
+                    }
+                });
+            }
+        };
+        /*设置footer位置*/
+        $(function(){
+            var contentHeight=$("#content-wrapper").height()+ (20 * 2);
+            var contentTop=$("#content-wrapper").offset().top;
+            if(contentTop + contentHeight > $(window).height()){
+                $("#main-footer").css("bottom","auto");
+            }else{
+                $("#main-footer").css("bottom","0");
+            }
+        });
+        function createDemo(name){
+            var container = $('#pagination-' + name);
+            var sources = function(){
+                $.ajax({
+                    type:"post",
+                    url:"",
+                    dataType:"json",
+                    success:function(data){
+                        var datas=JSON.parse(data);
+                        return datas;
+                    },
+                    error: function(){
+                        alert("后台请求加载数据错误");
+                    }
+                })
+            }();
+            var options = {
+                dataSource: sources,
+                className: 'paginationjs-theme-blue',
+
+                callback: function(response, pagination){
+                    window.console && console.log(response, pagination);
+
+                    var dataHtml = '<ul>';
+
+                    $.each(response, function(index, item){
+                        dataHtml += '<li>'+ item +'</li>';
+                    });
+
+                    dataHtml += '</ul>';
+
+                    container.prev().html(dataHtml);
+                }
+            };
+
+
+            container.addHook('beforeInit', function(){
+                window.console && console.log('beforeInit...');
+            });
+            container.pagination(options);
+
+            container.addHook('beforePageOnClick', function(){
+                window.console && console.log('beforePageOnClick...');
+                //return false
+            });
+
+            return container;
+        }
+      /*  var sjPager=window.sjPager={
+            opts: {
+                //默认属性
+                pageSize: 10,
+                perText: "pre",
+                nextText: "next",
+                firstText: "First",
+                lastText: "Last",
+                shiftingLeft: 3,
+                shiftingRight: 3,
+                preLeast: 2,
+                nextLeast: 2,
+                showFirst: true,
+                showLast: true,
+                url: "",
+                type: "POST",
+                dataType: "JSON",
+                searchParam: {},
+                beforeSend: null,
+                success: null,
+                complete: null,
+                error: function () {
+                    alert("请求出现错误");
+                },
+            },
+            pageElement:null,  //分页dom元素
+            commonHtmlText:{
+                //公共文本变量
+            },
+            init: function (obj, op) {
+                //对象初始化
+            },
+            doPage:function(index,pageSize,searchParam){
+                //执行分页方法
+            },
+            getTotalPage:function(){
+                //获取总页数
+            },
+            creatPreAndLastBtn:function(pageTextArr){
+                //创建上一页,首页按钮链接
+            },
+            createNextAndLastBtn:function(pageTextArr){
+                //创建下一页，尾页按钮链接
+            },
+            createIndexBtn:function(pageTextArr){
+                //中间分页索引按钮
+            },
+            renderHtml:function(pageTextArr){
+                //渲染分页控件到页面
+            },
+            createSpan:function(text,className){
+                //创建span
+            },
+            createIndexText:function(index,text){
+                //创建索引文本
+            },
+            jumpToPage: function () {
+                //跳转到
+            }
+        };
+        $.fn.sjAjaxPager = function(option){
+            return sjPager.init($(this),option);
+        };
+        $(function(){
+            $("#pager").sjAjaxPager({
+                url:"",
+                pageSize:10,
+                searchParam:{
+                    //如果有其他查询功能在此处传入
+                    id:1,
+                    name:'test',
+                },
+                beforeSend:function(){
+
+                },
+                success:function(data){
+                    //返回数据处理
+                    $.each(data.items,function(i,v){
+                        $("tbody").append("<tr>" +
+                                "<td><input type='checkbox' value='" + data[i].Id + "' /></td><td>" +
+                                data[i].name + "</td><td>" + data[i].sex + "</td><td>" +
+                                data[i].type + "</td>><td>" + data[i].birthday + "</td><td>" +
+                                data[i].phone + "</td><td>" + data[i].email + "</td></tr>");
+                    });
+                },
+                complete:function(){
+
+                }
+            });
+        });*/
+    </script>
+</body>
+</html>

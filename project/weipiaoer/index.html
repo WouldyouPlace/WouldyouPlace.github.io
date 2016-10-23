@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微票儿</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/MicroTicket.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top" name="top">
+        <div class="container">
+            <ul class="top-type">
+                <li class="top-type-active"><a href="#">演出</a></li>
+                <li><a href="#">电影</a></li>
+                <li><a href="#">体育</a></li>
+            </ul>
+            <div class="top-option">
+                <ul>
+                    <li><a href="#">手机微票儿</a></li>
+                    <li><a href="#">演出场馆</a></li>
+                    <li><a href="#">票品验证</a></li>
+                </ul>
+                <p class="hotline">服务热线：13672109615</p>
+            </div>
+        </div>
+    </div>
+    <header class="container">
+        <div class="header">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="#" class="logo"><img src="image/logo.png"/></a>
+                    全国<b class="caret"></b>
+                </div>
+                <div class="col-md-6 searchbar">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入艺人、演出、场馆...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-success">搜索</button>
+                    </span>
+                    </div>
+                </div>
+                <div class="col-md-3 user-state">
+                    <div class="pull-right">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <a href="#">登陆</a>
+                        <a href="#">注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-default ">
+        <div class="container">
+            <ul class="nav navbar-nav wpnav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">
+                        <span class="glyphicon glyphicon-list"></span>全部演出分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">演唱会</a></li>
+                        <li><a href="#">舞台剧</a></li>
+                        <li><a href="#">儿童亲子</a></li>
+                        <li><a href="#">音乐会</a></li>
+                        <li><a href="#">展览活动</a></li>
+                        <li><a href="#">舞蹈芭蕾</a></li>
+                        <li><a href="#">戏曲综艺</a></li>
+                        <li><a href="#">休闲娱乐</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">演唱会</a></li>
+                <li><a href="#">话剧格局</a></li>
+                <li><a href="#">儿童亲子</a></li>
+                <li><a href="#">音乐会</a></li>
+                <li><a href="#">展览活动</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-sm-12">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="image/banner1.png" alt="图片加载中..." width="100%" height="200px">
+                            </div>
+                            <div class="item">
+                                <img src="image/banner2.png" alt="图片加载中..." width="100%" height="200px">
+                            </div>
+                            <div class="item">
+                                <img src="image/banner3.png" alt="图片加载中..." width="100%" height="200px">
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="carbonad">
+                        <h1>特惠看</h1>
+                        <img src="image/groom.png" alt="图片加载中..." width="100%">
+                        <div class="carbonad-text">
+                            <a href="#">嗨翻津门——英国缤纷嘉年华•天津站</a>
+                        </div>
+                        <div class="carbonad-tab">
+                            <a href="#"><span class="glyphicon glyphicon-volume-up"></span>加入我们 成为欢乐分之一</a>
+                        </div>
+                        <hr />
+                        <ul class="carbonad-newlist">
+                            <li><a href="#">2016巡回演唱会</a><br></li>
+                            <li> <a href="#">[上海]百老汇经典音乐剧--《狮子王》</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <h3>近期热门</h3>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <a href="#"><img src="image/item8.png" alt="图片加载中..."></a>
+                            <div class="new-list">
+                                <a href="#">[深圳]逃跑计划2016巡回演唱会深圳站</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="#"><img src="image/item6.png" alt="图片加载中..."></a>
+                            <div class="new-list">
+                                <a href="#">[贵阳]陈奕迅 ANOTHER EASON'S LIFE演唱会贵阳站</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="#"><img src="image/item3.png" alt="图片加载中..."></a>
+                            <div class="new-list">
+                                <a href="#">[太原]2016岳云鹏相声专场太原站</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="#"><img src="image/item5.png" alt="图片加载中..."></a>
+                            <div class="new-list">
+                                <a href="#">[济南]2016刘若英"Renext 我敢"世界巡回演唱会济南站(售</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="event-content">
+                        <div class="sub-title">
+                            <h3>最新资讯</h3>
+                        </div>
+                        <img src="image/info3.png" alt="图片加载中..." width="100%">
+                        <div class="event-content-text">
+                            <a href="#">[哈尔滨]梁静茹.你的名字是爱情的演唱会</a><hr>
+                            <a href="#">[太原]蔡依林2016PLAY世界巡回演唱会</a>
+                        </div>
+                    </div>
+                    <a href="#" class="validate">票面真伪验证</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <img src="image/info.png" alt="" class="img-responsive">
+        </div>
+    </div>
+    <div id="show-recommand" class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <ul id="cateItem" class="show-recommand-content">
+                    <li class="recommand-active">演唱会</li>
+                    <li>舞台剧</li>
+                    <li>儿童亲子</li>
+                    <li>音乐会</li>
+                    <li>展览互动</li>
+                    <li class="pull-right"><a href="#" class="all-perform">全部演出&gt;</a></li>
+                </ul>
+                <ul id="cateContent">
+                    <li class="selected">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="#"  class="cate-item-img">
+                                    <img src="image/item3.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]2016刘若英“Renext 我敢”世界巡回演唱会（预售）</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#"   class="cate-item-img">
+                                    <img src="image/item2.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]重回年轻时代 郑智化西安演唱会</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item6.png" alt="图片加载中..." >
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list" >
+                                    <a href="#">[北京]陈奕迅 ANOTHER EASON'S LIFE演唱会北京站</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item5.png" alt="图片加载中...">
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[济南]2016刘若英"Renext 我敢"世界巡回演唱会济南站(售</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="#"  class="cate-item-img">
+                                    <img src="image/item3.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]2016刘若英“Renext 我敢”世界巡回演唱会（预售）</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#"   class="cate-item-img">
+                                    <img src="image/item2.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]重回年轻时代 郑智化西安演唱会</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item6.png" alt="图片加载中..." >
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list" >
+                                    <a href="#">[北京]陈奕迅 ANOTHER EASON'S LIFE演唱会北京站</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item5.png" alt="图片加载中...">
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[济南]2016刘若英"Renext 我敢"世界巡回演唱会济南站(售</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="#"   class="cate-item-img">
+                                    <img src="image/item2.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]重回年轻时代 郑智化西安演唱会</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#"  class="cate-item-img">
+                                    <img src="image/item3.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]2016刘若英“Renext 我敢”世界巡回演唱会（预售）</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item6.png" alt="图片加载中..." >
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list" >
+                                    <a href="#">[北京]陈奕迅 ANOTHER EASON'S LIFE演唱会北京站</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item5.png" alt="图片加载中...">
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[济南]2016刘若英"Renext 我敢"世界巡回演唱会济南站(售</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="#"  class="cate-item-img">
+                                    <img src="image/item3.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]2016刘若英“Renext 我敢”世界巡回演唱会（预售）</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#"   class="cate-item-img">
+                                    <img src="image/item2.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]重回年轻时代 郑智化西安演唱会</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item6.png" alt="图片加载中..." >
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list" >
+                                    <a href="#">[北京]陈奕迅 ANOTHER EASON'S LIFE演唱会北京站</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item5.png" alt="图片加载中...">
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[济南]2016刘若英"Renext 我敢"世界巡回演唱会济南站(售</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="#"   class="cate-item-img">
+                                    <img src="image/item2.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]重回年轻时代 郑智化西安演唱会</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item6.png" alt="图片加载中..." >
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list" >
+                                    <a href="#">[北京]陈奕迅 ANOTHER EASON'S LIFE演唱会北京站</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#"  class="cate-item-img">
+                                    <img src="image/item3.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]2016刘若英“Renext 我敢”世界巡回演唱会（预售）</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item5.png" alt="图片加载中...">
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[济南]2016刘若英"Renext 我敢"世界巡回演唱会济南站(售</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="#"  class="cate-item-img">
+                                    <img src="image/item3.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]2016刘若英“Renext 我敢”世界巡回演唱会（预售）</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#"   class="cate-item-img">
+                                    <img src="image/item2.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]重回年轻时代 郑智化西安演唱会</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item6.png" alt="图片加载中..." >
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list" >
+                                    <a href="#">[北京]陈奕迅 ANOTHER EASON'S LIFE演唱会北京站</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item5.png" alt="图片加载中...">
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[济南]2016刘若英"Renext 我敢"世界巡回演唱会济南站(售</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="#"   class="cate-item-img">
+                                    <img src="image/item2.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]重回年轻时代 郑智化西安演唱会</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item6.png" alt="图片加载中..." >
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list" >
+                                    <a href="#">[北京]陈奕迅 ANOTHER EASON'S LIFE演唱会北京站</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item5.png" alt="图片加载中...">
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[济南]2016刘若英"Renext 我敢"世界巡回演唱会济南站(售</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#"  class="cate-item-img">
+                                    <img src="image/item3.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]2016刘若英“Renext 我敢”世界巡回演唱会（预售）</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="#"  class="cate-item-img">
+                                    <img src="image/item3.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]2016刘若英“Renext 我敢”世界巡回演唱会（预售）</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#"   class="cate-item-img">
+                                    <img src="image/item2.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]重回年轻时代 郑智化西安演唱会</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item6.png" alt="图片加载中..." >
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list" >
+                                    <a href="#">[北京]陈奕迅 ANOTHER EASON'S LIFE演唱会北京站</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item5.png" alt="图片加载中...">
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[济南]2016刘若英"Renext 我敢"世界巡回演唱会济南站(售</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                        <div class="col-md-3">
+                            <a href="#"  class="cate-item-img">
+                                <img src="image/item3.png" alt="图片加载在中...">
+                                <span    class="cate-item-text">立即购买</span>
+                            </a>
+                            <div class="new-list">
+                                <a href="#">[西安]2016刘若英“Renext 我敢”世界巡回演唱会（预售）</a>
+                                <h2>380<small>元起</small></h2>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#"   class="cate-item-img">
+                                <img src="image/item2.png" alt="图片加载在中...">
+                                <span    class="cate-item-text">立即购买</span>
+                            </a>
+                            <div class="new-list">
+                                <a href="#">[西安]重回年轻时代 郑智化西安演唱会</a>
+                                <h2>380<small>元起</small></h2>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#" class="cate-item-img">
+                                <img src="image/item6.png" alt="图片加载中..." >
+                                <span  class="cate-item-text">立即购买</span>
+                            </a>
+                            <div class="new-list" >
+                                <a href="#">[北京]陈奕迅 ANOTHER EASON'S LIFE演唱会北京站</a>
+                                <h2>380<small>元起</small></h2>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#" class="cate-item-img">
+                                <img src="image/item5.png" alt="图片加载中...">
+                                <span  class="cate-item-text">立即购买</span>
+                            </a>
+                            <div class="new-list">
+                                <a href="#">[济南]2016刘若英"Renext 我敢"世界巡回演唱会济南站(售</a>
+                                <h2>380<small>元起</small></h2>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item6.png" alt="图片加载中..." >
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list" >
+                                    <a href="#">[北京]陈奕迅 ANOTHER EASON'S LIFE演唱会北京站</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="cate-item-img">
+                                    <img src="image/item5.png" alt="图片加载中...">
+                                    <span  class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[济南]2016刘若英"Renext 我敢"世界巡回演唱会济南站(售</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#"  class="cate-item-img">
+                                    <img src="image/item3.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]2016刘若英“Renext 我敢”世界巡回演唱会（预售）</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#"   class="cate-item-img">
+                                    <img src="image/item2.png" alt="图片加载在中...">
+                                    <span    class="cate-item-text">立即购买</span>
+                                </a>
+                                <div class="new-list">
+                                    <a href="#">[西安]重回年轻时代 郑智化西安演唱会</a>
+                                    <h2>380<small>元起</small></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <div class="show-recommand-sidebar">
+                    <div class="show-recommand-sidebar-title">
+                        <h3>历历在目-<small>尽享每一天的精彩</small></h3>
+                    </div>
+                    <div class="show-recommand-sidebar-content">
+                        <div class="show-sidebar-content-text">
+                            <p>今天一共<a href="#">19场</a>演出</p>
+                        </div>
+                        <div class="menu">
+                            <img src="image/book4.png" alt="">
+                            <span>
+                                <h4>[重庆]PNSO世界恐龙艺术大展全球巡展重庆站</h4>
+                                <small>2016年5月1日～2016年10月30日重庆自然博物馆新馆</small>
+                                <p><big>20</big>元起</p>
+                            </span>
+                        </div>
+                        <div class="menu">
+                            <img src="image/book4.png" alt="">
+                            <span>
+                                <h4>[重庆]PNSO世界恐龙艺术大展全球巡展重庆站</h4>
+                                <small>2016年5月1日～2016年10月30日重庆自然博物馆新馆</small>
+                                <p><big>20</big>元起</p>
+                            </span>
+                        </div>
+                        <div class="menu">
+                            <img src="image/book4.png" alt="">
+                            <span>
+                                <h4>[重庆]PNSO世界恐龙艺术大展全球巡展重庆站</h4>
+                                <small>2016年5月1日～2016年10月30日重庆自然博物馆新馆</small>
+                                <p><big>20</big>元起</p>
+                            </span>
+                        </div>
+                        <a href="#">查看今日全部演出</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="venue-recommand">
+        <div class="container">
+            <div class="col-md-9">
+                <div class="venue-title">
+                    <span class="venue-text">场馆推荐</span>
+                    <a href="#" class="pull-right">全部场馆&gt;</a>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="#" class="venue-show">
+                            <img src="image/cate1.png" alt="" width="95%">
+                            <div class="venue-place">
+                                <h4>北京保利剧院</h4>
+                                <p>地址：东直门南大街14号保利大厦</p>
+                                <p>电话：010 65065345</p>
+                            </div>
+                        </a>
+                        <h3>近期演出：</h3>
+                        <ul class="carbonad-newlist venue-color">
+                            <li><a href="#">[北京]恒源祥戏剧出品原创话剧《大商海》</a></li>
+                            <li><a href="#">[北京]百老汇经典音乐剧《音乐之声》中文版</a></li>
+                            <li><a href="#">[北京]儿童多媒体音乐游戏剧《我爱童话之小红帽和她的朋友们》</a></li>
+                            <li><a href="#">[北京]卓锦万代“与牠同行”演唱会</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#" class="venue-show">
+                            <img src="image/cate2.png" alt="" width="95%">
+                            <div class="venue-place">
+                                <h4>乐视体育生态中心</h4>
+                                <p>地址：复兴路69号(近五棵松地铁)</p>
+                                <p>电话：0106812312 01023123121</p>
+                            </div>
+                        </a>
+                        <h3>近期演出：</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 venue-sidebar">
+                <div class="venue-sidebar-title">
+                    热销榜单
+                </div>
+                <div class="venue-sidebar-content">
+                    <dl>
+                        <dt>
+                            <a href="#"><img src="image/book1.png" alt=""></a></dt>
+                        <dd>
+                            <p><a href="#">[深圳]逃跑计划2016巡回演唱会深圳站</a></p>
+                            <p><a href="#">2016年6月18日</a></p>
+                            <p><a href="#">深圳音乐厅</a></p>
+                            <p><a href="#"><big>180</big>元起</a></p>
+                        </dd>
+                    </dl>
+                    <ul>
+                        <li><a href="#">[贵阳]陈奕迅 ANOTHER EASON'S LIFE</a></li>
+                        <li><a href="#">[太原]2016岳云鹏相声专场太原站</a></li>
+                        <li><a href="#">[济南]2016刘若英"Renext 我敢"世界巡回</a></li>
+                        <li><a href="#">[上海]加拿大新马戏时尚秀《大都会 </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-logo">
+                    <img src="image/f1.png" alt="">
+                    <span class="instu1">微信电影票官网</span>
+                    <span class="instu2">在先占好座，覆盖影院全国第一</span>
+                </div>
+                <div class="col-md-4 footer-phone">
+                    <img src="image/f2.png" alt="">
+                    <span class="instu1">4001-100-100</span>
+                    <span class="instu2">9：00-23：00 | 全年无休</span>
+                </div>
+                <div class="col-md-4 footer-wechat">
+                    <img src="image/f3.png" alt="">
+                    <img src="image/f6.png" alt="">
+                    <span class="instu1">打开微信扫一扫</span>
+                </div>
+            </div>
+            <div class="row companyIns">
+                <span>@2015北京微影时代科技有限公司版权所有　　京ICP备14034406号-2</span>
+            </div>
+        </div>
+    </footer>
+</div>
+<a href="#top" class="return-top" id="returnTop"><span class="glyphicon glyphicon-chevron-up"></span></a>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/MicroTicket.js"></script>
+</body>
+</html>

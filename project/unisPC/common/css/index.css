@@ -1,0 +1,359 @@
+@charset "utf-8";
+body{
+    background-color: #2f9de8;
+}
+.error-prompt {
+    position: absolute;
+    z-index: 100000;
+    height: 800px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    text-align: center;
+}
+
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #D2E0F2;
+    z-index: 20000;
+}
+
+.loading-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -120px 0 0 -120px;
+    text-align: center;
+    border: 2px solid #D4EEFE;
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    background: #fff;
+    color: #15428B;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.header .logo{
+    position: relative;
+    padding-left: 20px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.imgBg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.header-right {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 50px;
+}
+
+.header-options {
+    margin-right: 8%;
+    float: right;
+    vertical-align: middle;
+
+}
+
+.header-options li {
+    text-decoration: none;
+    float: left;
+    vertical-align: middle;
+    margin-left: 30px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.header-options li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-options a img {
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+
+.textbox03 {
+    border: #878787 1px solid;
+    padding: 4px 3px;
+    line-height: 14px;
+    background-color: #fff;
+    height: auto;
+    font-size: 14px;
+    font-weight: bold;
+    width: 190px;
+}
+
+.txt01 {
+    padding: 3px 2px 2px 2px;
+    border-width: 1px;
+    border-color: #ddd;
+    color: #000;
+}
+
+.txt {
+    border: #878787 1px solid;
+    padding: 4px 3px;
+    line-height: 14px;
+    background-color: #fff;
+    height: auto;
+    font-size: 14px;
+}
+
+
+
+.crumbs {
+    background-color: #D4EEFE;
+    padding: 8px 0 2px 10px;
+    border-bottom:1px solid #95B8E7;
+}
+.crumbsNav span {
+    font-weight: bolder;
+    color: #111;
+}
+
+.crumbsNav a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+#sideBar {
+    background: url("../../common/images/side.jpg") center;
+    -moz-background-size:100% 100%;
+    -webkit-background-size:100% 100%;
+    -o-background-size:100% 100%;
+    background-size:100% 100%;  ;
+    color: #fff;
+    background-color: transparent;
+}
+
+#sideBar .panel-header {
+    background-color: #2F9CE7;
+}
+
+#sideBar .panel-title {
+    color: #fff;
+    text-align: left;
+}
+
+#sideBar .panel-body {
+    background-color: #2F9CE7;
+}
+
+#sideBar .accordion-collapse {
+    background: url('../images/accordion_arrows.png') no-repeat 0 0;
+}
+
+#sideBar .accordion-expand {
+    background: url("../images/accordion_arrows.png") no-repeat -16px 0;
+}
+.linkUp{
+    visibility: hidden;
+}
+.navlist {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+
+}
+.navlist > li {
+    position: relative;
+    padding: 0;
+}
+
+.navlist > li > div {
+    padding-left: 10px;
+    padding-top: 2px;
+}
+
+.navlist > li > div.hover {
+    background: #fff;
+    cursor: pointer;
+}
+
+.navlist > li > div > a {
+    color: #013E7F;
+    text-decoration: none;
+    line-height: 24px;
+}
+
+.navlist > li > div.hover > a {
+    color: #416AA3;
+    text-decoration: none;
+}
+
+.navlist > li > div.selected {
+    background: #E0ECFF;
+    cursor: default;
+}
+
+.navlist > li > div.selected > a {
+    color: #416AA3;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.third_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.third_ul > li {
+    padding-left: 20px;
+}
+
+.main-content {
+    position: relative;
+    overflow: hidden;
+    color: red;
+}
+
+#slide {
+    height: 100%;
+    width: 100%;
+}
+
+#slide ul {
+    position: relative;
+    height: 100%;
+    width: 200%;
+}
+#slide ul li {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+#slide li img {
+    width: 100%;
+    height: 100%;
+}
+
+#slide ol {
+    position: absolute;
+    left: 46%;
+    bottom: 3%;
+    z-index: 100;
+
+}
+
+#slide ol li {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-left: 25px;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#slide ol li .radius {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 19px dotted;
+    /* IE7,IE8圆尺寸要小1像素同时有1像素偏移 */
+    margin: 0 0 1px 1px;
+    border-width: 0vw;
+    margin: 0vw;
+    color: #fff;
+    background-color: currentColor;
+}
+
+#slide ol li .active {
+    color: #023d83;
+}
+
+.footer {
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    height: 40px;
+}
+
+.icon {
+    background: url(../images/tabicons.png) no-repeat;
+    width: 18px;
+    line-height: 18px;
+    display: inline-block;
+}
+
+.icon-sys {
+    background-position: 0px -200px;
+}
+
+.icon-set {
+    background-position: -380px -200px;
+}
+
+.icon-add {
+    background-position: -20px 0px;
+}
+
+.icon-nav {
+    background-position: -100px -20px;
+}
+
+.icon-users {
+    background-position: -100px -480px;
+}
+
+.icon-role {
+    background-position: -360px -200px;
+}
+
+.icon-set {
+    background-position: -380px -200px;
+}
+
+.icon-log {
+    background-position: -380px -80px;
+}
+
+.icon-delete {
+    background-position: -140px -120px;
+}
+
+.icon-edit {
+    background-position: -380px -320px;
+}
+
+.icon-magic {
+    background-position: 0px -500px;
+}
+
+.icon-database {
+    background-position: -20px -140px;
+}
+
+.icon-arrow {
+    background: url('../images/arrow.gif') no-repeat right;
+
+}
+

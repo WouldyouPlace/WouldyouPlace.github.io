@@ -1,0 +1,48 @@
+{
+    "errMsg": "",
+    "obj": {
+        "autoCount": true,
+        "first": 1,
+        "pageNo": 1,
+        "pageSize": 10,
+        "result": [
+            {
+                "busCode": "1",
+                "driverCode": "11111",
+                "dtTrade": "2015-01-01",
+                "id": 4,
+                "name": "if"
+            },
+            {
+                "busCode": "1",
+                "driverCode": "25454",
+                "dtTrade": "2015-04-29",
+                "id": 5,
+                "name": "else"
+            },
+            {
+                "busCode": "1",
+                "driverCode": "1",
+                "dtTrade": "2016-08-22",
+                "id": 1,
+                "name": "Objective - C"
+            },
+            {
+                "busCode": "1",
+                "driverCode": "2",
+                "dtTrade": "2016-02-01",
+                "id": 2,
+                "name": "Node.js"
+            },
+            {
+                "busCode": "1",
+                "driverCode": "1",
+                "dtTrade": "2016-01-01",
+                "id": 3,
+                "name": "PHP"
+            }
+        ],
+        "totalCount": 5
+    },
+    "status": true
+}

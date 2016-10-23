@@ -1,0 +1,46 @@
+<div>
+    <div class="row">
+        <div class="col-xs-3">
+
+            <div class="btn-group btn-group-xs" role="group" aria-label="...">
+                <button type="button" class="btn btn-info2" ng-click="searchList()"><i class="ace-icon fa fa-search"></i>查询条件</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>SIM卡号码</th>
+                    <th>机具编号</th>
+                    <th>线路编号</th>
+                    <th>车辆号</th>
+                    <th>欠费天数</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="rowItem in warningList">
+                    <th>{{(paginationConf.currentPage - 1) * paginationConf.itemsPerPage + $index + 1}}</th>
+                    <td>{{rowItem.simCode}}</td>
+                    <td>{{rowItem.devCode}}</td>
+                    <td>{{rowItem.lineCode}}</td>
+                    <td>{{rowItem.busCode}}</td>
+                    <td>{{rowItem.offDays}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div ace-pagination pagination-conf="paginationConf" pagination-click="updateList()"></div>
+        </div>
+    </div>
+
+    <div ace-modal-view modal-title="modalViewConf_query.title" modal-show="modalViewConf_query.show" modal-footer-block="modalViewConf_query.modalFooterBlock">
+        <div sim-arrears-warning-query query-object="queryObject" modal-view-conf="modalViewConf_query" update-list="updateList()" reset-query="resetQuery()"></div>
+    </div>
+
+</div>

@@ -1,0 +1,431 @@
+{
+  "status": true,
+  "obj": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "id": "10",
+              "icon": "",
+              "level": 3,
+              "title": "组织机构管理",
+              "orderNum": 4,
+              "parentId": "2",
+              "state": 1,
+              "link": "#/main/SystemManagement/OrganizationManagement"
+            },
+            {
+              "children": [],
+              "id": "11",
+              "icon": "",
+              "level": 3,
+              "title": "车站信息",
+              "orderNum": 5,
+              "parentId": "2",
+              "state": 1,
+              "link": "#/main/SystemManagement/StationManagement"
+            },
+            {
+              "children": [],
+              "id": "12",
+              "icon": "",
+              "level": 3,
+              "title": "公交车信息",
+              "orderNum": 6,
+              "parentId": "2",
+              "state": 1,
+              "link": "#/main/SystemManagement/BusManagement"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "id": "13",
+                  "icon": "",
+                  "level": 3,
+                  "title": "SIM卡管理",
+                  "orderNum": 7,
+                  "parentId": "2",
+                  "state": 1,
+                  "link": "#/main/SystemManagement/SimManagement"
+                },
+                {
+                  "children": [],
+                  "id": "13",
+                  "icon": "",
+                  "level": 3,
+                  "title": "PSAM卡管理",
+                  "orderNum": 7,
+                  "parentId": "2",
+                  "state": 1,
+                  "link": "#/main/SystemManagement/PsamManagementCtrl"
+                }
+              ],
+              "id": "13",
+              "icon": "",
+              "level": 3,
+              "title": "车载机登记",
+              "orderNum": 7,
+              "parentId": "2",
+              "state": 1,
+              "link": "javascript:void(0)"
+            },
+            {
+              "children": [],
+              "id": "7",
+              "icon": "",
+              "level": 3,
+              "title": "菜单管理",
+              "orderNum": 1,
+              "parentId": "2",
+              "state": 1,
+              "link": "#/main/SystemManagement/MenuManagement"
+            },
+            {
+              "children": [],
+              "id": "8",
+              "icon": "",
+              "level": 3,
+              "title": "用户管理",
+              "orderNum": 2,
+              "parentId": "2",
+              "state": 1,
+              "link": "#/main/SystemManagement/UserManagement"
+            },
+            {
+              "children": [],
+              "id": "9",
+              "icon": "",
+              "level": 3,
+              "title": "角色管理",
+              "orderNum": 3,
+              "parentId": "2",
+              "state": 1,
+              "link": "#/main/SystemManagement/RoleManagement"
+            }
+          ],
+          "id": "2",
+          "icon": "",
+          "level": 2,
+          "title": "系统管理",
+          "orderNum": 1,
+          "parentId": "1",
+          "state": 1,
+          "link": "javascript:void(0)"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "id": "14",
+              "icon": "",
+              "level": 3,
+              "title": "管理卡发放",
+              "orderNum": 1,
+              "parentId": "3",
+              "state": 1,
+              "link": "#/main/DailyManagement/CardGrant"
+            },
+            {
+              "children": [],
+              "id": "15",
+              "icon": "",
+              "level": 3,
+              "title": "考勤管理",
+              "orderNum": 2,
+              "parentId": "3",
+              "state": 1,
+              "link": "#/main/DailyManagement/AttendanceManagement"
+            },
+            {
+              "children": [],
+              "id": "16",
+              "icon": "",
+              "level": 3,
+              "title": "采集点管理",
+              "orderNum": 3,
+              "parentId": "3",
+              "state": 1,
+              "link": "#/main/DailyManagement/CollectionCenterManagement"
+            },
+            {
+              "children": [],
+              "id": "17",
+              "icon": "",
+              "level": 3,
+              "title": "排班管理",
+              "orderNum": 4,
+              "parentId": "3",
+              "state": 1,
+              "link": "#/main/DailyManagement/ScheduleManagement"
+            },
+            {
+              "children": [],
+              "id": "18",
+              "icon": "",
+              "level": 3,
+              "title": "出车与回场登记",
+              "orderNum": 5,
+              "parentId": "3",
+              "state": 1,
+              "link": "#/main/DailyManagement/DepartRegress"
+            },
+            {
+              "children": [],
+              "id": "19",
+              "icon": "",
+              "level": 3,
+              "title": "sim卡欠费报警",
+              "orderNum": 6,
+              "parentId": "3",
+              "state": 1,
+              "link": "#/main/DailyManagement/SimArrearsWarning"
+            },
+            {
+              "children": [],
+              "id": "20",
+              "icon": "",
+              "level": 3,
+              "title": "点钞管理",
+              "orderNum": 7,
+              "parentId": "3",
+              "state": 1,
+              "link": "#/main/DailyManagement/CountingManagement"
+            },
+            {
+              "children": [],
+              "id": "21",
+              "icon": "",
+              "level": 3,
+              "title": "事故登记",
+              "orderNum": 8,
+              "parentId": "3",
+              "state": 1,
+              "link": "javascript:void(0)"
+            },
+            {
+              "children": [],
+              "id": "22",
+              "icon": "",
+              "level": 3,
+              "title": "车辆违规登记",
+              "orderNum": 9,
+              "parentId": "3",
+              "state": 1,
+              "link": "#/main/DailyManagement/ViolationLog"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "id": "231",
+                  "icon": "",
+                  "level": 4,
+                  "title": "参数管理",
+                  "orderNum": 10,
+                  "parentId": "23",
+                  "state": 1,
+                  "link": "#/main/DailyManagement/ParamManagement"
+                },
+                {
+                  "children": [],
+                  "id": "231",
+                  "icon": "",
+                  "level": 4,
+                  "title": "主程序管理",
+                  "orderNum": 10,
+                  "parentId": "22313",
+                  "state": 1,
+                  "link": "#/main/DailyManagement/MainAppManagement"
+                },
+                {
+                  "children": [],
+                  "id": "231",
+                  "icon": "",
+                  "level": 4,
+                  "title": "白名单管理",
+                  "orderNum": 10,
+                  "parentId": "2231123",
+                  "state": 1,
+                  "link": "#/main/DailyManagement/WhiteList"
+                },
+                {
+                  "children": [],
+                  "id": "231",
+                  "icon": "",
+                  "level": 4,
+                  "title": "黑名单管理",
+                  "orderNum": 10,
+                  "parentId": "2231^&*IUH123",
+                  "state": 1,
+                  "link": "#/main/DailyManagement/BlacklistManagement"
+                },
+                {
+                  "children": [],
+                  "id": "231",
+                  "icon": "",
+                  "level": 4,
+                  "title": "读写板程序管理",
+                  "orderNum": 10,
+                  "parentId": "2231fs123",
+                  "state": 1,
+                  "link": "#/main/DailyManagement/RwBoardManagement"
+                }
+              ],
+              "id": "23",
+              "icon": "",
+              "level": 3,
+              "title": "数据采集与设置",
+              "orderNum": 10,
+              "parentId": "3",
+              "state": 1,
+              "link": "javascript:void(0)"
+            },
+            {
+              "children": [],
+              "id": "1dwd",
+              "icon": "",
+              "level": 3,
+              "title": "车辆规费登记",
+              "orderNum": 11,
+              "parentId": "3",
+              "state": 1,
+              "link": "#/main/DailyManagement/VehicleCharges"
+            }
+          ],
+          "id": "3",
+          "icon": "",
+          "level": 2,
+          "title": "日常管理",
+          "orderNum": 2,
+          "parentId": "1",
+          "state": 1,
+          "link": "javascript:void(0)"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "id": "25",
+              "icon": "",
+              "level": 3,
+              "title": "投诉与表扬登记",
+              "orderNum": 1,
+              "parentId": "4",
+              "state": 1,
+              "link": "javascript:void(0)"
+            },
+            {
+              "children": [],
+              "id": "26",
+              "icon": "",
+              "level": 3,
+              "title": "投诉处理",
+              "orderNum": 2,
+              "parentId": "4",
+              "state": 1,
+              "link": "javascript:void(0)"
+            }
+          ],
+          "id": "4",
+          "icon": "",
+          "level": 2,
+          "title": "客户维系",
+          "orderNum": 3,
+          "parentId": "1",
+          "state": 1,
+          "link": "javascript:void(0)"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "id": "27",
+              "icon": "",
+              "level": 3,
+              "title": "车辆定位与行驶情况",
+              "orderNum": 1,
+              "parentId": "5",
+              "state": 1,
+              "link": "javascript:void(0)"
+            }
+          ],
+          "id": "5",
+          "icon": "",
+          "level": 2,
+          "title": "车辆监控",
+          "orderNum": 4,
+          "parentId": "1",
+          "state": 1,
+          "link": "javascript:void(0)"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "id": "28",
+              "icon": "",
+              "level": 3,
+              "title": "员工卡发卡明细",
+              "orderNum": 1,
+              "parentId": "6",
+              "state": 1,
+              "link": "javascript:void(0)"
+            },
+            {
+              "children": [],
+              "id": "29",
+              "icon": "",
+              "level": 3,
+              "title": "线路运营明细",
+              "orderNum": 2,
+              "parentId": "6",
+              "state": 1,
+              "link": "javascript:void(0)"
+            },
+            {
+              "children": [],
+              "id": "30",
+              "icon": "",
+              "level": 3,
+              "title": "车辆运营明细",
+              "orderNum": 3,
+              "parentId": "6",
+              "state": 1,
+              "link": "javascript:void(0)"
+            },
+            {
+              "children": [],
+              "id": "31",
+              "icon": "",
+              "level": 3,
+              "title": "司机运营明细",
+              "orderNum": 4,
+              "parentId": "6",
+              "state": 1,
+              "link": "javascript:void(0)"
+            }
+          ],
+          "id": "6",
+          "icon": "",
+          "level": 2,
+          "title": "KPI",
+          "orderNum": 5,
+          "parentId": "1",
+          "state": 1,
+          "link": "javascript:void(0)"
+        }
+      ],
+      "id": "1",
+      "icon": "",
+      "level": 1,
+      "title": "导航菜单",
+      "orderNum": 1,
+      "parentId": "0",
+      "state": 1,
+      "link": "javascript:void(0)"
+    }
+  ]
+}

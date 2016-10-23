@@ -1,0 +1,23 @@
+<form class="form-horizontal" name="rwBoardAppManagementForm" novalidate ng-submit="submitForm()">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <!-- 文件上传 -->
+            <div class="form-group">
+                <label for="upLoadFile" class="col-sm-3 control-label">文件上传*</label>
+                <div class="col-sm-9">
+                    <div class="button btn btn-xs btn-info2 btn-block" id="upLoadFile" ngf-select ng-model="formObject.upLoadFile" name="upLoadFile" ng-required>选择文件</div>
+                    <small class="red" ng-show="rwBoardAppManagementForm.upLoadFile.$invalid">必填项, 请选择文件上传</small>
+                    <small class="green" ng-show="formObject.upLoadFile">已选择 {{formObject.upLoadFile.name}}</small>
+                </div>
+            </div>
+
+
+            <!-- Submit -->
+            <div class="form-group modal-btn-block">
+                <button class="btn btn-primary btn-block" type="submit" ng-disabled="!verifyForm()">确认</button>
+            </div>
+        </div>
+    </div>
+
+</form>

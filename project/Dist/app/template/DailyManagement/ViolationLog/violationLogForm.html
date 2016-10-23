@@ -1,0 +1,105 @@
+<form class="form-horizontal" name="violationForm" novalidate ng-submit="submitForm()">
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- 车号 -->
+            <div class="form-group">
+                <label for="cBusCode" class="col-sm-3 control-label">车号*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="cBusCode" id="cBusCode" placeholder="车号" ng-model="formObject.cBusCode" required>
+                    <small class="red" ng-show="violationForm.cBusCode.$invalid">必填项, 请输入车号</small>
+                </div>
+            </div>
+
+            <!-- 司机 -->
+            <div class="form-group">
+                <label for="driverId" class="col-sm-3 control-label">司机*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="driverId" id="driverId" placeholder="司机" ng-model="formObject.driverId" required>
+                    <small class="red" ng-show="violationForm.driverId.$invalid">必填项, 请输入司机</small>
+                </div>
+            </div>
+
+            <!-- 违章项目 -->
+            <div class="form-group">
+                <label for="violationProject" class="col-sm-3 control-label">违章项目*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="violationProject" id="violationProject" placeholder="违章项目" ng-model="formObject.violationProject" required>
+                    <small class="red" ng-show="violationForm.violationProject.$invalid">必填项, 请输入违章项目</small>
+                </div>
+            </div>
+
+            <!-- 日期 -->
+            <div class="form-group">
+                <label for="violationDate" class="col-sm-3 control-label">日期*</label>
+                <div class="col-sm-9">
+                    <input ace-datetimepicker date-object="formObject.violationDate" readonly unselectable="on" type="text" class="form-control" name="violationDate" id="violationDate" placeholder="日期" language="zh-CN" max-view="4" min-view="0" date-format="yyyy-MM-dd HH:mm:ss">
+                    <small class="red" ng-show="!formObject.violationDate">必选项, 请选择日期</small>
+                </div>
+            </div>
+
+
+            <!-- 地点 -->
+            <div class="form-group">
+                <label for="violationPlace" class="col-sm-3 control-label">地点*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="violationPlace" id="violationPlace" placeholder="地点" ng-model="formObject.violationPlace" required>
+                    <small class="red" ng-show="violationForm.violationPlace.$invalid">必填项, 请输入地点</small>
+                </div>
+            </div>
+
+            <!-- 金额 -->
+            <div class="form-group">
+                <label for="money" class="col-sm-3 control-label">金额*</label>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" name="money" id="money" placeholder="金额" ng-model="formObject.money" required>
+                    <small class="red" ng-show="violationForm.money.$invalid">必填项, 请输入金额</small>
+                </div>
+            </div>
+
+            <!-- 扣分 -->
+            <div class="form-group">
+                <label for="points" class="col-sm-3 control-label">扣分*</label>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" name="points" id="points" placeholder="扣分" ng-model="formObject.points" required>
+                    <small class="red" ng-show="violationForm.points.$invalid">必填项, 请输入扣分</small>
+                </div>
+            </div>
+
+            <!-- 支付账户 -->
+            <div class="form-group">
+                <label for="account" class="col-sm-3 control-label">支付账户*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="account" id="account" placeholder="支付账户" ng-model="formObject.account" required>
+                    <small class="red" ng-show="violationForm.account.$invalid">必填项, 请输入支付账户</small>
+                </div>
+            </div>
+
+            <!-- 登记人 -->
+            <div class="form-group">
+                <label for="registrar" class="col-sm-3 control-label">登记人*</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="registrar" id="registrar" placeholder="登记人" ng-model="formObject.registrar" required>
+                    <small class="red" ng-show="violationForm.registrar.$invalid">必填项, 请输入登记人</small>
+                </div>
+            </div>
+
+
+            <!-- 备注 -->
+            <div class="form-group">
+                <label for="note" class="col-sm-3 control-label">备注</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" name="note" id="note" rows="3"  ng-model="formObject.note" placeholder="备注"></textarea>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group modal-btn-block">
+                <button class="btn btn-primary btn-block" type="submit">确认</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</form>

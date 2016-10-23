@@ -1,0 +1,175 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+     position: relative;
+     width: 100%;
+     height: 15%;
+     display: table;
+ }
+.header .logo{
+    display: table-cell;
+    vertical-align: middle;
+}
+.imgBg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -100;
+}
+.login {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    height: 80%;
+    overflow: hidden;
+}
+
+.loginbody {
+    /*background: url(../../images/bg/2.jpg) center 0 no-repeat;*/
+    background-size: 100% auto;
+}
+
+.loginbox {
+    /*background: url(../../images/loginconBg.png) 0 0 no-repeat;*/
+    width: 350px;
+    height: 472px;
+    background-size: 100% auto;
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    padding: 0 20px;
+    margin-top: -236px;
+    background: rgba(162,209,237,.7);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2A5D3ED,endColorstr=#B2A5D3ED);
+}
+
+.loginbox h3 {
+    font-size: 22px;
+    font-weight: normal;
+    color: #222;
+    font-family: "宋体";
+    text-align: left;
+    margin: 0 25px;
+    padding-top: 50px;
+
+}
+
+.row{
+    width: 300px;
+    margin: 35px auto;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+.row label{
+    float: left;
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-color: #ccc;
+    z-index: -1;
+}
+.icon-user{
+    background: url("../../images/icon_03.png") no-repeat center;
+}
+.icon-pwd{
+    background: url("../../images/icon_04.png") no-repeat center;
+}
+.icon-ver{
+    background: url("../../images/icon_05.png") no-repeat center;
+}
+.logintext {
+    float: left;
+    border: 0 none;
+    padding: 10px;
+    font-size: 18px;
+    height: 20px;
+    color: #ddd;
+    width: 240px;
+    display: block;
+    outline: none;
+}
+.verInput{
+    width: 130px;
+}
+.verImg{
+    margin-left: 9px;
+    width:  100px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+}
+.login-btn{
+    width: 300px;
+    text-align: center;
+    margin:0 25px;
+    padding: 10px;
+    display: block;
+    color: #fff;
+    background-color: #2c88d1;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.user_text {
+    /*background:  40px center no-repeat;*/
+}
+
+.pwd_text {
+    /*background: url(../../images/pwd.png) 48px center no-repeat;*/
+    padding-bottom: 8px;
+}
+
+.forget_pwd {
+    display: block;
+    text-align: right;
+    color: #ddd;
+    padding: 40px 100px 0px 0px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.loginbtn {
+    color: #fff;
+    font-size: 22px;
+    width: 350px;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+    background: #27a9e3;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border: 0 none;
+    margin: 40px auto 0px;
+    display: block;
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    height: 5%;
+    display: table;
+    text-align: center;
+    background-color: #2081d0;
+}
+.footer p{
+    display: table-cell;
+    vertical-align: middle;
+    color: #fff;
+    letter-spacing: 2px;
+}
