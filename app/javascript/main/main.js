@@ -2,11 +2,12 @@ $(function () {
 
     $("#wicket").height($(".sideNav>ul").children().length * $(window).height());
     $("#wicket>section").height($(window).height());
-
-
     revealOnScroll();
     /* about map loading*/
     gainGeolocation();
+    /*轮播翻页*/
+    var coe = new carousel("inner");
+    coe.pageTurning();
     $("#menuBtn").on('click', function () {
         $("header").css("position", "fixed");
     });
@@ -14,11 +15,60 @@ $(function () {
     $("#logOff").on('click',function(){
         location.href = '../login/login.html';
     });
+
 });
 window.onload = function () {
-    /*轮播翻页*/
-    pageTurning();
+
 };
+function carousel(doc){
+    this.inner = $("#" + doc);
+
+}
+carousel.prototype ={
+    pageTurning:function () {
+        var _self = this;
+        var img = this.inner.find('li');
+        var len = img.length;
+        var item = 1;
+        _self.inner.width(len * 100 + "%");
+        img.width(100 / len + "%");
+        $("#indicators li").click(function () {
+            item = $(this).index();
+            _self.inner.css("left", -_self.inner.find("li").width() * item);
+            $("#indicators").find("li").eq(item).addClass("active").siblings().removeClass("active");
+        })
+        setInterval(imgTurn, 3000);
+        function imgTurn() {
+            if (item >= _self.inner.find("li").length) {
+                item = 0;
+            }
+            _self.inner.css("left", -_self.inner.find("li").width() * item);
+            $("#indicators").find("li").eq(item).addClass("active").siblings().removeClass("active");
+            item++;
+        }
+
+       $(window).resize(function(){
+           item--;
+           if (item < 0) {
+               item = 2;
+           }
+           if (item > 2) {
+               item = 0
+           }
+           _self.inner.css({"transition": "left 0s linear"});
+           _self.inner.css("left", -inner.find("li").width() * item);
+           setTimeout(function () {
+               _self.inner.css({"transition": "left 1s linear"});
+           }, 100);
+       });
+    }
+};
+window.onresize = function () {
+
+    /* 页面的重置 */
+    $("#wicket").height($(".sideNav>ul").children().length * $(window).height());
+    $("#wicket>section").height($(window).height());
+}
 /* 滚动 */
 function revealOnScroll() {
     var index = 0;
@@ -229,48 +279,7 @@ function handleAnimate(index) {
 }
 
 /* start页轮播 */
-function pageTurning() {
-    var inner = $("#inner");
-    var img = inner.find('li');
-    var len = img.length;
-    var myTimer;
-    var item = 1;
-    inner.width(len * 100 + "%");
-    img.width(100 / len + "%");
 
-    $("#indicators li").click(function () {
-        item = $(this).index();
-        inner.css("left", -inner.find("li").width() * item);
-        $("#indicators").find("li").eq(item).addClass("active").siblings().removeClass("active");
-    })
-    setInterval(imgTurn, 3000);
-    function imgTurn() {
-        if (item >= inner.find("li").length) {
-            item = 0;
-        }
-        inner.css("left", -inner.find("li").width() * item);
-        $("#indicators").find("li").eq(item).addClass("active").siblings().removeClass("active");
-        item++;
-    }
-
-    window.onresize = function () {
-        item--;
-        if (item < 0) {
-            item = 2;
-        }
-        if (item > 2) {
-            item = 0
-        }
-        inner.css({"transition": "left 0s linear"});
-        inner.css("left", -inner.find("li").width() * item);
-        setTimeout(function () {
-            inner.css({"transition": "left 1s linear"});
-        }, 100);
-        /* 页面的重置 */
-        $("#wicket").height($(".sideNav>ul").children().length * $(window).height());
-        $("#wicket>section").height($(window).height());
-    }
-}
 
 /*/!* 加载game背景 *!/
  function hackerEmpireStyle(){
