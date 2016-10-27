@@ -2,9 +2,7 @@ $(function () {
 
     $("#wicket").height($(".sideNav>ul").children().length * $(window).height());
     $("#wicket>section").height($(window).height());
-    setTimeout(function(){
-        $(".loading").css("display", "none");
-    },1000);
+
 
     revealOnScroll();
     /* about map loading*/
