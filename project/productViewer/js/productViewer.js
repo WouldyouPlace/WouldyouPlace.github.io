@@ -22,7 +22,6 @@
         },
         _loadSprite : function(){
             var self = this;
-
             this.spriteSrc = this._$product.data("image-src");
             $("<img>").attr("src",this.spriteSrc).on("load",function(){
                 window.setTimeout(function(){

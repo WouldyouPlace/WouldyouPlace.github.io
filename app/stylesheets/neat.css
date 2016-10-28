@@ -46,12 +46,7 @@ a {
 /**
 * 去掉点击时的焦点框，同时保证使用键盘可以显示焦点框
 */
-a:active,
-a:hover,
-a:visited,
-a:focus{
-    outline: none;
-}
+
 
 /**
 * 统一 Chrome 和 Safari 的焦点框样式
@@ -596,4 +591,8 @@ audio:not([controls]) {
 */
 [draggable] {
     cursor: move;
+}
+a:focus{
+    outline:none;
+    -moz-outline:none;
 }

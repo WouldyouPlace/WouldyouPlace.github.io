@@ -5,66 +5,74 @@ $(function () {
     revealOnScroll();
     /* about map loading*/
     gainGeolocation();
+
     /*轮播翻页*/
-    var coe = new carousel("inner");
-    coe.pageTurning();
+    new carousel("inner");
+
     $("#menuBtn").on('click', function () {
         $("header").css("position", "fixed");
     });
 
-    $("#logOff").on('click',function(){
+    $("#logOff").on('click', function () {
         location.href = '../login/login.html';
     });
 
 });
-window.onload = function () {
-
-};
-function carousel(doc){
+function carousel(doc) {
+    var _self = this;
     this.inner = $("#" + doc);
-
+    this._init();
+    this._bind();
+    this._imgTurn();
 }
-carousel.prototype ={
-    pageTurning:function () {
+carousel.prototype = {
+    _init: function () {
+        /*var _self = this;*/
+        this.img = this.inner.find('li');
+        this.len = this.img.length;
+        this.item = 0;
+        this.inner.width(this.len * 100 + "%");
+        this.img.width(100 / this.len + "%");
+    },
+    _bind: function () {
         var _self = this;
-        var img = this.inner.find('li');
-        var len = img.length;
-        var item = 1;
-        _self.inner.width(len * 100 + "%");
-        img.width(100 / len + "%");
         $("#indicators li").click(function () {
-            item = $(this).index();
-            _self.inner.css("left", -_self.inner.find("li").width() * item);
-            $("#indicators").find("li").eq(item).addClass("active").siblings().removeClass("active");
-        })
-        setInterval(imgTurn, 3000);
-        function imgTurn() {
-            if (item >= _self.inner.find("li").length) {
-                item = 0;
+            _self.item = $(this).index();
+            _self._slide();
+        });
+        $(window).resize(function () {
+            _self.item--;
+            if (_self.item < 0) {
+                _self.item = _self.len - 1;
             }
-            _self.inner.css("left", -_self.inner.find("li").width() * item);
-            $("#indicators").find("li").eq(item).addClass("active").siblings().removeClass("active");
-            item++;
-        }
-
-       $(window).resize(function(){
-           item--;
-           if (item < 0) {
-               item = 2;
-           }
-           if (item > 2) {
-               item = 0
-           }
-           _self.inner.css({"transition": "left 0s linear"});
-           _self.inner.css("left", -inner.find("li").width() * item);
-           setTimeout(function () {
-               _self.inner.css({"transition": "left 1s linear"});
-           }, 100);
-       });
+            if (_self.item >= _self.len - 1) {
+                _self.item = 0
+            }
+            _self.inner.css({"transition": "left 0s linear"});
+            _self.inner.css("left", -(_self.img.width() * _self.item));
+            console.log(_self.inner.width());
+            setTimeout(function () {
+                _self.inner.css({"transition": "left 1s linear"});
+            }, 100);
+        });
+    },
+    _imgTurn: function () {
+        var _self = this;
+        window.setInterval(function () {
+            if (_self.item >= _self.len) {
+                _self.item = 0;
+            }
+            _self._slide();
+            _self.item++;
+        }, 5000);
+    },
+    _slide: function () {
+        this.inner.css("left", -(this.img.width() * this.item));
+        $("#indicators").find("li").eq(this.item).addClass("active").siblings().removeClass("active");
     }
 };
-window.onresize = function () {
 
+window.onresize = function () {
     /* 页面的重置 */
     $("#wicket").height($(".sideNav>ul").children().length * $(window).height());
     $("#wicket>section").height($(window).height());
@@ -196,7 +204,6 @@ function revealOnScroll() {
      var endX, endY;
      endX = ev.changedTouches[0].pageX;
      endY = ev.changedTouches[0].pageY;
-
      var direction = GetSlideDirection(startX, startY, endX, endY);
      switch (direction){
      case 0:
@@ -352,7 +359,7 @@ function gainGeolocation() {
 
         // 百度地图API功能
         var map = new BMap.Map("allmap");
-        
+
         var geolocation = new BMap.Geolocation();
         geolocation.getCurrentPosition(function(r){
             if(this.getStatus() == BMAP_STATUS_SUCCESS){
