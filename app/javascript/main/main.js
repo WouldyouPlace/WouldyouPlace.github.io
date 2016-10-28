@@ -1,13 +1,9 @@
 $(function () {
-
     $("#wicket").height($(".sideNav>ul").children().length * $(window).height());
     $("#wicket>section").height($(window).height());
     revealOnScroll();
     /* about map loading*/
     gainGeolocation();
-
-    /*轮播翻页*/
-    new carousel("inner");
 
     $("#menuBtn").on('click', function () {
         $("header").css("position", "fixed");
@@ -16,18 +12,21 @@ $(function () {
     $("#logOff").on('click', function () {
         location.href = '../login/login.html';
     });
-
+    /*轮播翻页*/
+    new carousel("inner");
 });
+/*首页轮翻*/
 function carousel(doc) {
     var _self = this;
     this.inner = $("#" + doc);
     this._init();
     this._bind();
-    this._imgTurn();
+    /*this._imgTurn();*/
+    isImgLoad(this._imgTurn());
 }
 carousel.prototype = {
     _init: function () {
-        /*var _self = this;*/
+        var _self = this;
         this.img = this.inner.find('li');
         this.len = this.img.length;
         this.item = 0;
@@ -58,6 +57,7 @@ carousel.prototype = {
     },
     _imgTurn: function () {
         var _self = this;
+        console.log(this);
         window.setInterval(function () {
             if (_self.item >= _self.len) {
                 _self.item = 0;
