@@ -22,7 +22,6 @@ function carousel(doc) {
     this._init();
     this._bind();
     /*this._imgTurn();*/
-    isImgLoad(this._imgTurn());
 }
 carousel.prototype = {
     _init: function () {
@@ -32,6 +31,7 @@ carousel.prototype = {
         this.item = 0;
         this.inner.width(this.len * 100 + "%");
         this.img.width(100 / this.len + "%");
+        this.img.find('img').load(_self._imgTurn());
     },
     _bind: function () {
         var _self = this;
