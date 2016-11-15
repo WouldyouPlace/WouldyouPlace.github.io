@@ -485,6 +485,7 @@ ul.header-nav li a.seek span {
     transform: translateZ(100px);
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
+    background-color: #00b3ee;
 }
 
 .upright1 {
@@ -494,6 +495,7 @@ ul.header-nav li a.seek span {
     transform: rotateX(90deg) translateZ(100px);
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
+    background-color: #00b3ee;
 }
 
 .upright2 {
@@ -503,6 +505,7 @@ ul.header-nav li a.seek span {
     transform: rotateX(180deg) translateZ(100px);
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
+    background-color: #00b3ee;
 }
 
 .upright3 {
@@ -512,6 +515,7 @@ ul.header-nav li a.seek span {
     transform: rotateX(270deg) translateZ(100px);
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
+    background-color: #00b3ee;
 }
 
 .stage img {

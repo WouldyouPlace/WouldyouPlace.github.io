@@ -1,21 +1,19 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>js/javascript禁止滚动条滚动事件-郭碗瓢盆</title>
-    <script  type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-    <style>
-        #allmap{
-            width: 900px;
-            height: 900px;
-        }
-    </style>
 </head>
 <body>
-<div id="allmap" >
-111
-</div>
+<input type="text" id="in" name="in"/>
+<input type="button" value="Write!" onclick="writeFile('c:/12.txt',document.getElementById('in').value);"/>
+<br><br>
+<input type="button" value="Read!" onclick="document.getElementById('show').value=readFile('c:/12.txt');"/>
+<br>
+    <textarea id="show" name="show" cols="50" rows="8">
+    </textarea>
+<script type="text/javascript" language="javascript">
+
+</script>
 </body>
 </html>
+
