@@ -9,7 +9,7 @@ module.exports = {
     plugins: [commonsPlugin],
     //页面入口文件配置
     entry: {
-        manga: ['./app/javascript/manga/manga.js', './app/javascript/manga/picwall.js']
+        manga: ['./app/javascript/manga/manga', './app/javascript/manga/picwall']
     },
     //入口文件输出配置
     output: {
