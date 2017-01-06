@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>记录登录信息</title>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/neat.css">
+    <style>
+        table{
+            width: 100%;
+        }
+    </style>
+    <script type="text/javascript" src="../../../bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>经度</th>
+            <th>纬度</th>
+            <th>时间</th>
+            <th>地点</th>
+        </thead>
+        <tbody id="loginInfo">
+        </tbody>
+    </table>
+</body>
+<script>
+    $(function(){
+        var strHref = window.document.location.href;
+        var intPos = strHref.indexOf("?");
+        console.log(intPos);
+        var strRight = strHref.substr(intPos + 1);
+        console.log(strRight);
+        var arrTmp = strRight.split("&");
+        var lng = arrTmp[0].substr(arrTmp[0].indexOf("=") + 1);
+        var lat = arrTmp[1].substr(arrTmp[1].indexOf("=") + 1);
+        var str;
+        str += "<tr><td>" + lng + "</td><td>"+ lat +"</td><td>" +  new Date().getYear() +"</td><td>天津</td></tr>";
+        $("#loginInfo").append(str);
+    });
+</script>
+</html>
