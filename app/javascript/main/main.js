@@ -14,6 +14,13 @@ $(function () {
     });
     /*轮播翻页*/
     new carousel("inner");
+
+    document.onkeydown = function(){
+        var e = event || window.event || arguments.callee.caller.arguments[0];
+        if(e && e.keyCode == 13){
+            toggleShape();
+        }
+    }
 });
 /*首页轮翻*/
 function carousel(doc) {
@@ -161,9 +168,9 @@ function revealOnScroll() {
     $(window).on('resize', function () {
         height = $(window).height();
     });
-    window.onbeforeunload = function () {
-        $(body).scrollTop(0);
-    }
+    // window.onbeforeunload = function () {
+    //     $(body).scrollTop(0);
+    // }
 
     /*    /!* 移动端滑动事件 --start-- *!/
      /!* 滑动的角度*!/

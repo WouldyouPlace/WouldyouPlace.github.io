@@ -6,11 +6,8 @@
     <title>前端之路</title>
     <link rel="icon" href="../../image/main/icon-title.png" type="image/x-icon"/>
     <link rel="stylesheet" href="../../stylesheets/neat.css">
-    <link rel="stylesheet" type="text/css" href="../../stylesheets/main/main.css">
     <link rel="stylesheet" type="text/css" href="../../stylesheets/animate.min.css">
-    <script type="text/javascript" src="../../../bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript"
-            src="https://api.map.baidu.com/api?v=2.0&ak=prlgCEAlu7CaWGRZI2hxqn5aQmLwRGGM& s=1"></script>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/main/main.css">
 </head>
 <body>
 <div id="wicket" class="wrapper">
@@ -30,18 +27,14 @@
             <ul class="header-nav">
                 <li><a href="#" class='active'>首页</a></li>
                 <li><a href="../manga/manga.html">动漫</a></li>
-                <li><a href="../404/closeSite.html">游戏</a></li>
+                <li><a href="../404/closeSite.html">旅游</a></li>
                 <li><a href="../404/404.html">案例</a></li>
-                <!--                <li><a href="../projects/projects.html">项目</a></li>-->
                 <li>
                     <a href="../login/login.html" id="logOff" class="seek">
                         <span>退出登录</span>
                     </a>
                 </li>
             </ul>
-            <!--          <div class="headerRight">
-                          <a href="#" id="userNmae"><img src="" alt="">sa</a>
-                      </div>-->
         </header>
         <div class="banner">
             <ul id="inner">
@@ -60,32 +53,12 @@
             </ol>
         </div>
 
-        <!-- <a href="project/unisPC/main.html">unis</a>-->
     </section>
     <section class="manga">
         <hgroup id="mt" class="title">
             <h1>What I want to do</h1>
             <h2 class="mangaH2">欠缺的不是能力，而是天马行空般的想象力。</h2>
         </hgroup>
-        <!--品字显示-->
-        <!-- <div id="exhibit" class="sp">
-             <div class='pack'>
-                 <div><img src="../../image/manga/hok5.jpg" alt="hok"></div>
-                 <div><img src="../../image/manga/april1.jpg" alt="april"></div>
-                 <div><img src="../../image/manga/fairy.jpg" alt="april"></div>
-                 <div><img src="../../image/manga/mangaBG2.jpg"></div>
-                 <div><img src="../../image/manga/mangaBG3.jpeg" alt="bg"></div>
-             </div>
-         </div>-->
-        <!-- <div id="exhibit" class="sp">
-             <ul class='pack'>
-                 <li><img src="../../image/manga/hok5.jpg" alt="hok"></li>
-                 <li class="active"><img src="../../image/manga/april1.jpg" alt="april"></li>
-                 <li><img src="../../image/manga/fairy.jpg" alt="april"></li>
-                 <li><img src="../../image/manga/mangaBG2.jpg"></li>
-                 <li><img src="../../image/manga/mangaBG3.jpeg" alt="bg"></li>
-             </ul>
-         </div>-->
         <ul class="img-group">
             <li class="stage">
                 <div class='pack'>
@@ -137,29 +110,32 @@
                 <dt><img src="../../image/main/p_04.png"></dt>
                 <dd><h1>网站建设</h1><em>WEBSITE BUILDING</em></dd>
                 <dd>
-                    PC端作为网站的开始，先对网站的大体方向，style定位，然后开发。
+                    PC端作为网站的开始，对网站的大体方向，style定位，然后开发。
                 </dd>
             </dl>
             <dl id="mItem" class="animated" style="border-left: 1px solid #f1a417">
                 <dt><img src="../../image/main/p_03.png"></dt>
                 <dd><h1>移动应用</h1><em>MOBILE INTERNET</em></dd>
                 <dd>
-                    现在移动端这么火，怎么可能少得了对于移动端的开发，webAPP来一发。
+                    随着时代发展，移动端开发逐渐成为主流，开发一版webapp。
                 </dd>
             </dl>
             <dl id="fItem" class="animated" style="border-left: 1px solid #f1a417">
                 <dt><img src="../../image/main/p_01.png"></dt>
                 <dd><h1>全栈开发</h1><em>FULL STACK DEVELOPMENT</em></dd>
                 <dd>
-                    只做页面，那太没意思了。除非明年出个H6,自带VR。
-                    对于后台语言，就用node.js配合mongoDB数据库了，正好考验一下自己的javascript编程能力。
+                    服务器端选择node.js配合mongoDB数据库。暂时找一台电脑作为服务器。
                 </dd>
             </dl>
             <dl id="sItem" class="animated" style="border-left: 1px solid #f1a417">
                 <dt><img src="../../image/main/p_03.png"></dt>
                 <dd><h1>学习列表</h1><em>STUDY LIST</em></dd>
                 <dd>
-                    我只想说:不管是前端还是后台：打好基础，剩下的万变不离其中。
+                    框架：vue、angular、react<br/>
+                    工具：webpack+gulp<br/>
+                    语言:ES5+ES6<br/>
+                    动画：css3、canvas、tree.js <br>
+                    精通调试工具
                 </dd>
             </dl>
         </div>
@@ -169,9 +145,6 @@
             <h1>前端之路</h1>
         </hgroup>
         <div class="controls">
-            <button onclick="toggleShape()" class="btn-toggle">切换状态</button>
-            <input type="checkbox" id="backfaces" onclick="toggleBackfaces()" checked>
-            <label for="backfaces">取消透视</label>
         </div>
         <div class="pack">
             <div id="stage">
@@ -217,6 +190,9 @@
     <a href="javascript:void(0)" class="menu" id="menuBtn"></a>
 </div>
 </body>
+<script type="text/javascript" src="../../../bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript"
+        src="https://api.map.baidu.com/api?v=2.0&ak=prlgCEAlu7CaWGRZI2hxqn5aQmLwRGGM& s=1"></script>
 <script type="text/javascript">
     var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
     document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Faeff88f19045b513af7681b011cea3bd' type='text/javascript'%3E%3C/script%3E"));
