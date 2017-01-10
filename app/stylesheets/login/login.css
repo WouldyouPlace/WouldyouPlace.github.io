@@ -1,27 +1,38 @@
 /**
  * Created by Administrator on 2016/9/2.
  */
-.wrapper{
+.wrapper {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-   /* background-image: url("../../image/login/loginbg1.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    transition: background-image 1s linear;
-    -moz-transition:background-image 1s linear;
-    -o-transition: background-image 1s linear;
-    -webkit-transition: background-image 2s linear;*/
+    /* background-image: url("../../image/login/loginbg1.jpg");
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+     transition: background-image 1s linear;
+     -moz-transition:background-image 1s linear;
+     -o-transition: background-image 1s linear;
+     -webkit-transition: background-image 2s linear;*/
 }
-.pageBg{
+
+.pageBg {
     width: 100%;
     height: 100%;
     background-color: #0f0f0f;
     opacity: .6;
 }
-.imgStyle{
+
+h1 {
+    position: absolute;
+    top: 10%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color:#fff;
+}
+
+.imgStyle {
     position: absolute;
     top: 0;
     left: 0;
@@ -30,114 +41,173 @@
     height: 100%;
     /*visibility: hidden;*/
     opacity: 0;
-    transition: opacity 2s linear,perspective 1s linear;
+    transition: opacity 2s linear, perspective 1s linear;
 }
-.login{
+
+.login {
     position: absolute;
     top: calc(50% - 20%);
     left: calc(50% - 15%);
     width: 35%;
     max-width: 500px;
     padding: 30px 10px 10px 0;
-    background-color: rgba(130,130,130,.5);
+    background-color: rgba(130, 130, 130, .5);
     border-radius: 5px;
     box-shadow: 1px 1px 2px #ccc;
-    -o-box-shadow:1px 1px 2px #ccc;
+    -o-box-shadow: 1px 1px 2px #ccc;
     -webkit-box-shadow: 1px 1px 2px #ccc;
     -moz-box-shadow: 1px 1px 2px #ccc;
 }
 
-.form-row{
+.form-row {
     padding: 5px;
     width: 100%;
     margin: 20px 0;
     text-align: center;
-    font-size: 20px;
+    font-size: 1em;
     font-weight: bolder;
     color: #fff;
 }
-.form-row>label {
-    width: 16%;
+
+.form-row > label {
+    width: 18%;
+    font-size: 1.1em;
     text-align: center;
     display: inline-block;
-    font-family: '楷体','华文细黑', 'fantasy';
+    font-family: '楷体', '华文细黑', 'fantasy';
 }
-.form-row>input{
+
+.form-row > .form-input, .form-row > select {
     width: 70%;
     height: 30px;
-    padding:3px 10px;
-    box-shadow:1px 1px 1px #ccc;
+    padding: 3px 10px;
+    box-shadow: 1px 1px 1px #ccc;
+    box-sizing: border-box;
     outline: none;
+    font-size: .8em;
 }
-.form-row>.btn-login{
-    width: 90%;
-    height:40px;
+
+.form-row .form-radio-group {
+    width: 70%;
+    height: 30px;
+    text-align: left;
+    display: inline-block;
+    list-style: none;
+}
+.form-row .form-radio-group input{
+    margin:0 5px 0 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    vertical-align: middle;
+    /* -webkit-appearance: none; */
+    appearance: none;
+    border: 1px solid #dddddd;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    background-clip: content-box;
+    -webkit-appearance: none;
+    -webkit-user-select: none;
+    outline: none;
+    transition: border cubic-bezier(0, 0, 0, 1) 0.2s, box-shadow cubic-bezier(0, 0, 0, 1) 0.2s;
+    -webkit-transition: border cubic-bezier(0, 0, 0, 1) 0.2s, box-shadow cubic-bezier(0, 0, 0, 1) 0.2s;
+    background: transparent;
+    -webkit-border-radius: 50%;
+}
+.form-row .form-radio-group input:checked {
+    border-color: #5cb85c;
+    box-shadow: #5cb85c 0 0 0 26px inset;
+    background-color: #5cb85c;
     color: #fff;
-    font-size: 20px;
+}
+.form-row .form-radio-group input:checked:before {
+    content: '\2713';
+    border-radius: 50%;
+}
+.form-row .form-radio-group input {
+    color: #5cb85c;
+}
+.form-row > .btn-login {
+    width: 90%;
+    height: 40px;
+    padding-bottom: 3px;
+    color: #fff;
+    font-size: .95em;
     outline: none;
     cursor: pointer;
     margin-left: 10px;
     background-color: #35c3c1;
     border-radius: 4px;
-    border-top-color: rgba(255,255,255,.4);
-    border-left-color: rgba(255,255,255,.4);
-    border-bottom-color: rgba(60,60,60,.4);
-    border-right-color: rgba(60,60,60,.4);
+    border-top-color: rgba(255, 255, 255, .4);
+    border-left-color: rgba(255, 255, 255, .4);
+    border-bottom-color: rgba(60, 60, 60, .4);
+    border-right-color: rgba(60, 60, 60, .4);
 }
-.form-row>.btn-login:active{
+
+.form-row > .btn-login:active {
     border: 1px solid;
-    border-top-color: rgba(60,60,60,.4) ;
-    border-left-color:rgba(60,60,60,.4) ;
-    border-bottom-color:rgba(255,255,255,.4);
-    border-right-color:rgba(255,255,255,.4) ;
+    border-top-color: rgba(60, 60, 60, .4);
+    border-left-color: rgba(60, 60, 60, .4);
+    border-bottom-color: rgba(255, 255, 255, .4);
+    border-right-color: rgba(255, 255, 255, .4);
 }
-@media screen and (max-width: 970px ) and (min-width: 768px){
-    .login{
+
+@media screen and (max-width: 970px ) and (min-width: 768px) {
+    .login {
         width: 70%;
         top: calc(50% - 20%);
         left: calc(50% - 40%);
     }
-    .form-row{
+
+    .form-row {
         font-size: 18px;
     }
 }
-@media screen and (max-width: 768px) and (min-width: 440px){
-    .login{
+
+@media screen and (max-width: 768px) and (min-width: 440px) {
+    .login {
         width: 90%;
         top: 30%;
-        left:4%;
+        left: 4%;
     }
-    .form-row{
+
+    .form-row {
         font-size: 16px;
     }
-    .form-row>input{
+
+    .form-row > input {
         width: 70%;
         height: 25px;
-        padding:3px 10px;
-        box-shadow:1px 1px 1px #ccc;
+        padding: 3px 10px;
+        box-shadow: 1px 1px 1px #ccc;
         outline: none;
     }
-    .form-row>.btn-login{
+
+    .form-row > .btn-login {
         height: 35px;
     }
 }
+
 @media screen and (max-width: 440px) {
-    .login{
+    .login {
         width: 90%;
         top: 30%;
-        left:calc(3% + 1px);
+        left: calc(3% + 1px);
     }
-    .form-row{
+
+    .form-row {
         font-size: 12px;
     }
-    .form-row>input{
+
+    .form-row > input {
         width: 70%;
         height: 20px;
-        padding:3px 10px;
-        box-shadow:1px 1px 1px #ccc;
+        padding: 3px 10px;
+        box-shadow: 1px 1px 1px #ccc;
         outline: none;
     }
-    .form-row>.btn-login{
+
+    .form-row > .btn-login {
         font-size: 16px;
         height: 30px;
     }

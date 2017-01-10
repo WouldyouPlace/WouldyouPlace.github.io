@@ -2,34 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     <title>雾里看花</title>
-    <link rel="icon" href="../../image/main/icon-title.png" type="image/x-icon" />
+    <link rel="icon" href="../../image/main/icon-title.png" type="image/x-icon"/>
     <link rel="stylesheet" href="../../stylesheets/neat.css">
     <link rel="stylesheet" type="text/css" href="../../stylesheets/login/login.css">
 </head>
 <body>
-    <div class="wrapper">
-        <figure id="bgChange">
-            <img src="../../image/login/loginbg1.jpg" class="imgStyle">
-            <img src="../../image/login/loginbg2.jpg" class="imgStyle">
-            <img src="../../image/login/loginbg3.jpg" class="imgStyle">
-        </figure>
-        <div class="pageBg"></div>
-        <section class="login">
-            <div class="form-row">
-                <label for="userName">用户名</label>
-                <input type="text" id="userName" class="form-input" placeholder="用户名">
-            </div>
-            <div class="form-row">
-                <label for="userPwd">密码</label>
-                <input type="password" id="userPwd" class="form-input" placeholder="密码">
-            </div>
-            <div class="form-row">
-                <button type="button" class="btn-login" onclick="btnOk()">登录</button>
-            </div>
-        </section>
-    </div>
+<div class="wrapper">
+    <figure id="bgChange">
+        <img src="../../image/login/loginbg1.jpg" class="imgStyle">
+        <img src="../../image/login/loginbg2.jpg" class="imgStyle">
+        <img src="../../image/login/loginbg3.jpg" class="imgStyle">
+    </figure>
+    <div class="pageBg"></div>
+    <h1>选课管理系统</h1>
+    <section class="login">
+        <div class="form-row">
+            <label for="userName">用户名:</label>
+            <input type="text" id="userName" class="form-input" placeholder="用户名">
+        </div>
+        <div class="form-row">
+            <label for="userPwd">密码:</label>
+            <input type="password" id="userPwd" class="form-input" placeholder="密码">
+        </div>
+        <div class="form-row">
+            <label for="userPwd"></label>
+           <span class="form-radio-group">
+                <input type="radio" name="type" value="admin">管理员
+                <input type="radio" name="type" value="stu">学生
+                <input type="radio" name="type" value="teacher">老师
+           </span>
+            <!-- <select name="" id="" class="form-input">
+                 <option value="admin">管理员</option>
+                 <option value="stu">学生</option>
+                 <option value="teacher">老师</option>
+             </select>-->
+        </div>
+        <div class="form-row">
+            <button type="button" class="btn-login" onclick="btnOk()">登录</button>
+        </div>
+    </section>
+</div>
 </body>
 <script type="text/javascript" src="../../../bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="../../javascript/login/login.js"></script>
