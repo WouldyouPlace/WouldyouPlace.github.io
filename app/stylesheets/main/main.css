@@ -677,17 +677,25 @@ ul.header-nav li a.seek span {
 .pw {
     position: relative;
     width: 100%;
+    height:100%;
     overflow: hidden;
 }
 
 .pw .controls {
     position: absolute;
-    bottom:20px;
-    background-color:#111 ;
+    bottom:-10%;
+    left:50%;
+    padding: 10px;
+    transform: translate(-50%,-50%);
+    background-color:#ddd ;
     width: 90%;
-    height:100px;
+    height:35%;
+    border-radius: 10px;
 }
-
+.pw .controls p{
+    margin-top: 5px;
+    font-size: 1.3em;
+}
 .btn-toggle {
     padding: 10px 5px;
     width: 100px;
